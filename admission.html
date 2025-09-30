@@ -20,6 +20,20 @@
 
 <body>
 
+    <!-- Loader Overlay -->
+    <div id="loader-overlay">
+        <div class="loader-container">
+            <div class="circle-loader">
+                <img src="./assets/logo.jpg" alt="VVJM Logo" class="loader-logo">
+                <svg class="progress-ring" viewBox="0 0 160 160">
+                    <circle class="progress-ring__circle" stroke="#FF9933" stroke-width="6" fill="transparent" r="70"
+                        cx="80" cy="80" />
+                </svg>
+            </div>
+            <div class="loader-percentage" id="loader-percentage">0%</div>
+        </div>
+    </div>
+
     <!-- Top Admission Bar -->
     <div id="top-bar"
         class="bg-black w-full fixed top-0 left-0 z-50 flex justify-between items-center px-4 py-1 transition-all duration-300">
