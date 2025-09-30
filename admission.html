@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Enquiry</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Top Admission Bar -->
+    <div id="top-bar"
+        class="bg-black w-full fixed top-0 left-0 z-50 flex justify-between items-center px-4 py-1 transition-all duration-300">
+        <div class="text-[#FF9933] font-medium flex items-center gap-2">
+            <span><i class="fa-solid fa-phone"></i></span> +91 97507 83444
+        </div>
+        <div class="hidden md:block text-sm text-white">
+            An ISO 9001:2015 Certified School since 2017
+        </div>
+        <a href="./admission.html" class="bg-[#FF9933] hover:bg-[#B87333] text-white px-4 py-1 rounded">Admission
+            Open</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="bg-white shadow-md w-full fixed top-12 left-0 z-40 px-6 md:px-24 py-4 flex justify-between items-center transition-all duration-300">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+            <a href="./index.html"><img src="./assets/logo.jpg" alt="School Logo" class="h-16"></a>
+            <div>
+                <h1 class="text-lg font-bold text-gray-800">VVJM</h1>
+                <p class="text-xs text-gray-500">PARAMAHAMSA VIDYALAYAM</p>
+            </div>
+        </div>
+
+        <!-- Desktop Links -->
+        <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+            <!-- Home Link -->
+            <li>
+                <a href="./index.html"
+                    class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">
+                    Home
+                </a>
+            </li>
+
+            <!-- About Dropdown -->
+            <li class="relative group">
+                <button class="flex items-center gap-1 hover:text-[#FF9933] transition-colors duration-300">
+                    About
+                    <i
+                        class="fa-solid fa-angle-down transform transition-transform duration-300 group-hover:rotate-180"></i>
+                </button>
+                <div
+                    class="dropdown-content absolute top-full left-0 bg-white shadow-md rounded-md p-4 hidden group-hover:block">
+                    <ul>
+                        <h2 class="font-bold">About</h2>
+                        <li><a href="#"
+                                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Vision
+                                & Mission</a></li>
+                        <li><a href="#"
+                                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Principal’s
+                                Message</a></li>
+                        <li><a href="#"
+                                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Management</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- Academics Dropdown -->
+            <li class="relative group">
+                <button class="flex items-center gap-1 hover:text-[#FF9933] transition-colors duration-300">
+                    Academics
+                    <i
+                        class="fa-solid fa-angle-down transform transition-transform duration-300 group-hover:rotate-180"></i>
+                </button>
+                <div
+                    class="dropdown-content absolute top-full left-0 bg-white shadow-md rounded-md p-4 hidden group-hover:block">
+                    <ul>
+                        <h2 class="font-bold">Academics</h2>
+                        <li><a href="#"
+                                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Pre-Primary</a>
+                        </li>
+                        <li><a href="#"
+                                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Primary</a>
+                        </li>
+                        <li><a href="#"
+                                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Secondary</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <a href="#"
+                    class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Facilities</a>
+            </li>
+            <li>
+                <a href="#"
+                    class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Hostel</a>
+            </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="text-gray-800 text-2xl focus:outline-none"><i
+                    class="fa-solid fa-bars"></i></button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu"
+            class="absolute top-full left-0 w-full bg-white flex-col hidden text-gray-700 font-medium md:hidden shadow-md">
+
+            <li><a href="#" class="block px-6 py-3 border-b hover:bg-gray-100">Home</a></li>
+
+            <!-- About Dropdown -->
+            <li>
+                <button class="w-full text-left px-6 py-3 border-b flex justify-between items-center hover:bg-gray-100"
+                    onclick="toggleDropdown('about-mobile', this)">
+                    About <i class="fa-solid fa-plus transition-transform duration-300"></i>
+                </button>
+                <ul id="about-mobile" class="mobile-dropdown bg-gray-50 hidden">
+                    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">Vision & Mission</a></li>
+                    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">Principal’s Message</a></li>
+                    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">Management</a></li>
+                </ul>
+            </li>
+
+            <!-- Academics Dropdown -->
+            <li>
+                <button class="w-full text-left px-6 py-3 border-b flex justify-between items-center hover:bg-gray-100"
+                    onclick="toggleDropdown('academics-mobile', this)">
+                    Academics <i class="fa-solid fa-plus transition-transform duration-300"></i>
+                </button>
+                <ul id="academics-mobile" class="mobile-dropdown bg-gray-50 hidden">
+                    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">Pre-Primary</a></li>
+                    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">Primary</a></li>
+                    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">Secondary</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#" class="block px-6 py-3 border-b hover:bg-gray-100">Facilities</a></li>
+            <li><a href="#" class="block px-6 py-3 hover:bg-gray-100">Hostel</a></li>
+        </ul>
+    </nav>
+
+    <!-- Admission Form Banner Section -->
+    <section class="relative w-full h-52 md:h-64 lg:h-72 flex items-center justify-center bg-center bg-cover mt-32"
+        style="background-image: url('./assets/hero-1.jpg');">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <!-- Text -->
+        <h1 class="relative text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center">
+            Admission Form
+        </h1>
+    </section>
+
+    <!-- Admission Enquiry Form Section -->
+    <section
+        class="relative pt-20 pb-20 px-6 md:px-24 bg-gradient-to-r from-[#FF9933]/10 via-white to-[#FF9933]/10 overflow-hidden">
+        <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl p-10" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Admission Enquiry Form</h2>
+
+            <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden">
+                <!-- Parent's Name -->
+                <div data-aos="fade-right" data-aos-once="true">
+                    <label class="block font-medium text-gray-700 mb-1">Parent's Name</label>
+                    <input type="text" placeholder="Enter parent's name"
+                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
+                        required>
+                </div>
+
+                <!-- Student's Name -->
+                <div data-aos="fade-left" data-aos-once="true">
+                    <label class="block font-medium text-gray-700 mb-1">Student's Name</label>
+                    <input type="text" placeholder="Enter student's name"
+                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
+                        required>
+                </div>
+
+                <!-- Mobile Number -->
+                <div data-aos="fade-right" data-aos-once="true">
+                    <label class="block font-medium text-gray-700 mb-1">Mobile Number</label>
+                    <input type="tel" placeholder="Enter mobile number"
+                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
+                        required>
+                </div>
+
+                <!-- Email -->
+                <div data-aos="fade-left" data-aos-once="true">
+                    <label class="block font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" placeholder="Enter email address"
+                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
+                        required>
+                </div>
+
+                <!-- DOB -->
+                <div data-aos="fade-right" data-aos-once="true">
+                    <label class="block font-medium text-gray-700 mb-1">Student's DOB</label>
+                    <input type="date"
+                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
+                        required>
+                </div>
+
+                <!-- Admission Standard -->
+                <div data-aos="fade-left" data-aos-once="true">
+                    <label class="block font-medium text-gray-700 mb-1">Admission Standard</label>
+                    <select
+                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
+                        required>
+                        <option value="">Select</option>
+                        <option>LKG</option>
+                        <option>UKG</option>
+                        <option>1st</option>
+                        <option>2nd</option>
+                        <option>3rd</option>
+                        <option>4th</option>
+                        <option>5th</option>
+                        <option>6th</option>
+                        <option>7th</option>
+                        <option>8th</option>
+                        <option>9th</option>
+                        <option>11th</option>
+                    </select>
+                </div>
+
+                <!-- Currently Studying Class -->
+                <div data-aos="fade-right" data-aos-once="true">
+                    <label class="block font-medium text-gray-700 mb-1">Currently Studying in Class</label>
+                    <input type="text" placeholder="Enter current class"
+                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none">
+                </div>
+
+                <!-- Current School -->
+                <div data-aos="fade-left" data-aos-once="true">
+                    <label class="block font-medium text-gray-700 mb-1">Currently Studying School</label>
+                    <input type="text" placeholder="Enter school name"
+                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none">
+                </div>
+
+                <!-- Submit Button -->
+                <div class="md:col-span-2 text-center mt-6" data-aos="zoom-in" data-aos-once="true">
+                    <button type="submit"
+                        class="bg-[#FF9933] hover:bg-[#B87333] text-white px-8 py-3 rounded-lg shadow-md font-semibold transition duration-300">
+                        Submit Enquiry
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-200 pt-12 pb-6 px-6 md:px-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+
+            <!-- About with Logo -->
+            <div class="flex flex-col items-start">
+                <!-- Logo -->
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="./assets/logo.jpg" alt="VVJM Logo" class="h-16 w-16 rounded-full shadow-lg">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">VVJM Paramahamsa Vidyalayam</h3>
+                        <p class="text-gray-400 text-sm">Matric Hr Sec School</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 leading-relaxed text-justify">
+                    Providing value-based quality education from Pre-KG to Higher Secondary with Man Making & Nation
+                    Building
+                    ideals.
+                </p>
+                <div class="mt-4 flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-[#FF9933] transition-colors duration-300"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-[#FF9933] transition-colors duration-300"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-[#FF9933] transition-colors duration-300"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="flex flex-col">
+                <h3 class="text-xl font-bold text-white mb-4">Contact Us</h3>
+                <p class="text-gray-400"><span class="font-semibold">Phone:</span> +91 97507 83444</p>
+                <p class="text-gray-400"><span class="font-semibold">Email:</span> info@vvjmschool.com</p>
+                <p class="text-gray-400 mt-2"><span class="font-semibold">Coordinator:</span> R. Venkataswamy</p>
+                <p class="text-gray-400 mt-2"><span class="font-semibold">Address:</span> IT Park, Annanagar,
+                    Tiruchirappalli -
+                    620026, Tamil Nadu</p>
+            </div>
+
+            <!-- Embedded Map -->
+            <div class="flex flex-col">
+                <h3 class="text-xl font-bold text-white mb-4">Our Location</h3>
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125438.18117219604!2d78.68575556853486!3d10.738864156980378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa8c8c7f226251%3A0xe07806c711b252c2!2sVVJM%20PARAMAHAMSA%20VIDYALAYAM%20MATRIC%20HR%20SEC%20SCHOOL%2CI.T%20PATK%2C%20TIRUCHIRAPPALLI%20-26!5e0!3m2!1sen!2sin!4v1759223507921!5m2!1sen!2sin"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom -->
+        <div
+            class="mt-12 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0 text-gray-500 text-sm border-t border-gray-700 pt-4 text-center md:text-left">
+
+            <!-- Left side -->
+            <span class="block">&copy; 2025 VVJM Paramahamsa Vidyalayam. All rights reserved.</span>
+
+            <!-- Right side -->
+            <span class="block">
+                Developed by
+                <a href="https://musitechhub.com" target="_blank"
+                    class="text-[#FF9933] hover:underline transition-colors duration-300">
+                    Musitechhub
+                </a>
+            </span>
+        </div>
+
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+
+</html>
