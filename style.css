@@ -187,3 +187,44 @@ body {
 .dropdown-content ul li a:hover {
     color: #FF9933;
 }
+
+.news-container {
+    position: relative;
+    height: 100%;
+    /* Ensure it fills parent */
+    overflow: hidden;
+    /* Hide moving items outside container */
+    padding-top: 2.5rem;
+    /* space for the header bar */
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    animation: scrollNews 18s linear infinite;
+}
+
+.news-container:hover .news-list {
+    animation-play-state: paused;
+    /* Pause on hover */
+}
+
+@keyframes scrollNews {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/* Hide scrollbar for all browsers */
+.overflow-x-auto::-webkit-scrollbar {
+    display: none;
+}
+
+.overflow-x-auto {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

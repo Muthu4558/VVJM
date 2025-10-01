@@ -64,7 +64,7 @@
     <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
       <!-- Home Link -->
       <li>
-        <a href="#"
+        <a href="./index.html"
           class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">
           Home
         </a>
@@ -117,12 +117,12 @@
       </li>
 
       <li>
-        <a href="#"
-          class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Facilities</a>
+        <a href="./faculty.html"
+          class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Faculty</a>
       </li>
       <li>
-        <a href="#"
-          class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Hostel</a>
+        <a href="./gallery.html"
+          class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Gallery</a>
       </li>
     </ul>
 
@@ -163,8 +163,8 @@
         </ul>
       </li>
 
-      <li><a href="#" class="block px-6 py-3 border-b hover:bg-gray-100">Facilities</a></li>
-      <li><a href="#" class="block px-6 py-3 hover:bg-gray-100">Hostel</a></li>
+      <li><a href="./faculty.html" class="block px-6 py-3 border-b hover:bg-gray-100">Faculty</a></li>
+      <li><a href="./gallery.html" class="block px-6 py-3 hover:bg-gray-100">Gallery</a></li>
     </ul>
   </nav>
 
@@ -177,6 +177,9 @@
         </div>
         <div class="swiper-slide">
           <img src="./assets/hero-2.jpg" class="w-full h-screen object-cover">
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/1.jpg" class="w-full h-screen object-cover">
         </div>
       </div>
       <div class="swiper-pagination"></div>
@@ -292,15 +295,27 @@
         </p>
       </div>
 
-      <!-- Right Side: Illustration or Icon -->
-      <div class="relative group overflow-hidden rounded-2xl shadow-xl w-full" data-aos="zoom-in">
-        <img src="./assets/hero-1.jpg" alt="VVJM School"
-          class="w-full h-auto md:h-full object-cover transition-transform duration-500 group-hover:scale-105">
-        <!-- <div
-          class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <p class="text-white text-center px-4 text-lg md:text-xl font-medium">“Man Making and Nation Building”</p>
-        </div> -->
+      <!-- Right Side: News & Updates -->
+      <div class="relative w-full h-80 bg-white shadow-xl rounded-2xl border overflow-hidden" data-aos="zoom-in">
+        <!-- Header -->
+        <div
+          class="absolute top-0 left-0 w-full bg-[#FF9933] text-white text-lg font-semibold py-2 px-4 flex items-center z-10">
+          <i class="fas fa-bullhorn mr-2"></i> News & Updates
+        </div>
+
+        <!-- News Container -->
+        <div class="news-container h-full px-6 pb-4">
+          <ul class="news-list space-y-4 text-gray-800 font-medium">
+            <li><i class="fas fa-user-graduate mr-2"></i> Admissions open for Academic Year 2025-26.</li>
+            <li><i class="fas fa-trophy mr-2"></i> Our students secured 100% pass in the Board Exams.</li>
+            <li><i class="fas fa-book mr-2"></i> New library block inaugurated.</li>
+            <li><i class="fas fa-football-ball mr-2"></i> Annual Sports Meet scheduled for October 15th.</li>
+            <li><i class="fas fa-theater-masks mr-2"></i> Cultural Fest coming soon – stay tuned!</li>
+            <li><i class="fas fa-tree mr-2"></i> Eco Club launched a tree plantation drive.</li>
+          </ul>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -359,11 +374,11 @@
       <!-- Right Side: Coordinator Info Card -->
       <div class="md:w-1/2 relative flex justify-center md:justify-end" data-aos="fade-left" data-aos-delay="300">
         <div
-          class="bg-gradient-to-br from-[#FF9933]/20 to-[#FF9933]/10 rounded-2xl shadow-2xl p-6 w-full max-w-sm transform transition-transform duration-500 hover:rotate-0 rotate-2">
+          class="bg-gradient-to-br from-[#FF9933]/20 to-[#FF9933]/10 rounded-2xl shadow-2xl p-6 w-full max-w-sm">
 
           <!-- Coordinator Image -->
-          <div class="w-60 h-60 mx-auto rounded-full overflow-hidden border-4 border-[#FF9933] shadow-lg">
-            <img src="./assets/coordinator.jpg" alt="R. Venkataswamy" class="w-full h-full object-cover">
+          <div class="w-64 h-64 mx-auto rounded-full overflow-hidden border-4 border-[#FF9933] shadow-lg">
+            <img src="./assets/owner.jpg" alt="R. Venkataswamy" class="w-full h-full object-cover">
           </div>
 
           <!-- Coordinator Info -->

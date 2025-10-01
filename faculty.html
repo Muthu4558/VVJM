@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./assets/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admission Enquiry</title>
+    <title>Faculty</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
@@ -50,7 +49,7 @@
 
     <!-- Navbar -->
     <nav id="navbar"
-        class="bg-white shadow-md w-full fixed top-12 left-0 z-40 px-6 md:px-24 py-4 flex justify-between items-center transition-all duration-300">
+        class="bg-white shadow-md w-full fixed left-0 z-40 px-6 md:px-24 py-4 flex justify-between items-center transition-all duration-300">
 
         <!-- Logo -->
         <div class="flex items-center gap-2">
@@ -184,110 +183,180 @@
         <div class="relative text-center space-y-4">
             <!-- Page Title -->
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                Admission Form
+                Faculty
             </h1>
 
             <!-- Breadcrumb -->
             <p class="text-sm md:text-base lg:text-lg text-gray-200 font-medium">
                 <a href="./index.html" class="hover:text-[#FF9933] transition-colors">Home</a>
                 <span class="mx-2">></span>
-                <a href="./admission.html" class="hover:text-[#FF9933] transition-colors">Admission Form</a>
+                <a href="./faculty.html" class="hover:text-[#FF9933] transition-colors">Faculty</a>
             </p>
         </div>
 
     </section>
 
-    <!-- Admission Enquiry Form Section -->
-    <section
-        class="relative pt-20 pb-20 px-6 md:px-24 bg-gradient-to-r from-[#FF9933]/10 via-white to-[#FF9933]/10 overflow-hidden">
-        <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl p-10" data-aos="fade-up">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Admission Enquiry Form</h2>
+    <!-- Faculty Section -->
+    <section class="py-16 px-4 md:px-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto text-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
+                Our Faculty Members
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                A team of qualified and experienced educators committed to academic excellence and holistic growth of
+                students.
+            </p>
+        </div>
 
-            <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden">
-                <!-- Parent's Name -->
-                <div data-aos="fade-right" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Parent's Name</label>
-                    <input type="text" placeholder="Enter parent's name"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
-                        required>
-                </div>
+        <div class="overflow-x-auto">
+            <table class="w-full border-collapse bg-white shadow-xl rounded-2xl overflow-hidden" data-aos="fade-up">
+                <thead class="bg-[#FF9933] text-white">
+                    <tr>
+                        <th class="py-3 px-4 text-left">S.No</th>
+                        <th class="py-3 px-4 text-left">Staff Name</th>
+                        <th class="py-3 px-4 text-left">Qualification</th>
+                        <th class="py-3 px-4 text-left">Contact Number</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
 
-                <!-- Student's Name -->
-                <div data-aos="fade-left" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Student's Name</label>
-                    <input type="text" placeholder="Enter student's name"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
-                        required>
-                </div>
+                    <!-- Row 1 -->
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="py-3 px-4">1</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">P. Sampath Kumar</td>
+                        <td class="py-3 px-4">M.Sc., B.Ed (Maths)</td>
+                        <td class="py-3 px-4 flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF9933]"></i>
+                            9788530327</td>
+                    </tr>
 
-                <!-- Mobile Number -->
-                <div data-aos="fade-right" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Mobile Number</label>
-                    <input type="tel" placeholder="Enter mobile number"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
-                        required>
-                </div>
+                    <!-- Row 2 -->
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="py-3 px-4">2</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">A. Jayalakshmi</td>
+                        <td class="py-3 px-4">M.Sc., B.Ed (Chemistry)</td>
+                        <td class="py-3 px-4 flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF9933]"></i>
+                            7708038339</td>
+                    </tr>
 
-                <!-- Email -->
-                <div data-aos="fade-left" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Email</label>
-                    <input type="email" placeholder="Enter email address"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
-                        required>
-                </div>
+                    <!-- Row 3 -->
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="py-3 px-4">3</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">G. Premavathi</td>
+                        <td class="py-3 px-4">M.Sc., B.Ed (Physics)</td>
+                        <td class="py-3 px-4 flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF9933]"></i>
+                            9940289999</td>
+                    </tr>
 
-                <!-- DOB -->
-                <div data-aos="fade-right" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Student's DOB</label>
-                    <input type="date"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
-                        required>
-                </div>
+                    <!-- Row 4 -->
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="py-3 px-4">4</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">D. Shanthi</td>
+                        <td class="py-3 px-4">M.A., B.Ed (Economics)</td>
+                        <td class="py-3 px-4 flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF9933]"></i>
+                            9385908685</td>
+                    </tr>
 
-                <!-- Admission Standard -->
-                <div data-aos="fade-left" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Admission Standard</label>
-                    <select
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
-                        required>
-                        <option value="">Select</option>
-                        <option>LKG</option>
-                        <option>UKG</option>
-                        <option>1st</option>
-                        <option>2nd</option>
-                        <option>3rd</option>
-                        <option>4th</option>
-                        <option>5th</option>
-                        <option>6th</option>
-                        <option>7th</option>
-                        <option>8th</option>
-                        <option>9th</option>
-                        <option>11th</option>
-                    </select>
-                </div>
+                    <!-- Row 5 -->
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="py-3 px-4">5</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">K. Punitha</td>
+                        <td class="py-3 px-4">M.A. (Economics)</td>
+                        <td class="py-3 px-4 flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF9933]"></i>
+                            7339608611</td>
+                    </tr>
 
-                <!-- Currently Studying Class -->
-                <div data-aos="fade-right" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Currently Studying in Class</label>
-                    <input type="text" placeholder="Enter current class"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none">
-                </div>
+                    <!-- Row 6 -->
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="py-3 px-4">6</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">T. Sathya</td>
+                        <td class="py-3 px-4">M.Sc., B.Ed (Maths)</td>
+                        <td class="py-3 px-4 flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF9933]"></i>
+                            7339124831</td>
+                    </tr>
 
-                <!-- Current School -->
-                <div data-aos="fade-left" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Currently Studying School</label>
-                    <input type="text" placeholder="Enter school name"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none">
-                </div>
+                    <!-- Row 7 -->
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="py-3 px-4">7</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">P. Malathi</td>
+                        <td class="py-3 px-4">M.A., M.Ed (Tamil)</td>
+                        <td class="py-3 px-4 flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF9933]"></i>
+                            8015451611</td>
+                    </tr>
 
-                <!-- Submit Button -->
-                <div class="md:col-span-2 text-center mt-6" data-aos="zoom-in" data-aos-once="true">
-                    <button type="submit"
-                        class="bg-[#FF9933] hover:bg-[#B87333] text-white px-8 py-3 rounded-lg shadow-md font-semibold transition duration-300">
-                        Submit Enquiry
-                    </button>
-                </div>
-            </form>
+                    <!-- Row 8 -->
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="py-3 px-4">8</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">A. Ajina</td>
+                        <td class="py-3 px-4">D.ECCE</td>
+                        <td class="py-3 px-4 flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF9933]"></i>
+                            9345131792</td>
+                    </tr>
+
+                    <!-- Row 9 -->
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="py-3 px-4">9</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">D. Usha</td>
+                        <td class="py-3 px-4">M.A., B.Ed., M.Phil (Tamil)</td>
+                        <td class="py-3 px-4 flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF9933]"></i>
+                            8012755318</td>
+                    </tr>
+
+                    <!-- Row 10 -->
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="py-3 px-4">10</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">V. Keerthana</td>
+                        <td class="py-3 px-4">B.A., B.Ed., M.Ed (English)</td>
+                        <td class="py-3 px-4 flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF9933]"></i>
+                            8489577633</td>
+                    </tr>
+
+                    <!-- Row 11 -->
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="py-3 px-4">11</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">S. Chitra</td>
+                        <td class="py-3 px-4">D.T.Ed</td>
+                        <td class="py-3 px-4 flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF9933]"></i>
+                            8903432657</td>
+                    </tr>
+
+                    <!-- Row 12 -->
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="py-3 px-4">12</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">A. Mahalakshmi</td>
+                        <td class="py-3 px-4">M.C.A</td>
+                        <td class="py-3 px-4 flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF9933]"></i>
+                            8610573252</td>
+                    </tr>
+
+                    <!-- Row 13 -->
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="py-3 px-4">13</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">M. Muthuselvi</td>
+                        <td class="py-3 px-4">M.Sc., B.Ed (Chemistry)</td>
+                        <td class="py-3 px-4 flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF9933]"></i>
+                            9566875683</td>
+                    </tr>
+
+                    <!-- Row 14 -->
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="py-3 px-4">14</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">A. Safvana Begam</td>
+                        <td class="py-3 px-4">B.Com (Hindi Medium)</td>
+                        <td class="py-3 px-4 flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF9933]"></i>
+                            9159562164</td>
+                    </tr>
+
+                    <!-- Row 15 -->
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="py-3 px-4">15</td>
+                        <td class="py-3 px-4 font-medium text-gray-800">M.A. Kanimozhi</td>
+                        <td class="py-3 px-4">B.S., M.S., M.B.A., PG D.ECCE., DVM</td>
+                        <td class="py-3 px-4 flex items-center gap-2"><i class="fa-solid fa-phone text-[#FF9933]"></i>
+                            8778650009</td>
+                    </tr>
+
+                </tbody>
+            </table>
         </div>
     </section>
 
@@ -361,7 +430,6 @@
                 </a>
             </span>
         </div>
-
     </footer>
 
     <!-- Scripts -->
@@ -375,6 +443,7 @@
             once: true,
         });
     </script>
+
 </body>
 
 </html>

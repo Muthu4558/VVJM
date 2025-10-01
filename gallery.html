@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./assets/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admission Enquiry</title>
+    <title>Gallery</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
@@ -50,7 +49,7 @@
 
     <!-- Navbar -->
     <nav id="navbar"
-        class="bg-white shadow-md w-full fixed top-12 left-0 z-40 px-6 md:px-24 py-4 flex justify-between items-center transition-all duration-300">
+        class="bg-white shadow-md w-full fixed left-0 z-40 px-6 md:px-24 py-4 flex justify-between items-center transition-all duration-300">
 
         <!-- Logo -->
         <div class="flex items-center gap-2">
@@ -184,112 +183,71 @@
         <div class="relative text-center space-y-4">
             <!-- Page Title -->
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                Admission Form
+                Gallery
             </h1>
 
             <!-- Breadcrumb -->
             <p class="text-sm md:text-base lg:text-lg text-gray-200 font-medium">
                 <a href="./index.html" class="hover:text-[#FF9933] transition-colors">Home</a>
                 <span class="mx-2">></span>
-                <a href="./admission.html" class="hover:text-[#FF9933] transition-colors">Admission Form</a>
+                <a href="./faculty.html" class="hover:text-[#FF9933] transition-colors">Gallery</a>
             </p>
         </div>
 
     </section>
 
-    <!-- Admission Enquiry Form Section -->
-    <section
-        class="relative pt-20 pb-20 px-6 md:px-24 bg-gradient-to-r from-[#FF9933]/10 via-white to-[#FF9933]/10 overflow-hidden">
-        <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl p-10" data-aos="fade-up">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Admission Enquiry Form</h2>
+    <!-- 📸 Gallery Section -->
+<section class="py-16 px-6 md:px-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
+      Our School Memories
+    </h2>
+    <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+      A glimpse into our vibrant campus life and unforgettable moments.
+    </p>
+  </div>
 
-            <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden">
-                <!-- Parent's Name -->
-                <div data-aos="fade-right" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Parent's Name</label>
-                    <input type="text" placeholder="Enter parent's name"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
-                        required>
-                </div>
+  <!-- Image Grid -->
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="300">
+    <!-- Loop your images -->
+    <img src="./assets/Gallery/1.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(0)">
+    <img src="./assets/Gallery/3.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(1)">
+    <img src="./assets/Gallery/4.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(2)">
+    <img src="./assets/Gallery/6.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(3)">
+    <img src="./assets/Gallery/7.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(4)">
+    <img src="./assets/Gallery/8.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(5)">
+    <img src="./assets/Gallery/9.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(6)">
+    <img src="./assets/Gallery/10.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(7)">
+    <img src="./assets/Gallery/11.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(7)">
+    <img src="./assets/Gallery/12.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(7)">
+    <img src="./assets/Gallery/13.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(7)">
+    <img src="./assets/Gallery/14.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(7)">
+    <img src="./assets/Gallery/15.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(7)">
+    <img src="./assets/Gallery/16.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(7)">
+    <img src="./assets/Gallery/17.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(7)">
+    <img src="./assets/Gallery/18.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(7)">
+    <img src="./assets/Gallery/19.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(7)">
+    <img src="./assets/Gallery/20.jpg" alt="Gallery" class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500" onclick="openModal(7)">
+    <!-- Continue for all images -->
+  </div>
+</section>
 
-                <!-- Student's Name -->
-                <div data-aos="fade-left" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Student's Name</label>
-                    <input type="text" placeholder="Enter student's name"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
-                        required>
-                </div>
+<!-- Modal Lightbox -->
+<div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
+  <!-- Close Button -->
+  <button onclick="closeModal()" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
 
-                <!-- Mobile Number -->
-                <div data-aos="fade-right" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Mobile Number</label>
-                    <input type="tel" placeholder="Enter mobile number"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
-                        required>
-                </div>
+  <!-- Prev Button -->
+  <button onclick="changeSlide(-1)" class="absolute left-5 text-white text-4xl font-bold px-3">&#10094;</button>
 
-                <!-- Email -->
-                <div data-aos="fade-left" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Email</label>
-                    <input type="email" placeholder="Enter email address"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
-                        required>
-                </div>
+  <!-- Image -->
+  <img id="lightbox-img" src="" alt="Gallery Large" class="max-h-[80%] max-w-[90%] rounded-lg shadow-2xl transition-all duration-500">
 
-                <!-- DOB -->
-                <div data-aos="fade-right" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Student's DOB</label>
-                    <input type="date"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
-                        required>
-                </div>
+  <!-- Next Button -->
+  <button onclick="changeSlide(1)" class="absolute right-5 text-white text-4xl font-bold px-3">&#10095;</button>
+</div>
 
-                <!-- Admission Standard -->
-                <div data-aos="fade-left" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Admission Standard</label>
-                    <select
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
-                        required>
-                        <option value="">Select</option>
-                        <option>LKG</option>
-                        <option>UKG</option>
-                        <option>1st</option>
-                        <option>2nd</option>
-                        <option>3rd</option>
-                        <option>4th</option>
-                        <option>5th</option>
-                        <option>6th</option>
-                        <option>7th</option>
-                        <option>8th</option>
-                        <option>9th</option>
-                        <option>11th</option>
-                    </select>
-                </div>
 
-                <!-- Currently Studying Class -->
-                <div data-aos="fade-right" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Currently Studying in Class</label>
-                    <input type="text" placeholder="Enter current class"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none">
-                </div>
-
-                <!-- Current School -->
-                <div data-aos="fade-left" data-aos-once="true">
-                    <label class="block font-medium text-gray-700 mb-1">Currently Studying School</label>
-                    <input type="text" placeholder="Enter school name"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none">
-                </div>
-
-                <!-- Submit Button -->
-                <div class="md:col-span-2 text-center mt-6" data-aos="zoom-in" data-aos-once="true">
-                    <button type="submit"
-                        class="bg-[#FF9933] hover:bg-[#B87333] text-white px-8 py-3 rounded-lg shadow-md font-semibold transition duration-300">
-                        Submit Enquiry
-                    </button>
-                </div>
-            </form>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-200 pt-12 pb-6 px-6 md:px-24 relative overflow-hidden">
@@ -361,7 +319,6 @@
                 </a>
             </span>
         </div>
-
     </footer>
 
     <!-- Scripts -->
@@ -375,6 +332,7 @@
             once: true,
         });
     </script>
+
 </body>
 
 </html>

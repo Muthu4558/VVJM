@@ -90,3 +90,44 @@ const interval = setInterval(() => {
         setTimeout(() => overlay.style.display = 'none', 500);
     }
 }, 20);
+
+
+
+// Gallery
+const images = [
+    "./assets/Gallery/1.jpg",
+    "./assets/Gallery/3.jpg",
+    "./assets/Gallery/4.jpg",
+    "./assets/Gallery/6.jpg",
+    "./assets/Gallery/7.jpg",
+    "./assets/Gallery/8.jpg",
+    "./assets/Gallery/9.jpg",
+    "./assets/Gallery/10.jpg",
+    "./assets/Gallery/11.jpg",
+    "./assets/Gallery/12.jpg",
+    "./assets/Gallery/13.jpg",
+    "./assets/Gallery/14.jpg",
+    "./assets/Gallery/15.jpg",
+    "./assets/Gallery/16.jpg",
+    "./assets/Gallery/17.jpg",
+    "./assets/Gallery/18.jpg",
+    "./assets/Gallery/19.jpg",
+    "./assets/Gallery/20.jpg"
+];
+
+let currentIndex = 0;
+
+function openModal(index) {
+    currentIndex = index;
+    document.getElementById("lightbox").classList.remove("hidden");
+    document.getElementById("lightbox-img").src = images[currentIndex];
+}
+
+function closeModal() {
+    document.getElementById("lightbox").classList.add("hidden");
+}
+
+function changeSlide(direction) {
+    currentIndex = (currentIndex + direction + images.length) % images.length;
+    document.getElementById("lightbox-img").src = images[currentIndex];
+}
