@@ -7,7 +7,6 @@ function adjustNavbar() {
     navbar.style.top = `${topBarHeight}px`;
 }
 
-// Initial adjustment
 adjustNavbar();
 
 window.addEventListener("resize", adjustNavbar);
@@ -34,7 +33,6 @@ const swiper = new Swiper(".mySwiper", {
     fadeEffect: { crossFade: true },
 });
 
-// Feather icons
 feather.replace();
 
 // Mobile Menu Toggle
