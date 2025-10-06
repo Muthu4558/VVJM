@@ -77,7 +77,7 @@ function setProgress(percent) {
 // Smooth loading simulation
 let progress = 0;
 const interval = setInterval(() => {
-    progress += Math.random() * 2; // smooth increment
+    progress += Math.random() * 2;
     if (progress > 100) progress = 100;
     setProgress(Math.floor(progress));
     if (progress >= 100) {

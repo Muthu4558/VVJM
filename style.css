@@ -7,6 +7,8 @@
 html,
 body {
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Overlay with blur */

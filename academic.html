@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="./assets/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>VVJM School</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
@@ -16,6 +17,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- AOS CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
 </head>
 
 <body class="bg-gradient-to-r from-[#fdf6f0] to-[#ffffff]">
@@ -82,7 +84,7 @@
                     class="dropdown-content absolute top-full left-0 bg-white shadow-md rounded-md p-4 hidden group-hover:block">
                     <ul>
                         <li>
-                            <h2 class="font-bold"><a href="./about.html">About</a></h2>
+                            <h2 class="font-bold">About</h2>
                         </li>
                         <li><a href="#"
                                 class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Vision
@@ -99,7 +101,8 @@
 
             <!-- Academics Dropdown -->
             <li class="relative group">
-                <a href="./academic.html" class="flex items-center gap-1 hover:text-[#FF9933] transition-colors duration-300">
+                <a href="./academic.html"
+                    class="flex items-center gap-1 hover:text-[#FF9933] transition-colors duration-300">
                     Academics
                     <i
                         class="fa-solid fa-angle-down transform transition-transform duration-300 group-hover:rotate-180"></i>
@@ -175,7 +178,7 @@
         </ul>
     </nav>
 
-    <!-- Admission Form Banner Section -->
+    <!-- Academic banner -->
     <section class="relative w-full h-52 md:h-64 lg:h-72 flex items-center justify-center bg-center bg-cover mt-32"
         style="background-image: url('./assets/hero-1.jpg');">
 
@@ -187,106 +190,60 @@
         <div class="relative text-center space-y-4">
             <!-- Page Title -->
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                Gallery
+                Academics
             </h1>
 
             <!-- Breadcrumb -->
             <p class="text-sm md:text-base lg:text-lg text-gray-200 font-medium">
                 <a href="./index.html" class="hover:text-[#FF9933] transition-colors">Home</a>
                 <span class="mx-2">></span>
-                <a href="./faculty.html" class="hover:text-[#FF9933] transition-colors">Gallery</a>
+                <a href="./academic.html" class="hover:text-[#FF9933] transition-colors">Academics</a>
             </p>
         </div>
 
     </section>
 
-    <!-- Gallery Section -->
-    <section class="py-16 px-6 md:px-20">
-        <div class="max-w-7xl mx-auto text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
-                Our School Memories
-            </h2>
-            <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                A glimpse into our vibrant campus life and unforgettable moments.
-            </p>
+    <!-- Academics Content Section -->
+    <section class="py-16 px-6 md:px-24">
+        <div class="max-w-7xl mx-auto text-center mb-12" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">Our Academics</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">We provide holistic education for every stage of learning,
+                nurturing young minds to achieve excellence academically, morally, and socially.</p>
         </div>
 
-        <!-- Image Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="300">
-            <!-- Loop your images -->
-            <img src="./assets/Gallery/1.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(0)">
-            <img src="./assets/Gallery/3.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(1)">
-            <img src="./assets/Gallery/4.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(2)">
-            <img src="./assets/Gallery/6.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(3)">
-            <img src="./assets/Gallery/7.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(4)">
-            <img src="./assets/Gallery/8.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(5)">
-            <img src="./assets/Gallery/9.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(6)">
-            <img src="./assets/Gallery/10.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/11.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/12.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/13.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/14.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/15.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/16.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/17.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/18.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/19.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/20.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <!-- Continue for all images -->
+        <!-- Academics Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Pre-Primary -->
+            <div class="bg-white rounded-3xl shadow-xl p-6 transform transition-all duration-500 hover:scale-105"
+                data-aos="fade-right">
+                <img src="./assets/pre-primary.jpg" alt="Pre-Primary" class="rounded-2xl mb-4 h-40 w-full object-cover">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Pre-Primary</h3>
+                <p class="text-gray-600 mb-4">Our Pre-Primary program focuses on building curiosity, creativity, and
+                    foundational skills in a fun and nurturing environment.</p>
+                <a href="#" class="text-[#FF9933] font-semibold hover:underline transition-colors">Learn More</a>
+            </div>
+
+            <!-- Primary -->
+            <div class="bg-white rounded-3xl shadow-xl p-6 transform transition-all duration-500 hover:scale-105"
+                data-aos="fade-up">
+                <img src="./assets/primary.jpg" alt="Primary" class="rounded-2xl mb-4 h-40 w-full object-cover">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Primary</h3>
+                <p class="text-gray-600 mb-4">Our Primary curriculum emphasizes a strong foundation in literacy,
+                    numeracy, and life skills to prepare students for future academic success.</p>
+                <a href="#" class="text-[#FF9933] font-semibold hover:underline transition-colors">Learn More</a>
+            </div>
+
+            <!-- Secondary -->
+            <div class="bg-white rounded-3xl shadow-xl p-6 transform transition-all duration-500 hover:scale-105"
+                data-aos="fade-left">
+                <img src="./assets/secondary.jpg" alt="Secondary" class="rounded-2xl mb-4 h-40 w-full object-cover">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Secondary</h3>
+                <p class="text-gray-600 mb-4">Our Secondary program is designed to foster critical thinking, creativity,
+                    and academic excellence to prepare students for higher education and beyond.</p>
+                <a href="#" class="text-[#FF9933] font-semibold hover:underline transition-colors">Learn More</a>
+            </div>
         </div>
     </section>
-
-    <!-- Modal Lightbox -->
-    <div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
-        <!-- Close Button -->
-        <button onclick="closeModal()" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
-
-        <!-- Prev Button -->
-        <button onclick="changeSlide(-1)" class="absolute left-5 text-white text-4xl font-bold px-3">&#10094;</button>
-
-        <!-- Image -->
-        <img id="lightbox-img" src="" alt="Gallery Large"
-            class="max-h-[80%] max-w-[90%] rounded-lg shadow-2xl transition-all duration-500">
-
-        <!-- Next Button -->
-        <button onclick="changeSlide(1)" class="absolute right-5 text-white text-4xl font-bold px-3">&#10095;</button>
-    </div>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-200 pt-12 pb-6 px-6 md:px-24 relative overflow-hidden">

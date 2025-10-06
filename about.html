@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="./assets/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>VVJM School</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
@@ -16,6 +17,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- AOS CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
 </head>
 
 <body class="bg-gradient-to-r from-[#fdf6f0] to-[#ffffff]">
@@ -175,7 +177,7 @@
         </ul>
     </nav>
 
-    <!-- Admission Form Banner Section -->
+    <!-- about banner -->
     <section class="relative w-full h-52 md:h-64 lg:h-72 flex items-center justify-center bg-center bg-cover mt-32"
         style="background-image: url('./assets/hero-1.jpg');">
 
@@ -187,106 +189,136 @@
         <div class="relative text-center space-y-4">
             <!-- Page Title -->
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                Gallery
+                About
             </h1>
 
             <!-- Breadcrumb -->
             <p class="text-sm md:text-base lg:text-lg text-gray-200 font-medium">
                 <a href="./index.html" class="hover:text-[#FF9933] transition-colors">Home</a>
                 <span class="mx-2">></span>
-                <a href="./faculty.html" class="hover:text-[#FF9933] transition-colors">Gallery</a>
+                <a href="./about.html" class="hover:text-[#FF9933] transition-colors">About</a>
             </p>
         </div>
 
     </section>
 
-    <!-- Gallery Section -->
-    <section class="py-16 px-6 md:px-20">
-        <div class="max-w-7xl mx-auto text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
-                Our School Memories
+    <main class="max-w-7xl mx-auto px-6 md:px-12 space-y-32 mt-20 mb-20">
+
+        <!-- About School Zig-Zag -->
+        <section class="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right"
+                class="relative rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-500">
+                <img src="./assets/Gallery/4.jpg" alt="School Building" class="w-full h-96 object-cover">
+            </div>
+            <div data-aos="fade-left" class="space-y-6">
+                <h2 class="text-4xl font-extrabold text-gray-800">Who <span class="text-[#FF9933]">We Are</span></h2>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    Established in 1993, VVJM Paramahamsa Vidyalayam offers holistic education from Pre-KG to XII. We
+                    foster academic excellence, creativity, and moral values for building confident, responsible
+                    citizens.
+                </p>
+                <p class="text-[#FF9933] font-semibold text-lg">Motto: "Man Making and Nation Building"</p>
+            </div>
+        </section>
+
+        <!-- Vision & Mission Cards -->
+        <section class="grid md:grid-cols-2 gap-12">
+            <div data-aos="fade-right"
+                class="bg-gradient-to-br from-[#FF9933]/30 to-[#FF9933]/10 p-10 rounded-3xl shadow-2xl hover-3d transition-transform relative overflow-hidden">
+                <h3 class="text-2xl font-bold mb-4 text-[#FF9933]">Our Vision</h3>
+                <p class="text-gray-700 text-justify">To develop responsible, knowledgeable, and morally upright
+                    citizens who positively contribute to society.</p>
+            </div>
+            <div data-aos="fade-left"
+                class="bg-gradient-to-br from-[#3B82F6]/30 to-[#3B82F6]/10 p-10 rounded-3xl shadow-2xl hover-3d transition-transform relative overflow-hidden">
+                <h3 class="text-2xl font-bold mb-4 text-[#3B82F6]">Our Mission</h3>
+                <p class="text-gray-700 text-justify">To provide holistic education balancing academics, values, and
+                    life skills, nurturing leadership and creativity in every student.</p>
+            </div>
+        </section>
+
+        <!-- 3Ds Section -->
+        <section>
+            <h2 class="text-4xl font-extrabold text-gray-800 text-center mb-12" data-aos="fade-up">
+                <span class="block mb-4">Understanding the <span class="text-[#FF9933]">3Ds</span></span>
+                <span class="text-sm bg-[#FF9933] p-2 rounded-2xl text-white">DUTY • DEVOTION • DISCIPLINE</span>
             </h2>
-            <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                A glimpse into our vibrant campus life and unforgettable moments.
-            </p>
-        </div>
+            <div class="mt-20 grid md:grid-cols-3 gap-8" data-aos="fade-up">
 
-        <!-- Image Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="300">
-            <!-- Loop your images -->
-            <img src="./assets/Gallery/1.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(0)">
-            <img src="./assets/Gallery/3.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(1)">
-            <img src="./assets/Gallery/4.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(2)">
-            <img src="./assets/Gallery/6.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(3)">
-            <img src="./assets/Gallery/7.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(4)">
-            <img src="./assets/Gallery/8.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(5)">
-            <img src="./assets/Gallery/9.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(6)">
-            <img src="./assets/Gallery/10.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/11.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/12.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/13.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/14.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/15.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/16.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/17.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/18.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/19.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/20.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <!-- Continue for all images -->
-        </div>
-    </section>
+                <div
+                    class="bg-gradient-to-br from-[#FF9933]/30 to-[#FF9933]/10 p-8 rounded-3xl shadow-2xl hover:scale-105 transition-transform text-center">
+                    <h3 class="text-2xl font-bold text-[#FF9933] mb-4">DUTY (DHARMA)</h3>
+                    <p class="text-gray-700 text-justify">
+                        This refers to performing the duties appropriate for one's stage of life, such as duties to
+                        family, teachers, society, and God, guided by the principle of "Love All and Serve All".
+                    </p>
+                </div>
 
-    <!-- Modal Lightbox -->
-    <div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
-        <!-- Close Button -->
-        <button onclick="closeModal()" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+                <div
+                    class="bg-gradient-to-br from-[#3B82F6]/30 to-[#3B82F6]/10 p-8 rounded-3xl shadow-2xl hover:scale-105 transition-transform text-center">
+                    <h3 class="text-2xl font-bold text-[#3B82F6] mb-4">DEVOTION (BHAKTI)</h3>
+                    <p class="text-gray-700 text-justify">
+                        This is the highest form of love, involving constant worship and contemplation of the divine.
+                    </p>
+                </div>
 
-        <!-- Prev Button -->
-        <button onclick="changeSlide(-1)" class="absolute left-5 text-white text-4xl font-bold px-3">&#10094;</button>
+                <div
+                    class="bg-gradient-to-br from-[#F59E0B]/30 to-[#F59E0B]/10 p-8 rounded-3xl shadow-2xl hover:scale-105 transition-transform text-center">
+                    <h3 class="text-2xl font-bold text-[#F59E0B] mb-4">DISCIPLINE (VAIRAGYA)</h3>
+                    <p class="text-gray-700 text-justify">
+                        This involves performing required actions without deviating from a structured routine and
+                        intention, making it a habit from a young age.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-        <!-- Image -->
-        <img id="lightbox-img" src="" alt="Gallery Large"
-            class="max-h-[80%] max-w-[90%] rounded-lg shadow-2xl transition-all duration-500">
+        <!-- Principal Message Zig-Zag -->
+        <section class="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <img src="./assets/owner.jpg" alt="Principal"
+                    class="rounded-full w-64 h-64 mx-auto md:mx-0 shadow-2xl border-8 border-[#FF9933] hover:scale-105 transition-transform duration-500">
+            </div>
+            <div data-aos="fade-left" class="space-y-6">
+                <h2 class="text-4xl font-extrabold text-gray-800">Principal's <span
+                        class="text-[#FF9933]">Message</span></h2>
+                <p class="text-gray-700 leading-relaxed text-justify">Welcome! Education shapes character and values.
+                    Our teachers nurture creativity, empathy, and leadership to build confident citizens.</p>
+                <p class="font-semibold text-[#FF9933]">- Dr. S. Lakshmi, Principal</p>
+            </div>
+        </section>
 
-        <!-- Next Button -->
-        <button onclick="changeSlide(1)" class="absolute right-5 text-white text-4xl font-bold px-3">&#10095;</button>
-    </div>
+        <!-- Management Team -->
+        <section>
+            <h2 class="text-4xl font-extrabold text-gray-800 text-center mb-16" data-aos="fade-up">Our Management <span
+                    class="text-[#FF9933]">Team</span>
+            </h2>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-12">
+                <div data-aos="fade-up" data-aos-delay="100"
+                    class="bg-white rounded-3xl shadow-2xl hover-3d transition-transform p-8 text-center">
+                    <img src="./assets/owner.jpg" alt="Member"
+                        class="w-32 h-32 mx-auto rounded-full border-4 border-[#FF9933] mb-4 object-cover">
+                    <h3 class="font-bold text-lg text-gray-800">R. Venkataswamy</h3>
+                    <p class="text-gray-600">Correspondent</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200"
+                    class="bg-white rounded-3xl shadow-2xl hover-3d transition-transform p-8 text-center">
+                    <img src="./assets/owner.jpg" alt="Member"
+                        class="w-32 h-32 mx-auto rounded-full border-4 border-[#3B82F6] mb-4 object-cover">
+                    <h3 class="font-bold text-lg text-gray-800">Smt. G. Mariammal</h3>
+                    <p class="text-gray-600">Academic Advisor</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300"
+                    class="bg-white rounded-3xl shadow-2xl hover-3d transition-transform p-8 text-center">
+                    <img src="./assets/owner.jpg" alt="Member"
+                        class="w-32 h-32 mx-auto rounded-full border-4 border-[#F59E0B] mb-4 object-cover">
+                    <h3 class="font-bold text-lg text-gray-800">Sri. K. Raman</h3>
+                    <p class="text-gray-600">Administrator</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-200 pt-12 pb-6 px-6 md:px-24 relative overflow-hidden">
