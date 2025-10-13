@@ -362,3 +362,16 @@ body {
         height: 72px;
     }
 }
+
+/* Extra curicular */
+.activity-card {
+  @apply flex flex-col items-center justify-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500;
+}
+
+.activity-card h4 {
+  @apply mt-4 text-gray-800 font-semibold text-sm md:text-base;
+}
+
+.icon-box {
+  @apply w-16 h-16 flex items-center justify-center rounded-full text-2xl transition-all duration-500 shadow-md;
+}
