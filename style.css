@@ -230,3 +230,63 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+/* popup */
+
+ /* Backdrop */
+  .vvjm-backdrop {
+    backdrop-filter: blur(6px) saturate(1.05);
+    background: linear-gradient(180deg, rgba(17,24,39,0.35), rgba(17,24,39,0.45));
+  }
+
+  /* Card entrance */
+  @keyframes vvjm-entrance {
+    0% { transform: translateY(18px) scale(.98); opacity: 0; }
+    60% { transform: translateY(-6px) scale(1.02); opacity: 1; }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+  }
+
+  /* Subtle floating for left illustration */
+  @keyframes vvjm-float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .vvjm-modal-card { animation: vvjm-entrance 520ms cubic-bezier(.2,.9,.2,1); }
+  .vvjm-left-illu { animation: vvjm-float 4.8s ease-in-out infinite; }
+
+  /* CTA pulse */
+  @keyframes vvjm-cta {
+    0% { box-shadow: 0 8px 30px rgba(255,153,51,0.08); transform: translateY(0); }
+    50% { box-shadow: 0 18px 40px rgba(255,153,51,0.14); transform: translateY(-3px); }
+    100% { box-shadow: 0 8px 30px rgba(255,153,51,0.08); transform: translateY(0); }
+  }
+  .vvjm-cta.pulse { animation: vvjm-cta 2200ms ease-in-out infinite; }
+
+  /* small glassy border for inner box */
+  .vvjm-glass {
+    background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,255,255,0.82));
+    border: 1px solid rgba(255,153,51,0.09);
+    backdrop-filter: blur(2px);
+  }
+
+  /* decorative corner ribbon */
+  .vvjm-ribbon {
+    position: absolute;
+    top: 12px;
+    left: -36px;
+    transform: rotate(-12deg);
+    background: linear-gradient(90deg,#FF9933,#FFD1A8);
+    color: #fff;
+    padding: 6px 56px;
+    font-weight: 700;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    border-radius: 6px;
+    letter-spacing: .6px;
+  }
+
+  /* responsive tweaks */
+  @media (max-width: 768px) {
+    .vvjm-ribbon { left: -16px; padding: 8px 40px; top: 10px; }
+  }

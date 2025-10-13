@@ -143,3 +143,109 @@ const vivekanandaSwiper = new Swiper(".vivekanandaSwiper", {
     speed: 1200,                // Smooth transition speed
     allowTouchMove: false       // Prevent manual swipe
 });
+
+// Modal popup for VVJM Attention
+/* VVJM Popup script - show after 10s, respect "don't show again today" */
+/* Append or paste into ./script.js */
+
+(function () {
+    const MODAL_ID = 'vvjm-modal';
+    const CLOSE_ID = 'vvjm-close';
+    const CTA_ID = 'vvjm-apply';
+    const CHECK_ID = 'vvjm-dont-show';
+    const STORAGE_KEY = 'vvjm_popup_snooze_until';
+
+    const modal = document.getElementById(MODAL_ID);
+    const closeBtn = document.getElementById(CLOSE_ID);
+    const dontShowCheckbox = document.getElementById(CHECK_ID);
+    const cta = document.getElementById(CTA_ID);
+
+    // Helper: check snooze
+    function isSnoozed() {
+        try {
+            const v = localStorage.getItem(STORAGE_KEY);
+            if (!v) return false;
+            const ts = parseInt(v, 10);
+            return Date.now() < ts;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    // Helper: snooze for 24 hours
+    function snoozeFor24h() {
+        const ms24 = 24 * 60 * 60 * 1000;
+        const until = Date.now() + ms24;
+        localStorage.setItem(STORAGE_KEY, String(until));
+    }
+
+    function openModal() {
+        if (!modal) return;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        // trap focus to modal (basic)
+        const focusable = modal.querySelectorAll('a,button,input,textarea,[tabindex]:not([tabindex="-1"])');
+        if (focusable && focusable.length) focusable[0].focus();
+        // close on backdrop click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+        // close on Esc
+        document.addEventListener('keydown', escHandler);
+    }
+
+    function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+        document.removeEventListener('keydown', escHandler);
+    }
+
+    function escHandler(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+            if (dontShowCheckbox.checked) snoozeFor24h();
+        }
+    }
+
+    // close button
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            closeModal();
+            if (dontShowCheckbox.checked) snoozeFor24h();
+        });
+    }
+
+    // CTA: if user clicks Apply, optionally mark snooze (we don't force)
+    if (cta) {
+        cta.addEventListener('click', () => {
+            // If checked, snooze
+            if (dontShowCheckbox.checked) snoozeFor24h();
+            // Allow navigation to admission page naturally
+        });
+    }
+
+    // Show after 10 seconds unless snoozed
+    const SHOW_DELAY = 5000; // ms
+    if (!isSnoozed()) {
+        window.setTimeout(() => {
+            // Extra safety: don't show while loader overlay visible
+            const loader = document.getElementById('loader-overlay');
+            if (loader && !loader.classList.contains('hidden')) {
+                // if loader present, wait until loader hidden or 2 more seconds
+                const observer = new MutationObserver(() => {
+                    if (loader.classList.contains('hidden')) {
+                        observer.disconnect();
+                        openModal();
+                    }
+                });
+                observer.observe(loader, { attributes: true, attributeFilter: ['class'] });
+                // fallback: open after +2s
+                setTimeout(openModal, 2000);
+            } else {
+                openModal();
+            }
+        }, SHOW_DELAY);
+    }
+
+})();
