@@ -129,3 +129,17 @@ function changeSlide(direction) {
     currentIndex = (currentIndex + direction + images.length) % images.length;
     document.getElementById("lightbox-img").src = images[currentIndex];
 }
+
+
+// quotes
+const vivekanandaSwiper = new Swiper(".vivekanandaSwiper", {
+    loop: true,
+    effect: "fade",             // Smooth fade effect
+    fadeEffect: { crossFade: true },
+    autoplay: {
+        delay: 3500,              // 3.5 seconds per quote
+        disableOnInteraction: false,
+    },
+    speed: 1200,                // Smooth transition speed
+    allowTouchMove: false       // Prevent manual swipe
+});
