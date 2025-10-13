@@ -145,94 +145,114 @@ const vivekanandaSwiper = new Swiper(".vivekanandaSwiper", {
 });
 
 // Modal popup for VVJM Attention
-/* VVJM Popup script - show after 10s, respect "don't show again today" */
-/* Append or paste into ./script.js */
-
 (function () {
-    const MODAL_ID = 'vvjm-modal';
-    const CLOSE_ID = 'vvjm-close';
-    const CTA_ID = 'vvjm-apply';
-    const CHECK_ID = 'vvjm-dont-show';
+    const MODAL = document.getElementById('vvjm-modal');
+    const CARD = document.getElementById('vvjm-card');
+    const CLOSE = document.getElementById('vvjm-close');
+    const CTA = document.getElementById('vvjm-apply');
+    const DONT = document.getElementById('vvjm-dont-show');
     const STORAGE_KEY = 'vvjm_popup_snooze_until';
+    const SHOW_DELAY = 2000; // 10 seconds
 
-    const modal = document.getElementById(MODAL_ID);
-    const closeBtn = document.getElementById(CLOSE_ID);
-    const dontShowCheckbox = document.getElementById(CHECK_ID);
-    const cta = document.getElementById(CTA_ID);
+    // focus-trap utilities
+    let lastFocused = null;
+    function getFocusable(el) {
+        return Array.from(el.querySelectorAll('a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'))
+            .filter(x => x.offsetParent !== null);
+    }
 
-    // Helper: check snooze
+    function trapFocus(e) {
+        if (!MODAL || MODAL.getAttribute('aria-hidden') === 'true') return;
+        const focusables = getFocusable(CARD);
+        if (!focusables.length) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+
+        if (e.key === 'Tab') {
+            if (e.shiftKey) { // shift+tab
+                if (document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                }
+            } else { // tab
+                if (document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+        }
+    }
+
+    // snooze logic
     function isSnoozed() {
         try {
             const v = localStorage.getItem(STORAGE_KEY);
             if (!v) return false;
-            const ts = parseInt(v, 10);
-            return Date.now() < ts;
-        } catch (e) {
-            return false;
-        }
+            return Date.now() < parseInt(v, 10);
+        } catch (e) { return false; }
     }
-
-    // Helper: snooze for 24 hours
     function snoozeFor24h() {
         const ms24 = 24 * 60 * 60 * 1000;
-        const until = Date.now() + ms24;
-        localStorage.setItem(STORAGE_KEY, String(until));
+        localStorage.setItem(STORAGE_KEY, String(Date.now() + ms24));
     }
 
     function openModal() {
-        if (!modal) return;
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        // trap focus to modal (basic)
-        const focusable = modal.querySelectorAll('a,button,input,textarea,[tabindex]:not([tabindex="-1"])');
-        if (focusable && focusable.length) focusable[0].focus();
-        // close on backdrop click
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
-        // close on Esc
-        document.addEventListener('keydown', escHandler);
+        if (!MODAL) return;
+        lastFocused = document.activeElement;
+        MODAL.setAttribute('aria-hidden', 'false');
+        MODAL.classList.remove('hidden');
+        MODAL.classList.add('flex');
+        // autofocus first control
+        const focusables = getFocusable(CARD);
+        if (focusables.length) focusables[0].focus();
+        document.addEventListener('keydown', onKeyDown);
     }
 
     function closeModal() {
-        if (!modal) return;
-        modal.classList.remove('flex');
-        modal.classList.add('hidden');
-        document.removeEventListener('keydown', escHandler);
+        if (!MODAL) return;
+        MODAL.setAttribute('aria-hidden', 'true');
+        MODAL.classList.add('hidden');
+        MODAL.classList.remove('flex');
+        document.removeEventListener('keydown', onKeyDown);
+        if (lastFocused && lastFocused.focus) lastFocused.focus();
     }
 
-    function escHandler(e) {
+    function onKeyDown(e) {
         if (e.key === 'Escape') {
+            if (DONT && DONT.checked) snoozeFor24h();
             closeModal();
-            if (dontShowCheckbox.checked) snoozeFor24h();
+        } else if (e.key === 'Tab') {
+            trapFocus(e);
         }
     }
 
-    // close button
-    if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
+    // close handlers
+    if (CLOSE) CLOSE.addEventListener('click', () => {
+        if (DONT && DONT.checked) snoozeFor24h();
+        closeModal();
+    });
+
+    // backdrop click
+    MODAL.addEventListener('click', (e) => {
+        if (e.target === MODAL) {
+            if (DONT && DONT.checked) snoozeFor24h();
             closeModal();
-            if (dontShowCheckbox.checked) snoozeFor24h();
-        });
-    }
+        }
+    });
 
-    // CTA: if user clicks Apply, optionally mark snooze (we don't force)
-    if (cta) {
-        cta.addEventListener('click', () => {
-            // If checked, snooze
-            if (dontShowCheckbox.checked) snoozeFor24h();
-            // Allow navigation to admission page naturally
-        });
-    }
+    // CTA click: optional snooze if checked
+    if (CTA) CTA.addEventListener('click', () => {
+        if (DONT && DONT.checked) snoozeFor24h();
+        // natural navigation to admission.html will occur
+    });
 
-    // Show after 10 seconds unless snoozed
-    const SHOW_DELAY = 5000; // ms
+    // Show after delay if not snoozed
     if (!isSnoozed()) {
-        window.setTimeout(() => {
-            // Extra safety: don't show while loader overlay visible
+        setTimeout(() => {
+            // don't open if another overlay (like loader) present & visible
             const loader = document.getElementById('loader-overlay');
             if (loader && !loader.classList.contains('hidden')) {
-                // if loader present, wait until loader hidden or 2 more seconds
+                // wait for loader hide up to 3s
                 const observer = new MutationObserver(() => {
                     if (loader.classList.contains('hidden')) {
                         observer.disconnect();
@@ -240,12 +260,13 @@ const vivekanandaSwiper = new Swiper(".vivekanandaSwiper", {
                     }
                 });
                 observer.observe(loader, { attributes: true, attributeFilter: ['class'] });
-                // fallback: open after +2s
-                setTimeout(openModal, 2000);
+                setTimeout(openModal, 3000);
             } else {
                 openModal();
             }
         }, SHOW_DELAY);
     }
 
+    // Optional: expose open/close if needed
+    window.VVJMModal = { open: openModal, close: closeModal };
 })();

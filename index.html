@@ -21,16 +21,18 @@
 
 <body class="bg-gradient-to-r from-[#fdf6f0] to-[#ffffff]">
 
-  <div id="vvjm-modal" class="fixed inset-0 z-[1200] hidden items-center justify-center vvjm-backdrop px-4 py-8">
-    <div
+  <!-- VVJM Responsive Modal -->
+  <div id="vvjm-modal" aria-hidden="true" role="dialog" aria-modal="true"
+    class="fixed inset-0 z-[1200] hidden items-center justify-center vvjm-backdrop px-4 py-8">
+    <div id="vvjm-card"
       class="vvjm-modal-card relative grid grid-cols-1 md:grid-cols-10 gap-0 max-w-4xl w-full rounded-3xl overflow-hidden shadow-2xl">
-      <!-- Ribbon -->
+
+      <!-- Ribbon (desktop) -->
       <div class="vvjm-ribbon hidden md:block">Admissions 2025-26</div>
 
-      <!-- Left decorative column -->
+      <!-- Left decorative column (hidden on small) -->
       <div
-        class="md:col-span-4 bg-gradient-to-br from-[#FFF3E0] to-[#FFF7ED] p-6 flex flex-col items-center justify-center">
-        <!-- circular logo placeholder (use real logo if available) -->
+        class="md:col-span-4 hidden md:flex flex-col items-center justify-center bg-gradient-to-br from-[#FFF3E0] to-[#FFF7ED] p-6">
         <div
           class="w-28 h-28 rounded-full bg-white flex items-center justify-center shadow-lg border-4 border-[#FF9933]">
           <img src="./assets/logo.png" alt="VVJM Logo" class="w-20 h-20 object-contain rounded-full">
@@ -41,8 +43,8 @@
           <p class="text-sm text-gray-600 mt-1">Matric Hr Sec School</p>
         </div>
 
-        <!-- small visual: stylized school vector (inline SVG) -->
         <div class="mt-6 w-full flex justify-center">
+          <!-- Small decorative SVG -->
           <svg width="140" height="80" viewBox="0 0 280 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
             <rect x="10" y="48" width="260" height="70" rx="8" fill="#FF9933" opacity="0.12" />
             <path d="M20 90 L140 45 L260 90 V128 H20z" fill="#FF9933" opacity="0.14" />
@@ -52,7 +54,6 @@
           </svg>
         </div>
 
-        <!-- badge -->
         <div class="mt-6 inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white border border-[#FF9933]/10">
           <i class="fa-solid fa-award text-[#FF9933]"></i>
           <span class="text-sm font-semibold text-[#FF9933]">ISO 9001:2015</span>
@@ -61,23 +62,21 @@
 
       <!-- Right content column -->
       <div class="md:col-span-6 p-6 md:p-8 vvjm-glass relative">
-        <!-- close -->
+        <!-- Close button -->
         <button id="vvjm-close" aria-label="Close popup"
-          class="absolute right-4 top-4 text-gray-500 hover:text-gray-800 focus:outline-none">
+          class="absolute right-4 top-4 text-gray-500 hover:text-gray-800 focus:outline-none z-10">
           <i class="fa-solid fa-xmark text-2xl"></i>
         </button>
 
-        <!-- header -->
-        <h3 class="text-lg md:text-2xl font-extrabold text-[#0f172a]">
-          KIND ATTENTION:
-        </h3>
+        <!-- Header -->
+        <h3 class="text-lg md:text-2xl font-extrabold text-[#0f172a]">KIND ATTENTION:</h3>
         <p class="mt-2 md:mt-1 text-sm md:text-base text-gray-700">
           Parents of <span class="font-bold text-[#FF9933]">ANNANAGAR / MGR NAGAR / POLICE COLONY / KUMBAKUDI / NGO
             COLONY</span> —
           with children aged <strong>2+</strong> to <strong>17</strong>.
         </p>
 
-        <!-- highlighted info card -->
+        <!-- Info card -->
         <div class="mt-4 p-4 rounded-lg border border-[#FF9933]/8 bg-white shadow-sm">
           <p class="font-bold text-[#0f172a]">2025-26 ACADEMIC YEAR Admissions open</p>
           <p class="mt-1 text-sm text-gray-600">VVJM PARAMAHAMSA VIDYALAYAM MATRIC HR SEC SCHOOL</p>
@@ -102,7 +101,7 @@
           </a>
         </div>
 
-        <!-- small controls -->
+        <!-- Controls -->
         <div class="mt-4 flex items-center justify-between">
           <label class="inline-flex items-center gap-2 text-sm text-gray-600">
             <input id="vvjm-dont-show" type="checkbox" class="w-4 h-4 rounded border-gray-300">
@@ -112,7 +111,6 @@
           <div class="text-xs text-gray-500">Limited seats — early application recommended.</div>
         </div>
 
-        <!-- extra microcopy -->
         <p class="mt-4 text-xs text-gray-500">
           ISO 9001:2015 • TN Govt Recognised • Contact the office for a guided tour & scholarship info.
         </p>
