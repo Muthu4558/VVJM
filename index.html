@@ -147,20 +147,19 @@
 
   <!-- Navbar -->
   <nav id="navbar"
-    class="bg-white shadow-md w-full fixed left-0 z-40 px-6 md:px-24 py-4 flex justify-between items-center transition-all duration-300">
+    class="bg-gradient-to-b from-black/60 to-transparent backdrop-blur-md w-full fixed left-0 z-40 px-6 md:px-24 py-4 flex justify-between items-center transition-all duration-300">
 
     <!-- Logo -->
     <div class="flex items-center gap-2">
       <a href="./index.html"><img src="./assets/logo.png" alt="School Logo" class="h-16"></a>
       <div>
-        <h1 class="text-1xl md:text-3xl font-bold">VVJM</h1>
-        <p class="text-sm md:text-xl text-gray-500">PARAMAHAMSA VIDYALAYAM</p>
+        <h1 class="text-1xl md:text-3xl font-bold text-white">VVJM</h1>
+        <p class="text-sm md:text-xl text-gray-200">PARAMAHAMSA VIDYALAYAM</p>
       </div>
     </div>
 
     <!-- Desktop Links -->
-    <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
-      <!-- Home Link -->
+    <ul class="hidden md:flex space-x-6 text-white font-medium">
       <li>
         <a href="./index.html"
           class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">
@@ -168,111 +167,91 @@
         </a>
       </li>
 
-      <!-- About Dropdown -->
       <li class="relative group">
         <a href="./about.html" class="flex items-center gap-1 hover:text-[#FF9933] transition-colors duration-300">
           About
           <i class="fa-solid fa-angle-down transform transition-transform duration-300 group-hover:rotate-180"></i>
         </a>
         <div
-          class="dropdown-content absolute top-full left-0 bg-white shadow-md rounded-md p-4 hidden group-hover:block">
+          class="dropdown-content absolute top-full left-0 bg-white/90 backdrop-blur-md shadow-md rounded-md p-4 hidden group-hover:block text-gray-800">
           <ul>
             <li>
               <h2 class="font-bold">About</h2>
             </li>
-            <li><a href="./about.html#Vision"
-                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Vision
-                & Mission</a></li>
-            <li><a href="./about.html#Principal"
-                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Principal’s
-                Message</a></li>
-            <li><a href="./about.html#Management"
-                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Management</a>
-            </li>
+            <li><a href="./about.html#Vision" class="block py-1 hover:text-[#FF9933]">Vision & Mission</a></li>
+            <li><a href="./about.html#Principal" class="block py-1 hover:text-[#FF9933]">Principal’s Message</a></li>
+            <li><a href="./about.html#Management" class="block py-1 hover:text-[#FF9933]">Management</a></li>
+            <li><a href="./faculty.html" class="block py-1 hover:text-[#FF9933]">Faculty</a></li>
           </ul>
         </div>
       </li>
 
-      <!-- Academics Dropdown -->
       <li class="relative group">
         <a href="./academic.html" class="flex items-center gap-1 hover:text-[#FF9933] transition-colors duration-300">
           Academics
           <i class="fa-solid fa-angle-down transform transition-transform duration-300 group-hover:rotate-180"></i>
         </a>
         <div
-          class="dropdown-content absolute top-full left-0 bg-white shadow-md rounded-md p-4 hidden group-hover:block">
+          class="dropdown-content absolute top-full left-0 bg-white/90 backdrop-blur-md shadow-md rounded-md p-4 hidden group-hover:block text-gray-800">
           <ul>
             <h2 class="font-bold">Academics</h2>
-            <li><a href="./academic.html#pre-primary"
-                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Pre-Primary</a>
-            </li>
-            <li><a href="./academic.html#primary"
-                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Primary</a>
-            </li>
-            <li><a href="./academic.html#middle"
-                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Middle</a>
-            </li>
-            <li><a href="./academic.html#senior-secondary"
-                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Senior
-                Secondary</a>
+            <li><a href="./academic.html#pre-primary" class="block py-1 hover:text-[#FF9933]">Pre-Primary</a></li>
+            <li><a href="./academic.html#primary" class="block py-1 hover:text-[#FF9933]">Primary</a></li>
+            <li><a href="./academic.html#middle" class="block py-1 hover:text-[#FF9933]">Middle</a></li>
+            <li><a href="./academic.html#senior-secondary" class="block py-1 hover:text-[#FF9933]">Senior Secondary</a>
             </li>
           </ul>
         </div>
       </li>
 
       <li>
-        <a href="./faculty.html"
-          class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Faculty</a>
-      </li>
-      <li>
         <a href="./gallery.html"
-          class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Gallery</a>
+          class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">
+          Gallery
+        </a>
       </li>
     </ul>
 
     <!-- Mobile Menu Button -->
     <div class="md:hidden">
-      <button id="menu-btn" class="text-gray-800 text-2xl focus:outline-none"><i class="fa-solid fa-bars"></i></button>
+      <button id="menu-btn" class="text-white text-2xl focus:outline-none"><i class="fa-solid fa-bars"></i></button>
     </div>
 
     <!-- Mobile Menu -->
     <ul id="mobile-menu"
-      class="absolute top-full left-0 w-full bg-white flex-col hidden text-gray-700 font-medium md:hidden shadow-md">
+      class="absolute top-full left-0 w-full bg-black/80 backdrop-blur-md flex-col hidden text-white font-medium md:hidden shadow-md">
+      <li><a href="./index.html" class="block px-6 py-3 border-b hover:bg-black/40">Home</a></li>
 
-      <li><a href="./index.html" class="block px-6 py-3 border-b hover:bg-gray-100">Home</a></li>
-
-      <!-- About Dropdown -->
       <li>
-        <button class="w-full text-left px-6 py-3 border-b flex justify-between items-center hover:bg-gray-100"
+        <button class="w-full text-left px-6 py-3 border-b flex justify-between items-center hover:bg-black/40"
           onclick="toggleDropdown('about-mobile', this)">
           About <i class="fa-solid fa-plus transition-transform duration-300"></i>
         </button>
-        <ul id="about-mobile" class="mobile-dropdown bg-gray-50 hidden">
-          <li><a href="./about.html" class="block px-6 py-2 hover:bg-gray-100">About</a></li>
-          <li><a href="./about.html#Vision" class="block px-6 py-2 hover:bg-gray-100">Vision & Mission</a></li>
-          <li><a href="./about.html#Principal" class="block px-6 py-2 hover:bg-gray-100">Principal’s Message</a></li>
-          <li><a href="./about.html#Management" class="block px-6 py-2 hover:bg-gray-100">Management</a></li>
+        <ul id="about-mobile" class="mobile-dropdown bg-black/60 hidden">
+          <li><a href="./about.html" class="block px-6 py-2 hover:bg-black/40">About</a></li>
+          <li><a href="./about.html#Vision" class="block px-6 py-2 hover:bg-black/40">Vision & Mission</a></li>
+          <li><a href="./about.html#Principal" class="block px-6 py-2 hover:bg-black/40">Principal’s Message</a></li>
+          <li><a href="./about.html#Management" class="block px-6 py-2 hover:bg-black/40">Management</a></li>
+          <li><a href="./faculty.html" class="block px-6 py-2 hover:bg-black/40">Faculty</a></li>
         </ul>
       </li>
 
-      <!-- Academics Dropdown -->
       <li>
-        <button class="w-full text-left px-6 py-3 border-b flex justify-between items-center hover:bg-gray-100"
+        <button class="w-full text-left px-6 py-3 border-b flex justify-between items-center hover:bg-black/40"
           onclick="toggleDropdown('academics-mobile', this)">
           Academics <i class="fa-solid fa-plus transition-transform duration-300"></i>
         </button>
-        <ul id="academics-mobile" class="mobile-dropdown bg-gray-50 hidden">
-          <li><a href="./academic.html" class="block px-6 py-2 hover:bg-gray-100">Academics</a></li>
-          <li><a href="./academic.html#pre-primary" class="block px-6 py-2 hover:bg-gray-100">Pre-Primary</a></li>
-          <li><a href="./academic.html#primary" class="block px-6 py-2 hover:bg-gray-100">Primary</a></li>
-          <li><a href="./academic.html#middle" class="block px-6 py-2 hover:bg-gray-100">Middle</a></li>
-          <li><a href="./academic.html#senior-secondary" class="block px-6 py-2 hover:bg-gray-100">Senior Secondary</a>
+        <ul id="academics-mobile" class="mobile-dropdown bg-black/60 hidden">
+          <li><a href="./academic.html" class="block px-6 py-2 hover:bg-black/40">Academics</a></li>
+          <li><a href="./academic.html#pre-primary" class="block px-6 py-2 hover:bg-black/40">Pre-Primary</a></li>
+          <li><a href="./academic.html#primary" class="block px-6 py-2 hover:bg-black/40">Primary</a></li>
+          <li><a href="./academic.html#middle" class="block px-6 py-2 hover:bg-black/40">Middle</a></li>
+          <li><a href="./academic.html#senior-secondary" class="block px-6 py-2 hover:bg-black/40">Senior Secondary</a>
           </li>
         </ul>
       </li>
 
-      <li><a href="./faculty.html" class="block px-6 py-3 border-b hover:bg-gray-100">Faculty</a></li>
-      <li><a href="./gallery.html" class="block px-6 py-3 hover:bg-gray-100">Gallery</a></li>
+      <li><a href="./gallery.html" class="block px-6 py-3 hover:bg-black/40">Gallery</a></li>
     </ul>
   </nav>
 
@@ -296,81 +275,6 @@
       <div class="swiper-pagination"></div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
-    </div>
-  </section>
-
-  <section class="py-16 px-6 md:px-20 mt-20">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-
-      <!-- Left Side Image -->
-      <div class="flex justify-center md:justify-end">
-        <img src="./assets/swami-vivekananda.jpg" alt="Swami Vivekananda"
-          class="rounded-3xl shadow-2xl w-64 sm:w-72 md:w-80 lg:w-[420px] object-cover">
-      </div>
-
-      <!-- Right Side Quotes -->
-      <div class="flex flex-col w-full">
-        <div class="swiper vivekanandaSwiper w-full">
-          <div class="swiper-wrapper text-center md:text-left">
-
-            <!-- Quotes -->
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Education is the manifestation of the perfection already in man."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Knowledge can only be got in one way, the way of experience; there is no other way to know."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "The secret of life is not enjoyment, but education through experience."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "If the poor boy cannot come to education, education must go to him."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "A sapling must be hedged about for protection, but when it becomes a tree, a hedge would be a hindrance."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "To me the very essence of education is the concentration of mind, not the collecting of facts."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Education is not the amount of information that is put into your brain and runs riot there, undigested,
-              all your life."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "The only value of knowledge is in the strengthening, the disciplining, of the mind."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              “Education may be described as a development of faculty, not an accumulation of words, or as a training
-              of individuals to will rightly and efficiently.”
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              “The ass carrying its load of sandalwood knows only the weight and not the value of sandalwood.”
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Strength is life; weakness is death."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Comfort is no test of truth; truth is often far from being comfortable."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Do one thing at a time, and while doing it put your whole soul into it."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Talk to yourself once in a day; otherwise, you may miss meeting an intelligent person."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Fear is death, fear is sin, fear is hell, fear is unrighteousness, fear is wrong life."
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Author -->
-        <h2 class="text-center md:text-end mt-6 font-bold text-gray-800 text-lg md:text-xl">
-          - Swami Vivekananda
-        </h2>
-      </div>
-
     </div>
   </section>
 
@@ -620,6 +524,82 @@
           “Good manners and self-discipline build a graceful life.”
         </p>
       </div>
+    </div>
+  </section>
+
+  <!-- Swami Vivekananda Quotes Section -->  
+  <section class="py-16 px-6 md:px-20 mt-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+
+      <!-- Left Side Image -->
+      <div class="flex justify-center md:justify-end">
+        <img src="./assets/swami-vivekananda.jpg" alt="Swami Vivekananda"
+          class="rounded-3xl shadow-2xl w-64 sm:w-72 md:w-80 lg:w-[420px] object-cover">
+      </div>
+
+      <!-- Right Side Quotes -->
+      <div class="flex flex-col w-full">
+        <div class="swiper vivekanandaSwiper w-full">
+          <div class="swiper-wrapper text-center md:text-left">
+
+            <!-- Quotes -->
+            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+              "Education is the manifestation of the perfection already in man."
+            </div>
+            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+              "Knowledge can only be got in one way, the way of experience; there is no other way to know."
+            </div>
+            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+              "The secret of life is not enjoyment, but education through experience."
+            </div>
+            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+              "If the poor boy cannot come to education, education must go to him."
+            </div>
+            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+              "A sapling must be hedged about for protection, but when it becomes a tree, a hedge would be a hindrance."
+            </div>
+            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+              "To me the very essence of education is the concentration of mind, not the collecting of facts."
+            </div>
+            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+              "Education is not the amount of information that is put into your brain and runs riot there, undigested,
+              all your life."
+            </div>
+            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+              "The only value of knowledge is in the strengthening, the disciplining, of the mind."
+            </div>
+            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+              “Education may be described as a development of faculty, not an accumulation of words, or as a training
+              of individuals to will rightly and efficiently.”
+            </div>
+            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+              “The ass carrying its load of sandalwood knows only the weight and not the value of sandalwood.”
+            </div>
+            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+              "Strength is life; weakness is death."
+            </div>
+            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+              "Comfort is no test of truth; truth is often far from being comfortable."
+            </div>
+            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+              "Do one thing at a time, and while doing it put your whole soul into it."
+            </div>
+            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+              "Talk to yourself once in a day; otherwise, you may miss meeting an intelligent person."
+            </div>
+            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+              "Fear is death, fear is sin, fear is hell, fear is unrighteousness, fear is wrong life."
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Author -->
+        <h2 class="text-center md:text-end mt-6 font-bold text-gray-800 text-lg md:text-xl">
+          - Swami Vivekananda
+        </h2>
+      </div>
+
     </div>
   </section>
 
