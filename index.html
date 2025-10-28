@@ -147,19 +147,20 @@
 
   <!-- Navbar -->
   <nav id="navbar"
-    class="bg-gradient-to-b from-black/60 to-transparent backdrop-blur-md w-full fixed left-0 z-40 px-6 md:px-24 py-4 flex justify-between items-center transition-all duration-300">
+    class="bg-white w-full fixed left-0 z-40 px-6 md:px-24 py-4 flex justify-between items-center transition-all duration-300">
 
     <!-- Logo -->
     <div class="flex items-center gap-2">
       <a href="./index.html"><img src="./assets/logo.png" alt="School Logo" class="h-16"></a>
       <div>
-        <h1 class="text-1xl md:text-3xl font-bold text-white">VVJM</h1>
-        <p class="text-sm md:text-xl text-gray-200">PARAMAHAMSA VIDYALAYAM</p>
+        <h1 class="text-1xl md:text-3xl font-bold">VVJM</h1>
+        <p class="text-sm md:text-xl text-gray-500">PARAMAHAMSA VIDYALAYAM</p>
       </div>
     </div>
 
     <!-- Desktop Links -->
-    <ul class="hidden md:flex space-x-6 text-white font-medium">
+    <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+      <!-- Home Link -->
       <li>
         <a href="./index.html"
           class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">
@@ -167,91 +168,119 @@
         </a>
       </li>
 
+      <!-- About Dropdown -->
       <li class="relative group">
         <a href="./about.html" class="flex items-center gap-1 hover:text-[#FF9933] transition-colors duration-300">
           About
           <i class="fa-solid fa-angle-down transform transition-transform duration-300 group-hover:rotate-180"></i>
         </a>
         <div
-          class="dropdown-content absolute top-full left-0 bg-white/90 backdrop-blur-md shadow-md rounded-md p-4 hidden group-hover:block text-gray-800">
+          class="dropdown-content absolute top-full left-0 bg-white shadow-md rounded-md p-4 hidden group-hover:block">
           <ul>
             <li>
               <h2 class="font-bold">About</h2>
             </li>
-            <li><a href="./about.html#Vision" class="block py-1 hover:text-[#FF9933]">Vision & Mission</a></li>
-            <li><a href="./about.html#Principal" class="block py-1 hover:text-[#FF9933]">Principal’s Message</a></li>
-            <li><a href="./about.html#Management" class="block py-1 hover:text-[#FF9933]">Management</a></li>
-            <li><a href="./faculty.html" class="block py-1 hover:text-[#FF9933]">Faculty</a></li>
+            <li><a href="./about.html#Vision"
+                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Vision
+                & Mission</a></li>
+            <li><a href="./about.html#Principal"
+                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Principal’s
+                Message</a></li>
+            <li><a href="./about.html#Management"
+                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Management</a>
+            </li>
+            <li><a href="./faculty.html"
+                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Faculty</a>
+            </li>
           </ul>
         </div>
       </li>
 
+      <!-- Academics Dropdown -->
       <li class="relative group">
         <a href="./academic.html" class="flex items-center gap-1 hover:text-[#FF9933] transition-colors duration-300">
           Academics
           <i class="fa-solid fa-angle-down transform transition-transform duration-300 group-hover:rotate-180"></i>
         </a>
         <div
-          class="dropdown-content absolute top-full left-0 bg-white/90 backdrop-blur-md shadow-md rounded-md p-4 hidden group-hover:block text-gray-800">
+          class="dropdown-content absolute top-full left-0 bg-white shadow-md rounded-md p-4 hidden group-hover:block">
           <ul>
             <h2 class="font-bold">Academics</h2>
-            <li><a href="./academic.html#pre-primary" class="block py-1 hover:text-[#FF9933]">Pre-Primary</a></li>
-            <li><a href="./academic.html#primary" class="block py-1 hover:text-[#FF9933]">Primary</a></li>
-            <li><a href="./academic.html#middle" class="block py-1 hover:text-[#FF9933]">Middle</a></li>
-            <li><a href="./academic.html#senior-secondary" class="block py-1 hover:text-[#FF9933]">Senior Secondary</a>
+            <li><a href="./academic.html#pre-primary"
+                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Pre-Primary</a>
+            </li>
+            <li><a href="./academic.html#primary"
+                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Primary</a>
+            </li>
+            <li><a href="./academic.html#middle"
+                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Middle</a>
+            </li>
+            <li><a href="./academic.html#senior-secondary"
+                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Senior
+                Secondary</a>
             </li>
           </ul>
         </div>
       </li>
 
+      <!-- <li>
+        <a href="./faculty.html"
+          class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Faculty</a>
+      </li> -->
       <li>
         <a href="./gallery.html"
-          class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">
-          Gallery
-        </a>
+          class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Gallery</a>
       </li>
     </ul>
 
     <!-- Mobile Menu Button -->
     <div class="md:hidden">
-      <button id="menu-btn" class="text-white text-2xl focus:outline-none"><i class="fa-solid fa-bars"></i></button>
+      <button id="menu-btn" class="text-gray-800 text-2xl focus:outline-none"><i class="fa-solid fa-bars"></i></button>
     </div>
 
     <!-- Mobile Menu -->
     <ul id="mobile-menu"
-      class="absolute top-full left-0 w-full bg-black/80 backdrop-blur-md flex-col hidden text-white font-medium md:hidden shadow-md">
-      <li><a href="./index.html" class="block px-6 py-3 border-b hover:bg-black/40">Home</a></li>
+      class="absolute top-full left-0 w-full bg-white flex-col hidden text-gray-700 font-medium md:hidden shadow-md">
 
+      <li><a href="./index.html" class="block px-6 py-3 border-b hover:bg-gray-100">Home</a></li>
+
+      <!-- About Dropdown -->
       <li>
-        <button class="w-full text-left px-6 py-3 border-b flex justify-between items-center hover:bg-black/40"
+        <button class="w-full text-left px-6 py-3 border-b flex justify-between items-center hover:bg-gray-100"
           onclick="toggleDropdown('about-mobile', this)">
           About <i class="fa-solid fa-plus transition-transform duration-300"></i>
         </button>
-        <ul id="about-mobile" class="mobile-dropdown bg-black/60 hidden">
-          <li><a href="./about.html" class="block px-6 py-2 hover:bg-black/40">About</a></li>
-          <li><a href="./about.html#Vision" class="block px-6 py-2 hover:bg-black/40">Vision & Mission</a></li>
-          <li><a href="./about.html#Principal" class="block px-6 py-2 hover:bg-black/40">Principal’s Message</a></li>
-          <li><a href="./about.html#Management" class="block px-6 py-2 hover:bg-black/40">Management</a></li>
-          <li><a href="./faculty.html" class="block px-6 py-2 hover:bg-black/40">Faculty</a></li>
+        <ul id="about-mobile" class="mobile-dropdown bg-gray-50 hidden">
+          <li><a href="./about.html" class="block px-6 py-2 hover:bg-gray-100">About</a></li>
+          <li><a href="./about.html#Vision" class="block px-6 py-2 hover:bg-gray-100">Vision & Mission</a>
+          </li>
+          <li><a href="./about.html#Principal" class="block px-6 py-2 hover:bg-gray-100">Principal’s
+              Message</a></li>
+          <li><a href="./about.html#Management" class="block px-6 py-2 hover:bg-gray-100">Management</a></li>
+          <li><a href="./faculty.html" class="block px-6 py-2 hover:bg-gray-100">Faculty</a></li>
         </ul>
       </li>
 
+      <!-- Academics Dropdown -->
       <li>
-        <button class="w-full text-left px-6 py-3 border-b flex justify-between items-center hover:bg-black/40"
+        <button class="w-full text-left px-6 py-3 border-b flex justify-between items-center hover:bg-gray-100"
           onclick="toggleDropdown('academics-mobile', this)">
           Academics <i class="fa-solid fa-plus transition-transform duration-300"></i>
         </button>
-        <ul id="academics-mobile" class="mobile-dropdown bg-black/60 hidden">
-          <li><a href="./academic.html" class="block px-6 py-2 hover:bg-black/40">Academics</a></li>
-          <li><a href="./academic.html#pre-primary" class="block px-6 py-2 hover:bg-black/40">Pre-Primary</a></li>
-          <li><a href="./academic.html#primary" class="block px-6 py-2 hover:bg-black/40">Primary</a></li>
-          <li><a href="./academic.html#middle" class="block px-6 py-2 hover:bg-black/40">Middle</a></li>
-          <li><a href="./academic.html#senior-secondary" class="block px-6 py-2 hover:bg-black/40">Senior Secondary</a>
+        <ul id="academics-mobile" class="mobile-dropdown bg-gray-50 hidden">
+          <li><a href="./academic.html" class="block px-6 py-2 hover:bg-gray-100">Academics</a></li>
+          <li><a href="./academic.html#pre-primary" class="block px-6 py-2 hover:bg-gray-100">Pre-Primary</a>
+          </li>
+          <li><a href="./academic.html#primary" class="block px-6 py-2 hover:bg-gray-100">Primary</a></li>
+          <li><a href="./academic.html#middle" class="block px-6 py-2 hover:bg-gray-100">Middle</a></li>
+          <li><a href="./academic.html#senior-secondary" class="block px-6 py-2 hover:bg-gray-100">Senior
+              Secondary</a>
           </li>
         </ul>
       </li>
 
-      <li><a href="./gallery.html" class="block px-6 py-3 hover:bg-black/40">Gallery</a></li>
+      <!-- <li><a href="./faculty.html" class="block px-6 py-3 border-b hover:bg-gray-100">Faculty</a></li> -->
+      <li><a href="./gallery.html" class="block px-6 py-3 hover:bg-gray-100">Gallery</a></li>
     </ul>
   </nav>
 

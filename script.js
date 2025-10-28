@@ -1,62 +1,27 @@
 const topBar = document.getElementById("top-bar");
 const navbar = document.getElementById("navbar");
-const menuBtn = document.getElementById("menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
-
 let lastScroll = 0;
 
-// Adjust navbar position below top bar
 function adjustNavbar() {
-  const topBarHeight = topBar ? topBar.offsetHeight : 0;
-  navbar.style.top = `${topBarHeight}px`;
+    const topBarHeight = topBar.offsetHeight;
+    navbar.style.top = `${topBarHeight}px`;
 }
+
 adjustNavbar();
+
 window.addEventListener("resize", adjustNavbar);
 
-// Scroll behavior (hide top bar & make navbar sticky with white bg)
 window.addEventListener("scroll", () => {
-  const currentScroll = window.scrollY;
-
-  if (currentScroll > 50) {
-    navbar.classList.add("bg-white");
-    navbar.classList.remove("bg-transparent");
-  } else {
-    navbar.classList.remove("bg-white");
-    navbar.classList.add("bg-transparent");
-  }
-
-  if (currentScroll > lastScroll && currentScroll > 50) {
-    // Scrolling down — hide top bar
-    if (topBar) topBar.style.top = `-${topBar.offsetHeight}px`;
-    navbar.style.top = "0";
-  } else {
-    // Scrolling up — show top bar
-    if (topBar) topBar.style.top = "0";
-    adjustNavbar();
-  }
-
-  lastScroll = currentScroll;
+    const currentScroll = window.scrollY;
+    if (currentScroll > lastScroll && currentScroll > 50) {
+        topBar.style.top = `-${topBar.offsetHeight}px`; // hide top bar
+        navbar.style.top = "0"; // move navbar to very top
+    } else {
+        topBar.style.top = "0"; // show top bar
+        adjustNavbar(); // put navbar just below top bar
+    }
+    lastScroll = currentScroll;
 });
-
-// Mobile Menu Toggle
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
-  mobileMenu.classList.toggle("flex");
-
-  // Toggle icon between bars and X
-  menuBtn.innerHTML = mobileMenu.classList.contains("hidden")
-    ? '<i class="fa-solid fa-bars text-2xl"></i>'
-    : '<i class="fa-solid fa-xmark text-2xl"></i>';
-});
-
-// Mobile Dropdown Toggle
-function toggleDropdown(id, btn) {
-  const dropdown = document.getElementById(id);
-  const icon = btn.querySelector("i");
-
-  dropdown.classList.toggle("hidden");
-  icon.classList.toggle("rotate-45");
-}
 
 
 // Swiper
@@ -72,16 +37,16 @@ const swiper = new Swiper(".mySwiper", {
 feather.replace();
 
 // Mobile Menu Toggle
-// const menuBtn = document.getElementById("menu-btn");
-// const mobileMenu = document.getElementById("mobile-menu");
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
 
-// menuBtn.addEventListener("click", () => {
-//     mobileMenu.classList.toggle("hidden");
-//     // Toggle icon
-//     menuBtn.innerHTML = mobileMenu.classList.contains("hidden")
-//         ? '<i class="fa-solid fa-bars"></i>'
-//         : '<i class="fa-solid fa-xmark"></i>';
-// });
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+    // Toggle icon
+    menuBtn.innerHTML = mobileMenu.classList.contains("hidden")
+        ? '<i class="fa-solid fa-bars"></i>'
+        : '<i class="fa-solid fa-xmark"></i>';
+});
 
 // Mobile Dropdown Toggle
 function toggleDropdown(id, btn) {
