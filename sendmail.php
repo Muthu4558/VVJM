@@ -28,13 +28,13 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'muthukdm45@gmail.com';
-    $mail->Password   = 'yuxp ptdm gres rhhf';
+    $mail->Username   = 'vvjmmhss@gmail.com';
+    $mail->Password   = 'zkiq hpzc fxgm mewk';
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
-    $mail->setFrom('muthukdm45@gmail.com', 'Website Forms');
-    $mail->addAddress('muthukdm45@gmail.com');
+    $mail->setFrom('vvjmmhss@gmail.com', 'Website Forms');
+    $mail->addAddress('vvjmmhss@gmail.com');
 
     $mail->isHTML(true);
 
@@ -81,12 +81,13 @@ try {
 
     if ($formType === 'admission') {
         $parentName        = htmlspecialchars(trim($_POST['parent_name'] ?? ''));
-        $studentName       = htmlspecialchars(trim($_POST['student_name'] ?? ''));
+        $parentOccupation  = htmlspecialchars(trim($_POST['parent_occupation'] ?? ''));
+        $homeAddress       = htmlspecialchars(trim($_POST['home_address'] ?? ''));
         $mobile            = htmlspecialchars(trim($_POST['mobile'] ?? ''));
         $email             = htmlspecialchars(trim($_POST['email'] ?? ''));
+        $studentName       = htmlspecialchars(trim($_POST['student_name'] ?? ''));
         $dob               = htmlspecialchars(trim($_POST['dob'] ?? ''));
         $admissionStandard = htmlspecialchars(trim($_POST['admission_standard'] ?? ''));
-        $currentClass      = htmlspecialchars(trim($_POST['current_class'] ?? 'Not Provided'));
         $currentSchool     = htmlspecialchars(trim($_POST['current_school'] ?? 'Not Provided'));
 
         if (empty($parentName) || empty($studentName) || empty($email) || empty($mobile)) {
@@ -99,13 +100,14 @@ try {
                 <h2>New Admission Enquiry</h2>
                 <p>An admission enquiry has been submitted through the website. The details are below:</p>
                 <table class="data-table">
-                    <tr><td class="label">Parent\'s Name:</td><td>' . $parentName . '</td></tr>
-                    <tr><td class="label">Student\'s Name:</td><td>' . $studentName . '</td></tr>
+                    <tr><td class="label">Name of Father / Mother / Guardian:</td><td>' . $parentName . '</td></tr>
+                    <tr><td class="label">Occupation:</td><td>' . $parentOccupation . '</td></tr>
+                    <tr><td class="label">Home Address:</td><td>' . $homeAddress . '</td></tr>
                     <tr><td class="label">Mobile Number:</td><td>' . $mobile . '</td></tr>
                     <tr><td class="label">Email Address:</td><td>' . $email . '</td></tr>
+                    <tr><td class="label">Student\'s Name:</td><td>' . $studentName . '</td></tr>
                     <tr><td class="label">Student\'s DOB:</td><td>' . $dob . '</td></tr>
                     <tr><td class="label">Seeking Admission For:</td><td>' . $admissionStandard . '</td></tr>
-                    <tr><td class="label">Current Class:</td><td>' . $currentClass . '</td></tr>
                     <tr><td class="label">Current School:</td><td>' . $currentSchool . '</td></tr>
                 </table>
         ' . $templateFooter;

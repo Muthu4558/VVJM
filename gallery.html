@@ -22,7 +22,7 @@
 <body class="bg-gradient-to-r from-[#fdf6f0] to-[#ffffff]">
 
     <!-- Loader Overlay -->
-    <div id="loader-overlay">
+    <!-- <div id="loader-overlay">
         <div class="loader-container">
             <div class="circle-loader">
                 <img src="./assets/logo.png" alt="VVJM Logo" class="loader-logo">
@@ -33,7 +33,7 @@
             </div>
             <div class="loader-percentage" id="loader-percentage">0%</div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Top Admission Bar -->
     <div id="top-bar"
@@ -238,7 +238,7 @@
                 <div class="p-8 text-center md:text-left">
                     <h3 class="text-2xl font-bold text-[#FF9933] mb-2">IBR Achiever</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        We are proud of our students who have made their mark in the <span class="font-semibold">India
+                        We are proud of our student -name- who made his mark in the <span class="font-semibold">India
                             Book of Records</span> — a testament to VVJM’s excellence in nurturing talent and
                         determination.
                     </p>
@@ -403,6 +403,9 @@
         <!-- Image Grid -->
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="300">
             <!-- Loop your images -->
+            <img src="./assets/Gallery/23.jpg" alt="Gallery"
+                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
+                onclick="openModal(19)">
             <img src="./assets/Gallery/1.jpg" alt="Gallery"
                 class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
                 onclick="openModal(0)">
@@ -457,6 +460,10 @@
             <img src="./assets/Gallery/20.jpg" alt="Gallery"
                 class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
                 onclick="openModal(17)">
+            <img src="./assets/Gallery/22.jpg" alt="Gallery"
+                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
+                onclick="openModal(18)">
+            <!-- start with 20 -->
             <!-- Continue for all images -->
         </div>
     </section>
@@ -664,6 +671,50 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const images = [
+                "./assets/Gallery/1.jpg",
+                "./assets/Gallery/3.jpg",
+                "./assets/Gallery/4.jpg",
+                "./assets/Gallery/6.jpg",
+                "./assets/Gallery/7.jpg",
+                "./assets/Gallery/8.jpg",
+                "./assets/Gallery/9.jpg",
+                "./assets/Gallery/10.jpg",
+                "./assets/Gallery/11.jpg",
+                "./assets/Gallery/12.jpg",
+                "./assets/Gallery/13.jpg",
+                "./assets/Gallery/14.jpg",
+                "./assets/Gallery/15.jpg",
+                "./assets/Gallery/16.jpg",
+                "./assets/Gallery/17.jpg",
+                "./assets/Gallery/18.jpg",
+                "./assets/Gallery/19.jpg",
+                "./assets/Gallery/20.jpg",
+                "./assets/Gallery/22.jpg",
+                "./assets/Gallery/23.jpg",
+            ];
+
+            let currentIndex = 0;
+
+            window.openModal = function (index) {
+                currentIndex = index;
+                document.getElementById("lightbox").classList.remove("hidden");
+                document.getElementById("lightbox-img").src = images[currentIndex];
+            };
+
+            window.closeModal = function () {
+                document.getElementById("lightbox").classList.add("hidden");
+            };
+
+            window.changeSlide = function (direction) {
+                currentIndex = (currentIndex + direction + images.length) % images.length;
+                document.getElementById("lightbox-img").src = images[currentIndex];
+            };
+        });
+
+    </script>
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>

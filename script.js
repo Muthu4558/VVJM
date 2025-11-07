@@ -25,16 +25,43 @@ window.addEventListener("scroll", () => {
 
 
 // Swiper
-const swiper = new Swiper(".mySwiper", {
+// const swiper = new Swiper(".mySwiper", {
+//     loop: true,
+//     pagination: { el: ".swiper-pagination", clickable: true },
+//     navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+//     autoplay: { delay: 4000, disableOnInteraction: false },
+//     effect: "fade",
+//     fadeEffect: { crossFade: true },
+// });
+
+feather.replace();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Hero/Main Swiper
+  new Swiper(".mySwiper", {
     loop: true,
     pagination: { el: ".swiper-pagination", clickable: true },
     navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
     autoplay: { delay: 4000, disableOnInteraction: false },
     effect: "fade",
     fadeEffect: { crossFade: true },
+  });
+
+  // Vivekananda Quotes Swiper
+  new Swiper(".vivekanandaSwiper", {
+    loop: true,
+    effect: "fade",
+    fadeEffect: { crossFade: true },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    speed: 1200,
+    allowTouchMove: false,
+  });
 });
 
-feather.replace();
 
 // Mobile Menu Toggle
 const menuBtn = document.getElementById("menu-btn");
@@ -92,58 +119,58 @@ const interval = setInterval(() => {
 
 
 
-// Gallery
-const images = [
-    "./assets/Gallery/1.jpg",
-    "./assets/Gallery/3.jpg",
-    "./assets/Gallery/4.jpg",
-    "./assets/Gallery/6.jpg",
-    "./assets/Gallery/7.jpg",
-    "./assets/Gallery/8.jpg",
-    "./assets/Gallery/9.jpg",
-    "./assets/Gallery/10.jpg",
-    "./assets/Gallery/11.jpg",
-    "./assets/Gallery/12.jpg",
-    "./assets/Gallery/13.jpg",
-    "./assets/Gallery/14.jpg",
-    "./assets/Gallery/15.jpg",
-    "./assets/Gallery/16.jpg",
-    "./assets/Gallery/17.jpg",
-    "./assets/Gallery/18.jpg",
-    "./assets/Gallery/19.jpg",
-    "./assets/Gallery/20.jpg"
-];
+// // Gallery
+// const images = [
+//     "./assets/Gallery/1.jpg",
+//     "./assets/Gallery/3.jpg",
+//     "./assets/Gallery/4.jpg",
+//     "./assets/Gallery/6.jpg",
+//     "./assets/Gallery/7.jpg",
+//     "./assets/Gallery/8.jpg",
+//     "./assets/Gallery/9.jpg",
+//     "./assets/Gallery/10.jpg",
+//     "./assets/Gallery/11.jpg",
+//     "./assets/Gallery/12.jpg",
+//     "./assets/Gallery/13.jpg",
+//     "./assets/Gallery/14.jpg",
+//     "./assets/Gallery/15.jpg",
+//     "./assets/Gallery/16.jpg",
+//     "./assets/Gallery/17.jpg",
+//     "./assets/Gallery/18.jpg",
+//     "./assets/Gallery/19.jpg",
+//     "./assets/Gallery/20.jpg"
+// ];
 
-let currentIndex = 0;
+// let currentIndex = 0;
 
-function openModal(index) {
-    currentIndex = index;
-    document.getElementById("lightbox").classList.remove("hidden");
-    document.getElementById("lightbox-img").src = images[currentIndex];
-}
+// function openModal(index) {
+//     currentIndex = index;
+//     document.getElementById("lightbox").classList.remove("hidden");
+//     document.getElementById("lightbox-img").src = images[currentIndex];
+// }
 
-function closeModal() {
-    document.getElementById("lightbox").classList.add("hidden");
-}
+// function closeModal() {
+//     document.getElementById("lightbox").classList.add("hidden");
+// }
 
-function changeSlide(direction) {
-    currentIndex = (currentIndex + direction + images.length) % images.length;
-    document.getElementById("lightbox-img").src = images[currentIndex];
-}
+// function changeSlide(direction) {
+//     currentIndex = (currentIndex + direction + images.length) % images.length;
+//     document.getElementById("lightbox-img").src = images[currentIndex];
+// }
 
 
 // quotes
-const vivekanandaSwiper = new Swiper(".vivekanandaSwiper", {
-    loop: true,
-    effect: "fade",             // Smooth fade effect
-    fadeEffect: { crossFade: true },
-    autoplay: {
-        delay: 3500,              // 3.5 seconds per quote
-        disableOnInteraction: false,
-    },
-    speed: 1200,                // Smooth transition speed
-    allowTouchMove: false       // Prevent manual swipe
-});
+// const vivekanandaSwiper = new Swiper(".vivekanandaSwiper", {
+//     loop: true,
+//     effect: "fade",             // Smooth fade effect
+//     fadeEffect: { crossFade: true },
+//     autoplay: {
+//         delay: 3500,              // 3.5 seconds per quote
+//         disableOnInteraction: false,
+//     },
+//     speed: 1200,                // Smooth transition speed
+//     allowTouchMove: false       // Prevent manual swipe
+// });
 
 // Modal popup for VVJM Attention
 (function () {

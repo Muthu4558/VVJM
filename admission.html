@@ -221,8 +221,8 @@
     <section
         class="relative pt-20 pb-20 px-6 md:px-24 bg-gradient-to-r from-[#FF9933]/10 via-white to-[#FF9933]/10 overflow-hidden">
         <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl p-10" data-aos="fade-up">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8" data-aos="zoom-in">Admission Enquiry <span
-                    class="text-[#FF9933]">Form</span></h2>
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8" data-aos="zoom-in">ADMISSION REGISTRATION<span
+                    class="text-[#FF9933]"> FORM</span></h2>
 
             <form id="admissionForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -231,23 +231,31 @@
 
                 <!-- Parent's Name -->
                 <div data-aos="fade-right" data-aos-delay="100">
-                    <label class="block font-medium text-gray-700 mb-1" for="parent_name">Parent's Name</label>
+                    <label class="block font-medium text-gray-700 mb-1" for="parent_name">Name of Father / Mother / Guardian <span class="text-red-500">*</span></label>
                     <input type="text" id="parent_name" name="parent_name" placeholder="Enter parent's name"
                         class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
                         required>
                 </div>
 
-                <!-- Student's Name -->
-                <div data-aos="fade-left" data-aos-delay="150">
-                    <label class="block font-medium text-gray-700 mb-1" for="student_name">Student's Name</label>
-                    <input type="text" id="student_name" name="student_name" placeholder="Enter student's name"
+                <!-- Parent's occupation -->
+                <div data-aos="fade-right" data-aos-delay="100">
+                    <label class="block font-medium text-gray-700 mb-1" for="parent_occupation">Occupation <span class="text-red-500">*</span></label>
+                    <input type="text" id="parent_occupation" name="parent_occupation" placeholder="Enter parent's Occupation"
+                        class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
+                        required>
+                </div>
+
+                <!-- Parent's occupation -->
+                <div data-aos="fade-right" data-aos-delay="100">
+                    <label class="block font-medium text-gray-700 mb-1" for="home_address">Home Address <span class="text-red-500">*</span></label>
+                    <input type="text" id="home_address" name="home_address" placeholder="Enter Home Address"
                         class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
                         required>
                 </div>
 
                 <!-- Mobile Number -->
                 <div data-aos="fade-right" data-aos-delay="200">
-                    <label class="block font-medium text-gray-700 mb-1" for="mobile">Mobile Number</label>
+                    <label class="block font-medium text-gray-700 mb-1" for="mobile">Mobile Number <span class="text-red-500">*</span></label>
                     <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" pattern="[0-9]{10}"
                         class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
                         required>
@@ -263,9 +271,17 @@
                         required>
                 </div>
 
+                <!-- Student's Name -->
+                <div data-aos="fade-left" data-aos-delay="150">
+                    <label class="block font-medium text-gray-700 mb-1" for="student_name">Student's Name <span class="text-red-500">*</span></label>
+                    <input type="text" id="student_name" name="student_name" placeholder="Enter student's name"
+                        class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
+                        required>
+                </div>
+
                 <!-- DOB -->
                 <div data-aos="fade-right" data-aos-delay="300">
-                    <label class="block font-medium text-gray-700 mb-1" for="dob">Student's DOB</label>
+                    <label class="block font-medium text-gray-700 mb-1" for="dob">Student's Date of Birth <span class="text-red-500">*</span></label>
                     <input type="date" id="dob" name="dob"
                         class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
                         required>
@@ -273,12 +289,13 @@
 
                 <!-- Admission Standard -->
                 <div data-aos="fade-left" data-aos-delay="350">
-                    <label class="block font-medium text-gray-700 mb-1" for="admission_standard">Admission
-                        Standard</label>
+                    <label class="block font-medium text-gray-700 mb-1" for="admission_standard">Seeking Admission to
+                        ........ Standard <span class="text-red-500">*</span></label>
                     <select id="admission_standard" name="admission_standard"
                         class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none"
                         required>
                         <option value="">Select a standard</option>
+                        <option>Pre-LKG</option>
                         <option>LKG</option>
                         <option>UKG</option>
                         <option>1st</option>
@@ -290,22 +307,23 @@
                         <option>7th</option>
                         <option>8th</option>
                         <option>9th</option>
+                        <option>10th</option>
                         <option>11th</option>
                     </select>
                 </div>
 
                 <!-- Current Class -->
-                <div data-aos="fade-right" data-aos-delay="400">
+                <!-- <div data-aos="fade-right" data-aos-delay="400">
                     <label class="block font-medium text-gray-700 mb-1" for="current_class">Currently Studying in
                         Class</label>
                     <input type="text" id="current_class" name="current_class" placeholder="Enter current class"
                         class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none">
-                </div>
+                </div> -->
 
                 <!-- Current School -->
                 <div data-aos="fade-left" data-aos-delay="450">
-                    <label class="block font-medium text-gray-700 mb-1" for="current_school">Currently Studying
-                        School</label>
+                    <label class="block font-medium text-gray-700 mb-1" for="current_school">School Where the Student is Studying at Present
+                        <span class="text-red-500">*</span></label>
                     <input type="text" id="current_school" name="current_school" placeholder="Enter school name"
                         class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#FF9933] focus:outline-none">
                 </div>
