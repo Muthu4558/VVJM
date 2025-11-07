@@ -28,13 +28,13 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'vvjmmhss@gmail.com';
-    $mail->Password   = 'wyjr cvmw bbir jqcr';
+    $mail->Username   = 'muthukdm45@gmail.com';
+    $mail->Password   = 'yuxp ptdm gres rhhf';
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
-    $mail->setFrom('vvjmmhss@gmail.com', 'Website Forms');
-    $mail->addAddress('vvjmmhss@gmail.com');
+    $mail->setFrom('muthukdm45@gmail.com', 'Website Forms');
+    $mail->addAddress('muthukdm45@gmail.com');
 
     $mail->isHTML(true);
 

@@ -226,6 +226,9 @@
 
             <form id="admissionForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
+                <!-- This hidden field tells sendmail.php which logic to run. It's crucial. -->
+                <input type="hidden" name="formType" value="admission">
+
                 <!-- Parent's Name -->
                 <div data-aos="fade-right" data-aos-delay="100">
                     <label class="block font-medium text-gray-700 mb-1" for="parent_name">Parent's Name</label>
