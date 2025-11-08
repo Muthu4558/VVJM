@@ -401,71 +401,36 @@
         </div>
 
         <!-- Image Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="300">
-            <!-- Loop your images -->
-            <img src="./assets/Gallery/23.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(19)">
-            <img src="./assets/Gallery/1.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(0)">
-            <img src="./assets/Gallery/3.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(1)">
-            <img src="./assets/Gallery/4.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(2)">
-            <img src="./assets/Gallery/6.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(3)">
-            <img src="./assets/Gallery/7.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(4)">
-            <img src="./assets/Gallery/8.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(5)">
-            <img src="./assets/Gallery/9.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(6)">
-            <img src="./assets/Gallery/10.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(7)">
-            <img src="./assets/Gallery/11.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(8)">
-            <img src="./assets/Gallery/12.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(9)">
-            <img src="./assets/Gallery/13.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(10)">
-            <img src="./assets/Gallery/14.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(11)">
-            <img src="./assets/Gallery/15.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(12)">
-            <img src="./assets/Gallery/16.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(13)">
-            <img src="./assets/Gallery/17.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(14)">
-            <img src="./assets/Gallery/18.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(15)">
-            <img src="./assets/Gallery/19.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(16)">
-            <img src="./assets/Gallery/20.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(17)">
-            <img src="./assets/Gallery/22.jpg" alt="Gallery"
-                class="w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500"
-                onclick="openModal(18)">
-            <!-- start with 20 -->
-            <!-- Continue for all images -->
+        <!-- GALLERY GRID -->
+        <div id="gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 p-6"></div>
+
+        <!-- LIGHTBOX MODAL -->
+        <div id="lightbox"
+            class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm transition-opacity duration-300">
+            <button id="lightbox-close"
+                class="absolute top-6 right-6 text-white bg-black/50 hover:bg-black/80 rounded-full p-3 text-2xl z-50 transition">
+                ✕
+            </button>
+
+            <button id="lightbox-prev"
+                class="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-black/40 hover:bg-black/70 rounded-full p-3 text-3xl z-50 transition">
+                ‹
+            </button>
+
+            <button id="lightbox-next"
+                class="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-black/40 hover:bg-black/70 rounded-full p-3 text-3xl z-50 transition">
+                ›
+            </button>
+
+            <div class="max-w-5xl w-full px-4 flex justify-center">
+                <img id="lightbox-img" src="" alt="Gallery Image"
+                    class="max-h-[85vh] w-auto rounded-xl shadow-2xl opacity-0 scale-95 transition-all duration-500 ease-in-out" />
+            </div>
+            <div id="lightbox-counter"
+                class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-sm bg-black/50 px-3 py-1 rounded-full">
+            </div>
         </div>
+
     </section>
 
     <!-- Modal Lightbox -->
@@ -673,48 +638,103 @@
     <script src="./script.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const images = [
-                "./assets/Gallery/1.jpg",
-                "./assets/Gallery/3.jpg",
-                "./assets/Gallery/4.jpg",
-                "./assets/Gallery/6.jpg",
-                "./assets/Gallery/7.jpg",
-                "./assets/Gallery/8.jpg",
-                "./assets/Gallery/9.jpg",
-                "./assets/Gallery/10.jpg",
-                "./assets/Gallery/11.jpg",
-                "./assets/Gallery/12.jpg",
-                "./assets/Gallery/13.jpg",
-                "./assets/Gallery/14.jpg",
-                "./assets/Gallery/15.jpg",
-                "./assets/Gallery/16.jpg",
-                "./assets/Gallery/17.jpg",
-                "./assets/Gallery/18.jpg",
-                "./assets/Gallery/19.jpg",
-                "./assets/Gallery/20.jpg",
-                "./assets/Gallery/22.jpg",
-                "./assets/Gallery/23.jpg",
-            ];
+            // Create gallery image list
+            const images = Array.from({ length: 85 }, (_, i) => `./assets/Gallery/${i + 1}.jpg`);
+            const galleryGrid = document.getElementById("gallery-grid");
 
+            // Create image thumbnails dynamically
+            images.forEach((src, idx) => {
+                const img = document.createElement("img");
+                img.src = src;
+                img.alt = `Gallery ${idx + 1}`;
+                img.loading = "lazy";
+                img.className =
+                    "w-full h-48 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transform transition duration-500";
+                img.addEventListener("click", () => openModal(idx));
+                galleryGrid.appendChild(img);
+            });
+
+            // Modal elements
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const closeBtn = document.getElementById("lightbox-close");
+            const prevBtn = document.getElementById("lightbox-prev");
+            const nextBtn = document.getElementById("lightbox-next");
+            const counter = document.getElementById("lightbox-counter");
             let currentIndex = 0;
 
-            window.openModal = function (index) {
+            // Functions
+            function openModal(index) {
                 currentIndex = index;
-                document.getElementById("lightbox").classList.remove("hidden");
-                document.getElementById("lightbox-img").src = images[currentIndex];
-            };
+                updateLightbox();
+                lightbox.classList.remove("hidden");
+                lightbox.classList.add("flex");
+                document.body.style.overflow = "hidden"; // disable background scroll
+                setTimeout(() => {
+                    lightboxImg.classList.remove("opacity-0", "scale-95");
+                    lightboxImg.classList.add("opacity-100", "scale-100");
+                }, 50);
+            }
 
-            window.closeModal = function () {
-                document.getElementById("lightbox").classList.add("hidden");
-            };
+            function closeModal() {
+                lightboxImg.classList.add("opacity-0", "scale-95");
+                lightboxImg.classList.remove("opacity-100", "scale-100");
+                setTimeout(() => {
+                    lightbox.classList.add("hidden");
+                    lightbox.classList.remove("flex");
+                    document.body.style.overflow = "";
+                }, 200);
+            }
 
-            window.changeSlide = function (direction) {
+            function changeSlide(direction) {
                 currentIndex = (currentIndex + direction + images.length) % images.length;
-                document.getElementById("lightbox-img").src = images[currentIndex];
-            };
-        });
+                updateLightbox(true);
+            }
 
+            function updateLightbox(smooth = false) {
+                counter.textContent = `${currentIndex + 1} / ${images.length}`;
+                if (smooth) {
+                    lightboxImg.classList.add("opacity-0", "scale-95");
+                    setTimeout(() => {
+                        lightboxImg.src = images[currentIndex];
+                        lightboxImg.onload = () => {
+                            lightboxImg.classList.remove("opacity-0", "scale-95");
+                            lightboxImg.classList.add("opacity-100", "scale-100");
+                        };
+                    }, 150);
+                } else {
+                    lightboxImg.src = images[currentIndex];
+                    lightboxImg.onload = () => {
+                        lightboxImg.classList.add("opacity-100", "scale-100");
+                    };
+                }
+            }
+
+            // Button listeners
+            closeBtn.addEventListener("click", closeModal);
+            prevBtn.addEventListener("click", () => changeSlide(-1));
+            nextBtn.addEventListener("click", () => changeSlide(1));
+
+            // Backdrop click
+            lightbox.addEventListener("click", (e) => {
+                if (e.target === lightbox) closeModal();
+            });
+
+            // Keyboard controls
+            document.addEventListener("keydown", (e) => {
+                if (lightbox.classList.contains("hidden")) return;
+                if (e.key === "Escape") closeModal();
+                if (e.key === "ArrowLeft") changeSlide(-1);
+                if (e.key === "ArrowRight") changeSlide(1);
+            });
+
+            // Expose functions (optional)
+            window.openModal = openModal;
+            window.closeModal = closeModal;
+            window.changeSlide = changeSlide;
+        });
     </script>
+
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
