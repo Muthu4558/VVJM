@@ -2,731 +2,1055 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" href="./assets/logo.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VVJM School</title>
-  <link rel="stylesheet" href="./style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/feather-icons"></script>
-  <!-- AOS CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="icon" href="./assets/images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VVJM School</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
 </head>
 
 <body class="bg-gradient-to-r from-[#fdf6f0] to-[#ffffff]">
 
-  <!-- VVJM Responsive Modal -->
-  <div id="vvjm-modal" aria-hidden="true" role="dialog" aria-modal="true"
-    class="fixed inset-0 z-[1200] hidden items-center justify-center vvjm-backdrop px-4 py-8">
-    <div id="vvjm-card"
-      class="vvjm-modal-card relative grid grid-cols-1 md:grid-cols-10 gap-0 max-w-4xl w-full rounded-3xl overflow-hidden shadow-2xl">
+    <!-- VVJM Responsive Modal -->
+    <div id="vvjm-modal" aria-hidden="true" role="dialog" aria-modal="true"
+        class="fixed inset-0 z-[1200] hidden items-center justify-center vvjm-backdrop px-4 py-8">
+        <div id="vvjm-card"
+            class="vvjm-modal-card relative grid grid-cols-1 md:grid-cols-10 gap-0 max-w-4xl w-full rounded-3xl overflow-hidden shadow-2xl">
 
-      <div class="vvjm-ribbon hidden md:block">Admissions open 2025-26</div>
+            <div class="vvjm-ribbon hidden md:block">Admissions open 2025-26</div>
 
-      <div
-        class="md:col-span-4 hidden md:flex flex-col items-center justify-center bg-gradient-to-br from-[#FFF3E0] to-[#FFF7ED] p-6">
-        <div
-          class="w-28 h-28 rounded-full bg-white flex items-center justify-center shadow-lg border-4 border-[#FF9933]">
-          <img src="./assets/logo.png" alt="VVJM Logo" class="w-20 h-20 object-contain rounded-full">
+            <div
+                class="md:col-span-4 hidden md:flex flex-col items-center justify-center bg-gradient-to-br from-[#FFF3E0] to-[#FFF7ED] p-6">
+                <div
+                    class="w-28 h-28 rounded-full bg-white flex items-center justify-center shadow-lg border-4 border-[#FF9933]">
+                    <img src="./assets/images/logo.png" alt="VVJM Logo" class="w-20 h-20 object-contain rounded-full">
+                </div>
+
+                <div class="mt-4 text-center px-2">
+                    <h4 class="text-lg font-bold text-[#1f2937]">VVJM Paramahamsa Vidyalayam</h4>
+                    <p class="text-sm text-gray-600 mt-1">Matric Hr Sec School</p>
+                </div>
+
+                <div class="mt-6 w-full flex justify-center">
+                    <svg width="140" height="80" viewBox="0 0 280 160" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden>
+                        <rect x="10" y="48" width="260" height="70" rx="8" fill="#FF9933" opacity="0.12" />
+                        <path d="M20 90 L140 45 L260 90 V128 H20z" fill="#FF9933" opacity="0.14" />
+                        <rect x="40" y="98" width="36" height="22" rx="3" fill="#fff" opacity="0.95" />
+                        <rect x="120" y="98" width="36" height="22" rx="3" fill="#fff" opacity="0.95" />
+                        <rect x="200" y="98" width="36" height="22" rx="3" fill="#fff" opacity="0.95" />
+                    </svg>
+                </div>
+
+                <div
+                    class="mt-6 inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white border border-[#FF9933]/10">
+                    <i class="fa-solid fa-award text-[#FF9933]"></i>
+                    <span class="text-sm font-semibold text-[#FF9933]">ISO 9001:2015</span>
+                </div>
+            </div>
+
+            <div class="md:col-span-6 p-6 md:p-8 vvjm-glass relative">
+                <button id="vvjm-close" aria-label="Close popup"
+                    class="absolute right-4 top-4 text-gray-500 hover:text-gray-800 focus:outline-none z-10">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+
+                <h3 class="text-lg md:text-2xl font-extrabold text-[#0f172a]">KIND ATTENTION:</h3>
+                <p class="mt-2 md:mt-1 text-sm md:text-base text-gray-700">
+                    Parents of <span class="font-bold text-[#FF9933]">ANNANAGAR / MGR NAGAR / POLICE COLONY / KUMBAKUDI
+                        / NGO
+                        COLONY</span> —
+                    with children aged <strong>2+</strong> to <strong>17</strong>.
+                </p>
+
+                <div class="mt-4 p-4 rounded-lg border border-[#FF9933]/8 bg-white shadow-sm">
+                    <p class="font-bold text-[#0f172a]">2025-26 ACADEMIC YEAR Admissions open</p>
+                    <p class="mt-1 text-sm text-gray-600">VVJM PARAMAHAMSA VIDYALAYAM MATRIC HR SEC SCHOOL</p>
+                    <p class="text-sm text-gray-600">I.T PARK, POLICE COLONY, ANNA NAGAR, TIRUCHIRAPPALLI - 620026</p>
+
+                    <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div class="text-sm"><span class="font-semibold">Classes:</span> PREKG, LKG, UKG, I STD to XII
+                            STD</div>
+                        <div class="text-sm"><span class="font-semibold">Hours:</span> 9.00 a.m — 4.30 p.m <br>(All
+                            Working Days)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 flex flex-col sm:flex-row sm:items-center gap-3">
+                    <a href="./admission.html" id="vvjm-apply"
+                        class="vvjm-cta pulse inline-flex items-center justify-center gap-3 px-5 py-3 rounded-full bg-gradient-to-r from-[#FF9933] to-[#FF6A00] text-white font-semibold shadow-lg hover:opacity-95 transition-transform">
+                        <i class="fa-solid fa-school"></i> Apply Now
+                    </a>
+
+                    <a href="tel:+91 7695888803"
+                        class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full border border-gray-200 text-gray-700 hover:bg-gray-50">
+                        <i class="fa-solid fa-phone"></i> +91 76958 88803
+
+                    </a>
+                </div>
+
+                <div class="mt-4 flex items-center justify-between">
+                    <label class="inline-flex items-center gap-2 text-sm text-gray-600">
+                        <input id="vvjm-dont-show" type="checkbox" class="w-4 h-4 rounded border-gray-300">
+                        Don't show again today
+                    </label>
+
+                    <div class="text-xs text-gray-500">Limited seats — individual attention guaranteed apply at your
+                        earliest and
+                        we assured your wards bright future.</div>
+                </div>
+
+                <p class="mt-4 text-xs text-gray-500">
+                    ISO 9001:2015 Certified • TN Govt Recognised • Contact the office for a guided tour & scholarship
+                    info.
+                </p>
+            </div>
         </div>
-
-        <div class="mt-4 text-center px-2">
-          <h4 class="text-lg font-bold text-[#1f2937]">VVJM Paramahamsa Vidyalayam</h4>
-          <p class="text-sm text-gray-600 mt-1">Matric Hr Sec School</p>
-        </div>
-
-        <div class="mt-6 w-full flex justify-center">
-          <svg width="140" height="80" viewBox="0 0 280 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-            <rect x="10" y="48" width="260" height="70" rx="8" fill="#FF9933" opacity="0.12" />
-            <path d="M20 90 L140 45 L260 90 V128 H20z" fill="#FF9933" opacity="0.14" />
-            <rect x="40" y="98" width="36" height="22" rx="3" fill="#fff" opacity="0.95" />
-            <rect x="120" y="98" width="36" height="22" rx="3" fill="#fff" opacity="0.95" />
-            <rect x="200" y="98" width="36" height="22" rx="3" fill="#fff" opacity="0.95" />
-          </svg>
-        </div>
-
-        <div class="mt-6 inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white border border-[#FF9933]/10">
-          <i class="fa-solid fa-award text-[#FF9933]"></i>
-          <span class="text-sm font-semibold text-[#FF9933]">ISO 9001:2015</span>
-        </div>
-      </div>
-
-      <div class="md:col-span-6 p-6 md:p-8 vvjm-glass relative">
-        <button id="vvjm-close" aria-label="Close popup"
-          class="absolute right-4 top-4 text-gray-500 hover:text-gray-800 focus:outline-none z-10">
-          <i class="fa-solid fa-xmark text-2xl"></i>
-        </button>
-
-        <h3 class="text-lg md:text-2xl font-extrabold text-[#0f172a]">KIND ATTENTION:</h3>
-        <p class="mt-2 md:mt-1 text-sm md:text-base text-gray-700">
-          Parents of <span class="font-bold text-[#FF9933]">ANNANAGAR / MGR NAGAR / POLICE COLONY / KUMBAKUDI / NGO
-            COLONY</span> —
-          with children aged <strong>2+</strong> to <strong>17</strong>.
-        </p>
-
-        <div class="mt-4 p-4 rounded-lg border border-[#FF9933]/8 bg-white shadow-sm">
-          <p class="font-bold text-[#0f172a]">2025-26 ACADEMIC YEAR Admissions open</p>
-          <p class="mt-1 text-sm text-gray-600">VVJM PARAMAHAMSA VIDYALAYAM MATRIC HR SEC SCHOOL</p>
-          <p class="text-sm text-gray-600">I.T PARK, POLICE COLONY, ANNA NAGAR, TIRUCHIRAPPALLI - 620026</p>
-
-          <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
-            <div class="text-sm"><span class="font-semibold">Classes:</span> PREKG, LKG, UKG, I STD to XII STD</div>
-            <div class="text-sm"><span class="font-semibold">Hours:</span> 9.00 a.m — 4.30 p.m <br>(All Working Days)</div>
-          </div>
-        </div>
-
-        <div class="mt-5 flex flex-col sm:flex-row sm:items-center gap-3">
-          <a href="./admission.html" id="vvjm-apply"
-            class="vvjm-cta pulse inline-flex items-center justify-center gap-3 px-5 py-3 rounded-full bg-gradient-to-r from-[#FF9933] to-[#FF6A00] text-white font-semibold shadow-lg hover:opacity-95 transition-transform">
-            <i class="fa-solid fa-school"></i> Apply Now
-          </a>
-
-          <a href="tel:+91 7695888803"
-            class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full border border-gray-200 text-gray-700 hover:bg-gray-50">
-            <i class="fa-solid fa-phone"></i> +91 76958 88803
-
-          </a>
-        </div>
-
-        <div class="mt-4 flex items-center justify-between">
-          <label class="inline-flex items-center gap-2 text-sm text-gray-600">
-            <input id="vvjm-dont-show" type="checkbox" class="w-4 h-4 rounded border-gray-300">
-            Don't show again today
-          </label>
-
-          <div class="text-xs text-gray-500">Limited seats — individual attention guaranteed apply at your earliest and we assured your wards bright future.</div>
-        </div>
-
-        <p class="mt-4 text-xs text-gray-500">
-          ISO 9001:2015 Certified • TN Govt Recognised • Contact the office for a guided tour & scholarship info.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Loader Overlay -->
-  <div id="loader-overlay">
-    <div class="loader-container">
-      <div class="circle-loader">
-        <img src="./assets/logo.png" alt="VVJM Logo" class="loader-logo">
-        <svg class="progress-ring" viewBox="0 0 160 160">
-          <circle class="progress-ring__circle" stroke="#FF9933" stroke-width="6" fill="transparent" r="70" cx="80"
-            cy="80" />
-        </svg>
-      </div>
-      <div class="loader-percentage" id="loader-percentage">0%</div>
-    </div>
-  </div>
-
-  <!-- Top Admission Bar -->
-  <div id="top-bar"
-    class="bg-black w-full fixed top-0 left-0 z-50 flex justify-between items-center px-4 py-1 transition-all duration-300">
-    <div class="text-[#FF9933] font-medium flex items-center gap-2">
-      <span><i class="fa-solid fa-phone"></i></span> +91 76958 88801
-    </div>
-    <div class="hidden md:block text-sm text-white">
-      An ISO 9001:2015 Certified School since 2017
-    </div>
-    <a href="./admission.html" class="bg-[#FF9933] hover:bg-[#B87333] text-white px-4 py-1 rounded">Admission Open</a>
-  </div>
-
-  <!-- Navbar -->
-  <nav id="navbar"
-    class="bg-white w-full fixed left-0 z-40 px-6 md:px-24 py-4 flex justify-between items-center transition-all duration-300">
-
-    <!-- Logo -->
-    <div class="flex items-center gap-2">
-      <a href="./index.html"><img src="./assets/logo.png" alt="School Logo" class="h-16"></a>
-      <div>
-        <h1 class="text-1xl md:text-3xl font-bold">VVJM</h1>
-        <p class="text-sm md:text-xl text-gray-500">PARAMAHAMSA VIDYALAYAM</p>
-      </div>
     </div>
 
-    <!-- Desktop Links -->
-    <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
-      <!-- Home Link -->
-      <li>
-        <a href="./index.html"
-          class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">
-          Home
-        </a>
-      </li>
+    <!-- Loader Overlay -->
+    <div id="loader-overlay">
+        <div class="loader-container">
+            <div class="circle-loader">
+                <img src="./assets/images/logo.png" alt="VVJM Logo" class="loader-logo">
+                <svg class="progress-ring" viewBox="0 0 160 160">
+                    <circle class="progress-ring__circle" stroke="#FF9933" stroke-width="6" fill="transparent" r="70"
+                        cx="80" cy="80" />
+                </svg>
+            </div>
+            <div class="loader-percentage" id="loader-percentage">0%</div>
+        </div>
+    </div>
 
-      <!-- About Dropdown -->
-      <li class="relative group">
-        <a href="./about.html" class="flex items-center gap-1 hover:text-[#FF9933] transition-colors duration-300">
-          About
-          <i class="fa-solid fa-angle-down transform transition-transform duration-300 group-hover:rotate-180"></i>
-        </a>
-        <div
-          class="dropdown-content absolute top-full left-0 bg-white shadow-md rounded-md p-4 hidden group-hover:block">
-          <ul>
+    <!-- Top Admission Bar -->
+    <div id="top-bar"
+        class="bg-black w-full fixed top-0 left-0 z-50 flex justify-between items-center px-4 py-1 transition-all duration-300">
+        <div class="text-[#FF9933] font-medium flex items-center gap-2">
+            <span><i class="fa-solid fa-phone"></i></span> +91 76958 88801
+        </div>
+        <div class="hidden md:block text-sm text-white">
+            An ISO 9001:2015 Certified School since 2017
+        </div>
+        <a href="./admission.html" class="bg-[#FF9933] hover:bg-[#B87333] text-white px-4 py-1 rounded">Admission
+            Open</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="bg-white w-full fixed left-0 z-40 px-6 md:px-24 py-4 flex justify-between items-center transition-all duration-300">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+            <a href="./index.html"><img src="./assets/images/logo.png" alt="School Logo" class="h-16"></a>
+            <div>
+                <h1 class="text-1xl md:text-3xl font-bold">VVJM</h1>
+                <p class="text-sm md:text-xl text-gray-500">PARAMAHAMSA VIDYALAYAM</p>
+            </div>
+        </div>
+
+        <!-- Desktop Links -->
+        <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+            <!-- Home Link -->
             <li>
-              <h2 class="font-bold">About</h2>
+                <a href="./index.html"
+                    class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">
+                    Home
+                </a>
             </li>
-            <li><a href="./about.html#Vision"
-                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Vision
-                & Mission</a></li>
-            <li><a href="./about.html#Principal"
-                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Principal’s
-                Message</a></li>
-            <li><a href="./about.html#Management"
-                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Management</a>
-            </li>
-            <li><a href="./faculty.html"
-                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Faculty</a>
-            </li>
-          </ul>
-        </div>
-      </li>
 
-      <!-- Academics Dropdown -->
-      <li class="relative group">
-        <a href="./academic.html" class="flex items-center gap-1 hover:text-[#FF9933] transition-colors duration-300">
-          Academics
-          <i class="fa-solid fa-angle-down transform transition-transform duration-300 group-hover:rotate-180"></i>
-        </a>
-        <div
-          class="dropdown-content absolute top-full left-0 bg-white shadow-md rounded-md p-4 hidden group-hover:block">
-          <ul>
-            <h2 class="font-bold">Academics</h2>
-            <li><a href="./academic.html#pre-primary"
-                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Pre-Primary</a>
+            <!-- About Dropdown -->
+            <li class="relative group">
+                <a href="./about.html"
+                    class="flex items-center gap-1 hover:text-[#FF9933] transition-colors duration-300">
+                    About
+                    <i
+                        class="fa-solid fa-angle-down transform transition-transform duration-300 group-hover:rotate-180"></i>
+                </a>
+                <div
+                    class="dropdown-content absolute top-full left-0 bg-white shadow-md rounded-md p-4 hidden group-hover:block">
+                    <ul>
+                        <li>
+                            <h2 class="font-bold">About</h2>
+                        </li>
+                        <li><a href="./about.html#Vision"
+                                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Vision
+                                & Mission</a></li>
+                        <li><a href="./about.html#Principal"
+                                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Principal’s
+                                Message</a></li>
+                        <li><a href="./about.html#Management"
+                                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Management</a>
+                        </li>
+                        <li><a href="./faculty.html"
+                                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Faculty</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
-            <li><a href="./academic.html#primary"
-                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Primary</a>
-            </li>
-            <li><a href="./academic.html#middle"
-                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Middle</a>
-            </li>
-            <li><a href="./academic.html#senior-secondary"
-                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Senior
-                Secondary</a>
-            </li>
-          </ul>
-        </div>
-      </li>
 
-      <!-- <li>
+            <!-- Academics Dropdown -->
+            <li class="relative group">
+                <a href="./academic.html"
+                    class="flex items-center gap-1 hover:text-[#FF9933] transition-colors duration-300">
+                    Academics
+                    <i
+                        class="fa-solid fa-angle-down transform transition-transform duration-300 group-hover:rotate-180"></i>
+                </a>
+                <div
+                    class="dropdown-content absolute top-full left-0 bg-white shadow-md rounded-md p-4 hidden group-hover:block">
+                    <ul>
+                        <h2 class="font-bold">Academics</h2>
+                        <li><a href="./academic.html#pre-primary"
+                                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Pre-Primary</a>
+                        </li>
+                        <li><a href="./academic.html#primary"
+                                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Primary</a>
+                        </li>
+                        <li><a href="./academic.html#middle"
+                                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Middle</a>
+                        </li>
+                        <li><a href="./academic.html#senior-secondary"
+                                class="block py-1 hover:text-[#FF9933] relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Senior
+                                Secondary</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- <li>
         <a href="./faculty.html"
           class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Faculty</a>
       </li> -->
-      <li>
-        <a href="./gallery.html"
-          class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Gallery</a>
-      </li>
-    </ul>
-
-    <!-- Mobile Menu Button -->
-    <div class="md:hidden">
-      <button id="menu-btn" class="text-gray-800 text-2xl focus:outline-none"><i class="fa-solid fa-bars"></i></button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <ul id="mobile-menu"
-      class="absolute top-full left-0 w-full bg-white flex-col hidden text-gray-700 font-medium md:hidden shadow-md">
-
-      <li><a href="./index.html" class="block px-6 py-3 border-b hover:bg-gray-100">Home</a></li>
-
-      <!-- About Dropdown -->
-      <li>
-        <button class="w-full text-left px-6 py-3 border-b flex justify-between items-center hover:bg-gray-100"
-          onclick="toggleDropdown('about-mobile', this)">
-          About <i class="fa-solid fa-plus transition-transform duration-300"></i>
-        </button>
-        <ul id="about-mobile" class="mobile-dropdown bg-gray-50 hidden">
-          <li><a href="./about.html" class="block px-6 py-2 hover:bg-gray-100">About</a></li>
-          <li><a href="./about.html#Vision" class="block px-6 py-2 hover:bg-gray-100">Vision & Mission</a>
-          </li>
-          <li><a href="./about.html#Principal" class="block px-6 py-2 hover:bg-gray-100">Principal’s
-              Message</a></li>
-          <li><a href="./about.html#Management" class="block px-6 py-2 hover:bg-gray-100">Management</a></li>
-          <li><a href="./faculty.html" class="block px-6 py-2 hover:bg-gray-100">Faculty</a></li>
+            <li>
+                <a href="./gallery.html"
+                    class="relative hover:text-[#FF9933] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#FF9933] after:transition-all after:duration-500 hover:after:w-full">Gallery</a>
+            </li>
         </ul>
-      </li>
 
-      <!-- Academics Dropdown -->
-      <li>
-        <button class="w-full text-left px-6 py-3 border-b flex justify-between items-center hover:bg-gray-100"
-          onclick="toggleDropdown('academics-mobile', this)">
-          Academics <i class="fa-solid fa-plus transition-transform duration-300"></i>
-        </button>
-        <ul id="academics-mobile" class="mobile-dropdown bg-gray-50 hidden">
-          <li><a href="./academic.html" class="block px-6 py-2 hover:bg-gray-100">Academics</a></li>
-          <li><a href="./academic.html#pre-primary" class="block px-6 py-2 hover:bg-gray-100">Pre-Primary</a>
-          </li>
-          <li><a href="./academic.html#primary" class="block px-6 py-2 hover:bg-gray-100">Primary</a></li>
-          <li><a href="./academic.html#middle" class="block px-6 py-2 hover:bg-gray-100">Middle</a></li>
-          <li><a href="./academic.html#senior-secondary" class="block px-6 py-2 hover:bg-gray-100">Senior
-              Secondary</a>
-          </li>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="text-gray-800 text-2xl focus:outline-none"><i
+                    class="fa-solid fa-bars"></i></button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu"
+            class="absolute top-full left-0 w-full bg-white flex-col hidden text-gray-700 font-medium md:hidden shadow-md">
+
+            <li><a href="./index.html" class="block px-6 py-3 border-b hover:bg-gray-100">Home</a></li>
+
+            <!-- About Dropdown -->
+            <li>
+                <button class="w-full text-left px-6 py-3 border-b flex justify-between items-center hover:bg-gray-100"
+                    onclick="toggleDropdown('about-mobile', this)">
+                    About <i class="fa-solid fa-plus transition-transform duration-300"></i>
+                </button>
+                <ul id="about-mobile" class="mobile-dropdown bg-gray-50 hidden">
+                    <li><a href="./about.html" class="block px-6 py-2 hover:bg-gray-100">About</a></li>
+                    <li><a href="./about.html#Vision" class="block px-6 py-2 hover:bg-gray-100">Vision & Mission</a>
+                    </li>
+                    <li><a href="./about.html#Principal" class="block px-6 py-2 hover:bg-gray-100">Principal’s
+                            Message</a></li>
+                    <li><a href="./about.html#Management" class="block px-6 py-2 hover:bg-gray-100">Management</a></li>
+                    <li><a href="./faculty.html" class="block px-6 py-2 hover:bg-gray-100">Faculty</a></li>
+                </ul>
+            </li>
+
+            <!-- Academics Dropdown -->
+            <li>
+                <button class="w-full text-left px-6 py-3 border-b flex justify-between items-center hover:bg-gray-100"
+                    onclick="toggleDropdown('academics-mobile', this)">
+                    Academics <i class="fa-solid fa-plus transition-transform duration-300"></i>
+                </button>
+                <ul id="academics-mobile" class="mobile-dropdown bg-gray-50 hidden">
+                    <li><a href="./academic.html" class="block px-6 py-2 hover:bg-gray-100">Academics</a></li>
+                    <li><a href="./academic.html#pre-primary" class="block px-6 py-2 hover:bg-gray-100">Pre-Primary</a>
+                    </li>
+                    <li><a href="./academic.html#primary" class="block px-6 py-2 hover:bg-gray-100">Primary</a></li>
+                    <li><a href="./academic.html#middle" class="block px-6 py-2 hover:bg-gray-100">Middle</a></li>
+                    <li><a href="./academic.html#senior-secondary" class="block px-6 py-2 hover:bg-gray-100">Senior
+                            Secondary</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- <li><a href="./faculty.html" class="block px-6 py-3 border-b hover:bg-gray-100">Faculty</a></li> -->
+            <li><a href="./gallery.html" class="block px-6 py-3 hover:bg-gray-100">Gallery</a></li>
         </ul>
-      </li>
+    </nav>
 
-      <!-- <li><a href="./faculty.html" class="block px-6 py-3 border-b hover:bg-gray-100">Faculty</a></li> -->
-      <li><a href="./gallery.html" class="block px-6 py-3 hover:bg-gray-100">Gallery</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero Swiper Section -->
-  <section class="relative pt-24">
-    <div class="swiper mySwiper h-screen">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="./assets/hero-1.jpg" class="w-full h-screen object-cover">
+    <!-- Hero Swiper Section -->
+    <section class="relative pt-24">
+        <div class="swiper mySwiper h-screen">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./assets/images/hero-1.jpg" class="w-full h-screen object-cover">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/images/hero-2.jpg" class="w-full h-screen object-cover">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/images/hero-3.jpg" class="w-full h-screen object-cover">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/images/1.jpg" class="w-full h-screen object-cover">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
-        <div class="swiper-slide">
-          <img src="./assets/hero-2.jpg" class="w-full h-screen object-cover">
+    </section>
+
+    <!-- Motto -->
+    <section class="py-16 px-6 md:px-12 lg:px-24" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
+            <!-- LEFT: Textual content -->
+            <div class="space-y-6" data-aos="fade-right" data-aos-delay="80">
+                <div class="inline-flex items-center gap-3" data-aos="fade-down" data-aos-delay="120">
+                    <span
+                        class="px-3 py-1 rounded-full bg-gradient-to-r from-[#FF9933] to-[#FF6A00] text-white text-sm font-semibold">Established
+                        1993</span>
+                    <span class="text-sm text-slate-500">ISO 9001:2015 • Matric Hr Sec School</span>
+                </div>
+
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight" data-aos="fade-up"
+                    data-aos-delay="160">
+                    VVJM PARAMAHAMSA <span class="text-[#FF9933]">VIDYALAYAM</span>
+                </h2>
+
+                <p class="text-sm sm:text-base text-slate-600 font-medium uppercase tracking-wider" data-aos="fade-up"
+                    data-aos-delay="200">
+                    I.T Park, Annanagar, Tiruchirappalli — PRE KG → XII STD
+                </p>
+
+                <p class="text-slate-700 text-base leading-relaxed" data-aos="fade-up" data-aos-delay="240">
+                    Established on <strong>04 July 1993</strong>, our school provides Value-based Quality Education to
+                    the younger generation, right from PRE KG, LKG, UKG, I STD to XII STD. Education is based on the
+                    twin ideals of Swami Vivekananda:
+                    <em class="font-semibold">“The Man Making and The Nation Building.”</em>
+                </p>
+
+                <!-- Feature grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" data-aos="fade-up" data-aos-delay="280">
+                    <div class="flex gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm items-start"
+                        data-aos="fade-right" data-aos-delay="320">
+                        <div
+                            class="flex-none w-12 h-12 rounded-lg grid place-items-center bg-[#FFF6ED] border border-[#FFE3C4]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" aria-hidden>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                    d="M12 8v4l3 3" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Motto</h4>
+                            <p class="text-sm text-slate-600 font-semibold">Duty · Devotion · Discipline</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm items-start"
+                        data-aos="fade-left" data-aos-delay="340">
+                        <div
+                            class="flex-none w-12 h-12 rounded-lg grid place-items-center bg-[#F0FBFF] border border-[#CEEFFF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" aria-hidden>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Achievements</h4>
+                            <p class="text-sm text-slate-600">• 100% Results Year after Year in SSLC & HSLC <br> • An
+                                ISO 9001:2015 Certified Organization since 2017.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick facts -->
+                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm" data-aos="fade-up" data-aos-delay="380">
+                    <li class="flex items-start gap-2" data-aos="fade-up" data-aos-delay="420">
+                        <span class="mt-1 inline-flex w-3 h-3 rounded-full bg-[#FF9933]"></span>
+                        <span class="text-slate-700">Pre KG — XII</span>
+                    </li>
+                    <li class="flex items-start gap-2" data-aos="fade-up" data-aos-delay="460">
+                        <span class="mt-1 inline-flex w-3 h-3 rounded-full bg-[#3B82F6]"></span>
+                        <span class="text-slate-700">Holistic development</span>
+                    </li>
+                    <li class="flex items-start gap-2" data-aos="fade-up" data-aos-delay="500">
+                        <span class="mt-1 inline-flex w-3 h-3 rounded-full bg-[#10B981]"></span>
+                        <span class="text-slate-700">Co-curricular focus</span>
+                    </li>
+                </ul>
+
+                <!-- CTA -->
+                <div class="mt-2" data-aos="zoom-in" data-aos-delay="540">
+                    <a href="./admission.html"
+                        class="inline-flex items-center gap-3 px-5 py-3 bg-[#0F172A] text-white rounded-full font-semibold shadow hover:scale-[1.01] transition">
+                        Enquire / Admissions
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" aria-hidden>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT: Image card with elegant overlay + contact card -->
+            <div class="space-y-5" data-aos="fade-left" data-aos-delay="120">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-slate-100" data-aos="zoom-in"
+                    data-aos-delay="180">
+                    <img src="./assets/images/hero-1.jpg" alt="VVJM School building"
+                        class="w-full h-80 sm:h-96 object-cover transition-transform duration-700 hover:scale-105"
+                        loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 mix-blend-multiply">
+                    </div>
+                    <div
+                        class="absolute left-6 bottom-6 bg-white/90 rounded-xl p-4 backdrop-blur-sm border border-slate-100 w-[86%] sm:w-[72%]">
+                        <p class="text-sm text-slate-800 font-semibold">“The Man Making and The Nation Building”</p>
+                        <p class="text-xs text-slate-600 mt-1">Value-based education — discipline, character & academic
+                            excellence.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-3 items-center p-4 rounded-xl bg-gradient-to-r from-white to-slate-50 border border-slate-100 shadow-sm"
+                    data-aos="fade-up" data-aos-delay="240">
+                    <div class="flex-none">
+                        <div class="w-14 h-14 rounded-lg grid place-items-center bg-[#FFFAF0] border border-[#FFEDD5]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" aria-hidden>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                    d="M2 8.5A2.5 2.5 0 014.5 6h15A2.5 2.5 0 0122 8.5v7A2.5 2.5 0 0119.5 18h-15A2.5 2.5 0 012 15.5v-7z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-sm font-semibold text-slate-900">Want a visit or details?</p>
+                        <p class="text-xs text-slate-600">
+                            Call:
+                            <span class="font-medium text-slate-800">+91-76958 88801</span>
+                        </p>
+                    </div>
+
+                    <div>
+                        <a href="tel:+917695888801"
+                            class="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-[#FF9933] text-white text-sm font-semibold shadow-sm hover:scale-[1.02] transition">
+                            Contact
+                        </a>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <div class="swiper-slide">
-          <img src="./assets/hero-3.jpg" class="w-full h-screen object-cover">
+    </section>
+
+    <!-- About -->
+    <section class="py-20 px-6 md:px-24 overflow-hidden" data-aos="fade-up" aria-labelledby="about-vvjm">
+
+        <div class="max-w-7xl mx-auto flex flex-col space-y-12">
+            <!-- top: about + news -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+                <!-- LEFT: About -->
+                <div class="space-y-6 w-full" data-aos="fade-left" aria-labelledby="about-title">
+                    <h2 id="about-title" class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">
+                        About VVJM Paramahamsa <span class="text-[#FF9933]">Vidyalayam</span>
+                    </h2>
+
+                    <!-- decorative underline -->
+                    <div class="w-28 mt-2 grad-underline rounded-full"></div>
+
+                    <p class="text-gray-700 leading-relaxed text-justify mt-4">
+                        Established in 1993, <span class="font-semibold text-[#FF9933]">VVJM Paramahamsa
+                            Vidyalayam</span> is a
+                        leading educational institution in Tiruchirappalli, dedicated to providing value-based quality
+                        education. We
+                        offer a comprehensive curriculum for students from Pre-KG through to Higher Secondary, guided by
+                        the ideals of
+                        Swami Vivekananda and cared for by highly qualified teachers.
+                    </p>
+
+                    <p class="text-gray-700 text-justify mt-4" data-aos="fade-left" data-aos-delay="200">
+                        Our school shapes the younger generation with a strong foundation in academics, values, and
+                        discipline,
+                        ensuring holistic growth and preparation for meeting future challenges.
+                    </p>
+                </div>
+
+                <!-- RIGHT: News & Updates (unchanged content, styled to match) -->
+                <aside class="relative w-full h-80 bg-white shadow-2xl rounded-2xl border overflow-hidden"
+                    data-aos="zoom-in" aria-label="News and updates">
+                    <!-- header -->
+                    <div
+                        class="absolute top-0 left-0 w-full bg-[#FF9933] text-white text-lg font-semibold py-2 px-4 flex items-center z-10">
+                        <!-- bullhorn svg -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" aria-hidden>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M5 11h.01M19 11a4 4 0 01-4 4H8l-4 3V8l4 3h7a4 4 0 014 4z" />
+                        </svg>
+                        News & Updates
+                    </div>
+
+                    <!-- content -->
+                    <div class="news-container pt-12 h-full px-6 pb-4">
+                        <ul class="news-list space-y-4 text-gray-800 font-medium">
+                            <li><i class="fas fa-user-graduate mr-2"></i> Admissions open for Academic Year 2025-26.
+                            </li>
+                            <li><i class="fas fa-trophy mr-2"></i> Our students secured 100% pass in the Board Exams.
+                            </li>
+                            <li><i class="fas fa-book mr-2"></i> New library block inaugurated.</li>
+                            <li><i class="fas fa-football-ball mr-2"></i> Annual Sports Meet scheduled for October 15th.
+                            </li>
+                            <li><i class="fas fa-theater-masks mr-2"></i> Cultural Fest coming soon – stay tuned!</li>
+                            <li><i class="fas fa-tree mr-2"></i> Eco Club launched a tree plantation drive.</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- bottom: 4 cards in a single row (responsive). content unchanged -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-6" data-aos="fade-up">
+
+                <!-- Card 1 -->
+                <div
+                    class="relative group rounded-2xl p-6 overflow-hidden glass border-l-4 border-[#F59E0B] shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02]">
+                    <div
+                        class="absolute -right-10 -top-10 w-36 h-36 rounded-full opacity-20 blur-3xl bg-gradient-to-tr from-[#F59E0B] to-transparent">
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="flex-none w-12 h-12 rounded-lg grid place-items-center bg-white/80 text-[#F59E0B] text-2xl shadow-md group-hover:rotate-[10deg] transition">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-1">CORE IDEALS</h4>
+                            <p class="text-gray-600 text-sm leading-snug">The Man-making &amp;The Nation-building, Duty,
+                                Devotion, Discipline</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 text-xs text-slate-500 flex items-center justify-between">
+                        <span class="inline-flex items-center gap-2 text-[#F59E0B]">
+                            <i class="fa-solid fa-calendar-days"></i> Established 1993
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="relative group rounded-2xl p-6 overflow-hidden glass border-l-4 border-[#0EA5E9] shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02]">
+                    <div
+                        class="absolute -left-12 -bottom-8 w-36 h-36 rounded-full opacity-20 blur-3xl bg-gradient-to-br from-[#0EA5E9] to-transparent">
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="flex-none w-12 h-12 rounded-lg grid place-items-center bg-white/80 text-[#0EA5E9] text-2xl shadow-md group-hover:rotate-[10deg] transition">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-1">ACCREDITATIONS</h4>
+                            <p class="text-gray-600 text-sm">• Qualified Brand</p>
+                            <p class="text-gray-600 text-sm">• An ISO 9001:2015 Certified Institution</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 text-xs text-slate-500 flex items-center justify-between">
+                        <span class="text-[#0EA5E9]"><i class="fa-solid fa-certificate"></i> ISO 9001:2015</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="relative group rounded-2xl p-6 overflow-hidden glass border-l-4 border-[#22C55E] shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02]">
+                    <div
+                        class="absolute -right-8 -top-6 w-36 h-36 rounded-full opacity-20 blur-3xl bg-gradient-to-tr from-[#22C55E] to-transparent">
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="flex-none w-12 h-12 rounded-lg grid place-items-center bg-white/80 text-[#22C55E] text-2xl shadow-md group-hover:rotate-[10deg] transition">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-1">ACADEMIC EXCELLENCE</h4>
+                            <p class="text-gray-600 text-sm leading-snug">Consistent 100% Results in the Government
+                                board examinations</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 text-xs text-slate-500 flex items-center justify-between">
+                        <span class="text-[#22C55E]"><i class="fa-solid fa-graduation-cap"></i> Board Results</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="relative group rounded-2xl p-6 overflow-hidden glass border-l-4 border-[#EF4444] shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02]">
+                    <div
+                        class="absolute -left-10 -top-6 w-36 h-36 rounded-full opacity-20 blur-3xl bg-gradient-to-tl from-[#EF4444] to-transparent">
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="flex-none w-12 h-12 rounded-lg grid place-items-center bg-white/80 text-[#EF4444] text-2xl shadow-md group-hover:rotate-[10deg] transition">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-1">CURRICULUM</h4>
+                            <p class="text-gray-600 text-sm leading-snug">Comprehensive Pre-KG to Higher Secondary
+                                program</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 text-xs text-slate-500 flex items-center justify-between">
+                        <span class="text-[#EF4444]"><i class="fa-solid fa-school"></i> Pre KG → XII</span>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-        <div class="swiper-slide">
-          <img src="./assets/1.jpg" class="w-full h-screen object-cover">
+    </section>
+
+    <!-- Academic -->
+    <section class="py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden">
+
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Heading: centered -->
+            <div class="text-center mb-8">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800" data-aos="fade-up">
+                    Academic Excellence & <span class="text-[#FF9933]">Guidance</span>
+                </h2>
+                <div class="mt-4 flex justify-center">
+                    <div class="h-1 w-28 rounded-full bg-gradient-to-r from-[#FF9933] to-[#FF6A00]" data-aos="fade-up"
+                        data-aos-delay="80"></div>
+                </div>
+            </div>
+
+            <!-- Two-column row: left content / right achievements -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+
+                <!-- LEFT: content (unchanged text) -->
+                <div class="space-y-6" data-aos="fade-right" data-aos-delay="100">
+                    <p class="text-gray-700 leading-relaxed text-justify text-base">
+                        This School runs with twin ideals as envisaged by Swami Vivekananda: providing
+                        <span class="font-semibold text-[#FF9933]">“The Man Making”</span> and
+                        <span class="font-semibold text-[#FF9933]">“The Nation Building”</span> Education with Great
+                        Indian Values.
+                    </p>
+
+                    <p class="text-gray-700 leading-relaxed text-justify text-base" data-aos="fade-up"
+                        data-aos-delay="180">
+                        Guided by our esteemed Academic Advisors:
+                    </p>
+
+                    <!-- decorative short description row -->
+                    <div class="flex items-center gap-4 mt-2">
+                        <div
+                            class="w-12 h-12 rounded-lg grid place-items-center bg-[#FF9933]/10 text-[#FF9933] text-xl shadow-sm">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-slate-600">Value-led education, mentoring and holistic support across
+                                grades.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Achievements boxes (unchanged content) -->
+                <div class="space-y-6" data-aos="fade-left" data-aos-delay="120">
+                    <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-none w-14 h-14 rounded-lg grid place-items-center bg-gradient-to-br from-[#FF9933]/20 to-transparent text-[#FF9933] text-2xl">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-800 font-semibold leading-tight">
+                                    <!-- <i class="fa-solid fa-trophy text-[#FF9933] mr-2"></i> -->
+                                    Quality Brand status in 2017 &amp; ISO 9001:2015 Certified.
+                                </p>
+                                <p class="text-sm text-slate-500 mt-1">Recognised for consistent operational excellence
+                                    and quality processes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-none w-14 h-14 rounded-lg grid place-items-center bg-gradient-to-br from-[#3B82F6]/20 to-transparent text-[#3B82F6] text-2xl">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-800 font-semibold leading-tight">
+                                    <!-- <i class="fa-solid fa-chart-line text-[#3B82F6] mr-2"></i> -->
+                                    Continuously producing 100% results with high percentages of marks.
+                                </p>
+                                <p class="text-sm text-slate-500 mt-1">Sustained academic performance across cohorts and
+                                    boards.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEW: Redesigned Advisor Cards (only design changed) -->
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6" data-aos="fade-up" data-aos-delay="220"
+                aria-label="Advisors">
+
+                <!-- Advisor 1 -->
+                <article
+                    class="relative bg-white rounded-2xl overflow-hidden border border-slate-100 card-elevate soft-ring">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+                        <!-- Left: image hero with subtle gradient overlay -->
+                        <div class="md:col-span-1 relative">
+                            <div class="h-44 md:h-full overflow-hidden">
+                                <img src="./assets/images/owner.jpg" alt="Sri. R. Venkataswamy"
+                                    class="w-full h-[245px] md:h-full object-contain">
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none">
+                            </div>
+                        </div>
+
+                        <!-- Right: content area -->
+                        <div class="md:col-span-2 p-6 flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-semibold text-xl text-gray-900">Sri. R. Venkataswamy, <br> M.A., M.Ed.
+                                </h3>
+                                <p class="text-gray-600 mt-3 text-sm leading-relaxed">
+                                    50 years of School Education Service - Experience. <br>
+                                    TN Government's <span class="font-bold text-black">Dr. RathaKrishnan Best
+                                        Teacher&nbsp;Awardee</span> - 2005.
+                                </p>
+
+                                <!-- meta badges -->
+                                <div class="mt-4 flex flex-wrap gap-3">
+                                    <span
+                                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF9933]/10 text-[#FF9933] text-xs font-semibold">
+                                        <i class="fa-solid fa-star text-xs"></i> Senior Advisor
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs">
+                                        50+ years experience
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Advisor 2 -->
+                <article
+                    class="relative bg-white rounded-2xl overflow-hidden border border-slate-100 card-elevate soft-ring">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+                        <!-- Left: image hero -->
+                        <div class="md:col-span-1 relative">
+                            <div class="h-44 md:h-full overflow-hidden">
+                                <img src="./assets/images/advicer.jpg" alt="Smt G. Mariammal"
+                                    class="w-full h-[245px] object-cover">
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none">
+                            </div>
+                        </div>
+
+                        <!-- Right: content -->
+                        <div class="md:col-span-2 p-6 flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-semibold text-xl text-gray-900">Smt G. Mariammal, <br> M.A., M.Sc.,
+                                    M.Ed.,
+                                    M.Phil.</h3>
+                                <p class="text-gray-600 mt-3 text-sm leading-relaxed">
+                                    45+ years of School Education Service - Experience.<br>
+                                    TN Government's <span class="font-bold text-black">Dr. RathaKrishnan Best
+                                        Teacher&nbsp;Awardee</span> - 2015.
+                                </p>
+
+                                <div class="mt-4 flex flex-wrap gap-3">
+                                    <span
+                                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#3B82F6]/10 text-[#0EA5E9] text-xs font-semibold">
+                                        <i class="fa-solid fa-award text-xs"></i> Senior Advisor
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs">
+                                        45+ years experience
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- floating decorative accents -->
+            <div
+                class="absolute left-8 top-8 w-36 h-36 rounded-full bg-gradient-to-tr from-[#FF9933]/12 to-transparent blur-3xl pointer-events-none">
+            </div>
+            <div
+                class="absolute right-12 bottom-8 w-28 h-28 rounded-full bg-gradient-to-tr from-[#3B82F6]/10 to-transparent blur-2xl pointer-events-none">
+            </div>
         </div>
-      </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Motto -->
-  <section class="py-20 px-6 md:px-24 overflow-hidden" data-aos="fade-up">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-      <!-- Left Side: School Image or Illustration -->
-      <div class="relative group overflow-hidden rounded-2xl shadow-xl w-full" data-aos="zoom-in">
-        <img src="./assets/hero-1.jpg" alt="VVJM School"
-          class="w-full h-auto md:h-full object-cover transition-transform duration-500 group-hover:scale-105">
-        <div
-          class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <p class="text-white text-center px-4 text-lg md:text-xl font-medium">“Man Making and Nation Building”</p>
-        </div>
-      </div>
-
-      <!-- Right Side: School Info -->
-      <div class="space-y-8 w-full" data-aos="fade-left">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800">VVJM PARAMAHAMSA <span
-            class="text-[#FF9933]">VIDYALAYAM</span></h2>
-        <p class="text-orange-500 font-semibold uppercase tracking-wide">Matric Hr Sec School, I.T Park, Annanagar,
-          Tiruchirappalli</p>
-
-        <p class="text-gray-700 leading-relaxed text-justify">
-          Established on 04/07/1993. Our School provides Value-based Quality Education to the Younger Generation, right
-          from
-          PRE KG, LKG, UKG, I STD to XII STD. Education is based on the Twin Ideals of Swami Vivekananda: <span
-            class="font-semibold">“The Man Making and The Nation Building”</span>.
-        </p>
-
-        <!-- Highlight Boxes -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
-          <div class="bg-[#FFFAF0] p-6 rounded-xl shadow-lg border-l-4 border-[#FF9933]" data-aos="fade-up"
-            data-aos-delay="100">
-            <h3 class="font-bold text-xl text-gray-800 mb-2">MOTTO</h3>
-            <p class="text-gray-600 font-bold">Duty - Devotion - Discipline</p>
-          </div>
-          <div class="bg-[#F0F9FF] p-6 rounded-xl shadow-lg border-l-4 border-[#3B82F6]" data-aos="fade-up"
-            data-aos-delay="200">
-            <h3 class="font-bold text-xl text-gray-800 mb-2">ACHIEVEMENTS</h3>
-            <p class="text-gray-600"><i style="color: gold;" class="fa-solid fa-star"></i> 100% Results Year after Year in SSLC & HSLC. <br> <i style="color: gold;" class="fa-solid fa-star"></i> An ISO 9001:2015 Certified
-              Organization since 2017.
+    <!-- Golden Rules for Living Section -->
+    <section class="py-16 px-6 md:px-20" data-aos="fade-up">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">
+                Golden Rules for <span class="text-[#FF9933]">Living</span>
+            </h2>
+            <p class="text-gray-600 text-lg mb-8">
+                Simple principles to live with respect, responsibility, and integrity.
             </p>
-          </div>
+
+            <div class="bg-white rounded-3xl shadow-lg border border-[#FF9933]/30 p-8 md:p-10">
+                <div class="grid md:grid-cols-2 gap-6 text-left">
+                    <ul class="space-y-3 text-gray-700 text-lg font-medium leading-relaxed">
+                        <li>1. If you open it, close it.</li>
+                        <li>2. If you turn it on, turn it off.</li>
+                        <li>3. If you unlock it, lock it up.</li>
+                        <li>4. If you break it, admit it.</li>
+                        <li>5. If you can’t fix it, call in someone who can.</li>
+                        <li>6. If you borrow it, return it.</li>
+                    </ul>
+                    <ul class="space-y-3 text-gray-700 text-lg font-medium leading-relaxed">
+                        <li>7. If you value it, take care of it.</li>
+                        <li>8. If you make a mess, clean it up.</li>
+                        <li>9. If you move it, put it back.</li>
+                        <li>10. If it belongs to someone else, get permission to use it.</li>
+                        <li>11. If you don’t know how to operate it, leave it alone.</li>
+                        <li>12. If it’s none of your business, don’t ask questions.</li>
+                    </ul>
+                </div>
+
+                <p class="mt-10 text-[#FF9933] italic font-semibold text-center text-lg">
+                    “Good manners and self-discipline build a graceful life.”
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Swami Vivekananda Quotes Section -->
+    <section class="py-16 px-6 md:px-20 mt-20 flex justify-center items-center">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-10 text-center">
+
+            <!-- Left Side Image -->
+            <div class="flex justify-center">
+                <img src="./assets/images/swami-vivekananda.jpg" alt="Swami Vivekananda"
+                    class="rounded-3xl shadow-2xl w-64 sm:w-72 md:w-80 lg:w-[420px] object-cover" />
+            </div>
+
+            <!-- Right Side Quotes -->
+            <div class="flex flex-col justify-center items-center w-full">
+                <div class="swiper vivekanandaSwiper w-full max-w-xl">
+                    <div class="swiper-wrapper">
+                        <!-- Quotes -->
+                        <div
+                            class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                            "Education is the manifestation of the perfection already in man."
+                        </div>
+                        <div
+                            class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                            "Knowledge can only be got in one way, the way of experience; there is no other way to
+                            know."
+                        </div>
+                        <div
+                            class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                            "The secret of life is not enjoyment, but education through experience."
+                        </div>
+                        <div
+                            class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                            "If the poor boy cannot come to education, education must go to him."
+                        </div>
+                        <div
+                            class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                            "A sapling must be hedged about for protection, but when it becomes a tree, a hedge would be
+                            a hindrance."
+                        </div>
+                        <div
+                            class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                            "To me the very essence of education is the concentration of mind, not the collecting of
+                            facts."
+                        </div>
+                        <div
+                            class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                            "Education is not the amount of information that is put into your brain and runs riot there,
+                            undigested,
+                            all your life."
+                        </div>
+                        <div
+                            class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                            "The only value of knowledge is in the strengthening, the disciplining, of the mind."
+                        </div>
+                        <div
+                            class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                            “Education may be described as a development of faculty, not an accumulation of words, or as
+                            a training of
+                            individuals to will rightly and efficiently.”
+                        </div>
+                        <div
+                            class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                            “The ass carrying its load of sandalwood knows only the weight and not the value of
+                            sandalwood.”
+                        </div>
+                        <div
+                            class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                            "Strength is life; weakness is death."
+                        </div>
+                        <div
+                            class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                            "Comfort is no test of truth; truth is often far from being comfortable."
+                        </div>
+                        <div
+                            class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                            "Do one thing at a time, and while doing it put your whole soul into it."
+                        </div>
+                        <div
+                            class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                            "Talk to yourself once in a day; otherwise, you may miss meeting an intelligent person."
+                        </div>
+                        <div
+                            class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                            "Fear is death, fear is sin, fear is hell, fear is unrighteousness, fear is wrong life."
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Author -->
+                <h2 class="mt-6 font-bold text-gray-800 text-lg md:text-xl">
+                    - Swami Vivekananda
+                </h2>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-200 pt-12 pb-6 px-6 md:px-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+
+            <!-- About with Logo -->
+            <div class="flex flex-col items-start">
+                <!-- Logo -->
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="./assets/images/logo.png" alt="VVJM Logo" class="h-16 w-16 rounded-full shadow-lg">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">VVJM Paramahamsa Vidyalayam</h3>
+                        <p class="text-gray-400 text-sm">Matric Hr Sec School</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 leading-relaxed text-justify">
+                    Providing value-based quality education from Pre-KG to Higher Secondary with Man Making & Nation
+                    Building
+                    ideals.
+                </p>
+                <p class="text-white mt-6">
+                    An ISO 9001:2015 Certified School since 2017
+                </p>
+                <div class="mt-4 flex space-x-4">
+                    <a href="https://www.facebook.com/share/15jGGCvQiE/"
+                        class="text-gray-400 hover:text-[#FF9933] transition-colors duration-300"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="mailto:vvjmmhss@gmail.com"
+                        class="text-gray-400 hover:text-[#FF9933] transition-colors duration-300">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="flex flex-col">
+                <h3 class="text-xl font-bold text-white mb-4">Contact Us</h3>
+                <div class="text-gray-400">
+                    <span class="font-semibold">Phone:</span>
+                    <ul class="list-none mt-1">
+                        <li>+91 76958 88801</li>
+                        <li>+91 76985 88802</li>
+                        <li>+91 76958 88803</li>
+                        <li>+91 76958 88804</li>
+                    </ul>
+                </div>
+                <p class="text-gray-400 mt-2">
+                    <span class="font-semibold">Email:</span> vvjmmhss@gmail.com
+                </p>
+                <p class="text-gray-400 mt-2">
+                    <span class="font-semibold">Correspondent:</span> R. Venkataswamy
+                </p>
+                <p class="text-gray-400 mt-2">
+                    <span class="font-semibold">Address:</span> IT Park, Annanagar, Tiruchirappalli - 620026, Tamil Nadu
+                </p>
+            </div>
+
+
+            <!-- Embedded Map -->
+            <div class="flex flex-col">
+                <h3 class="text-xl font-bold text-white mb-4">Our Location</h3>
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125438.18117219604!2d78.68575556853486!3d10.738864156980378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa8c8c7f226251%3A0xe07806c711b252c2!2sVVJM%20PARAMAHAMSA%20VIDYALAYAM%20MATRIC%20HR%20SEC%20SCHOOL%2CI.T%20PATK%2C%20TIRUCHIRAPPALLI%20-26!5e0!3m2!1sen!2sin!4v1759223507921!5m2!1sen!2sin"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Subjects -->
-        <!-- <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
-          <div class="bg-[#FEF3C7] p-5 rounded-xl shadow-md border-l-4 border-[#F59E0B]" data-aos="fade-right"
-            data-aos-delay="100">
-            <h4 class="font-semibold text-gray-800 mb-2">Group A</h4>
-            <p class="text-gray-600">Maths, Physics, Chemistry, Computer Science</p>
-          </div>
-          <div class="bg-[#E0F2FE] p-5 rounded-xl shadow-md border-l-4 border-[#0EA5E9]" data-aos="fade-right"
-            data-aos-delay="200">
-            <h4 class="font-semibold text-gray-800 mb-2">Group B</h4>
-            <p class="text-gray-600">Economics, Commerce, Accountancy, Business Maths / Computer Science</p>
-          </div>
-        </div> -->
-
-        <p class="text-gray-700 text-justify mt-4" data-aos="fade-left" data-aos-delay="300">
-          We care and assure our best service to the student community, fostering excellence in academics, discipline,
-          and achieving overall development.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section class="py-20 px-6 md:px-24 overflow-hidden" data-aos="fade-up">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-      <!-- Left Side: Text Content -->
-      <div class="space-y-6 w-full" data-aos="fade-left">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800">About VVJM Paramahamsa <span
-            class="text-[#FF9933]">Vidyalayam</span></h2>
-        <p class="text-gray-700 leading-relaxed text-justify">
-          Established on 04/07/1993, <span class="font-semibold text-[#FF9933]">VVJM Paramahamsa Vidyalayam</span> is a
-          leading Education Institution in Tiruchirappalli, dedicated to providing the Value-based Quality Education. We
-          offer a comprehensive curriculum for students from Pre-KG through to Higher Secondary, guided by the ideals of
-          Swami Vivekananda and cared by Highly Qulaified Teachers.
-        </p>
-
-        <!-- Highlights / Pill Boxes -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
-          <div class="bg-[#FEF3C7] p-5 rounded-xl shadow-md border-l-4 border-[#F59E0B]" data-aos="fade-up"
-            data-aos-delay="100">
-            <h4 class="font-semibold text-gray-800 mb-2">CORE IDEALS</h4>
-            <p class="text-gray-600">The Man Making and The Nation Building based on the Indian Cultural Heritage with the giding principles <br> <span class="font-bold">DUTY - DEVOTION - DISCIPLINE</span></p>
-          </div>
-          <div class="bg-[#E0F2FE] p-5 rounded-xl shadow-md border-l-4 border-[#0EA5E9]" data-aos="fade-up"
-            data-aos-delay="200">
-            <h4 class="font-semibold text-gray-800 mb-2">ACCREDITATIONS</h4>
-            <p class="text-gray-600"><i style="color: gold;" class="fa-solid fa-star"></i> Quality Brand</p>
-            <p class="text-gray-600"><i style="color: gold;" class="fa-solid fa-star"></i> An ISO 9001:2015 Certified
-              Institution</p>
-          </div>
-          <div class="bg-[#F0FDF4] p-5 rounded-xl shadow-md border-l-4 border-[#22C55E]" data-aos="fade-up"
-            data-aos-delay="300">
-            <h4 class="font-semibold text-gray-800 mb-2">ACADEMIC EXCELLENCE</h4>
-            <p class="text-gray-600">Consistently Scoring 100% Results in the Government board examinations</p>
-          </div>
-          <div class="bg-[#FEE2E2] p-5 rounded-xl shadow-md border-l-4 border-[#EF4444]" data-aos="fade-up"
-            data-aos-delay="400">
-            <h4 class="font-semibold text-gray-800 mb-2">CURRICULUM</h4>
-            <p class="text-gray-600">Comprehensive <br> PRE KG, LKG, UKG, I STD to XII STD</p>
-          </div>
-        </div>
-
-        <p class="text-gray-700 text-justify mt-4" data-aos="fade-left" data-aos-delay="500">
-          Our school shapes the younger generation with a strong foundation in academics, values, and discipline,
-          ensuring holistic growth and preparation for meeting the future challenges.
-        </p>
-      </div>
-
-      <!-- Right Side: News & Updates -->
-      <div class="relative w-full h-80 bg-white shadow-xl rounded-2xl border overflow-hidden" data-aos="zoom-in">
-        <!-- Header -->
+        <!-- Footer Bottom -->
         <div
-          class="absolute top-0 left-0 w-full bg-[#FF9933] text-white text-lg font-semibold py-2 px-4 flex items-center z-10">
-          <i class="fas fa-bullhorn mr-2"></i> News & Updates
+            class="mt-12 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0 text-gray-500 text-sm border-t border-gray-700 pt-4 text-center md:text-left">
+
+            <!-- Left side -->
+            <span class="block">&copy; 2025 VVJM Paramahamsa Vidyalayam. All rights reserved.</span>
+
+            <!-- Right side -->
+            <span class="block">
+                Developed by
+                <a href="https://musitechhub.com" target="_blank"
+                    class="text-[#FF9933] hover:underline transition-colors duration-300">
+                    Musitechhub
+                </a>
+            </span>
         </div>
+    </footer>
 
-        <!-- News Container -->
-        <div class="news-container h-full px-6 pb-4">
-          <ul class="news-list space-y-4 text-gray-800 font-medium">
-            <li><i class="fas fa-user-graduate mr-2"></i> Admissions registration open for Academic Year 2026-27.</li>
-            <li><i class="fas fa-trophy mr-2"></i> Assured 100% Result in the Board Exams.</li>
-            <li><i class="fas fa-book mr-2"></i> Library with 5000+ books made available.</li>
-            <li><i class="fas fa-football-ball mr-2"></i> Science Exhibition is scheduled for 14th November</li>
-            <li><i class="fas fa-theater-masks mr-2"></i> Cultural Fest coming soon In Feburary 2026– stay tuned!</li>
-            <li><i class="fas fa-tree mr-2"></i> Eco Club launched a tree plantation drive.</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Academic Excellence Section -->
-  <section class="py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
-
-      <!-- Left Side: Key Info & Image -->
-      <div class="md:w-1/2 space-y-6 relative">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800" data-aos="fade-right">
-          Academic Excellence & <span class="text-[#FF9933]">Guidance</span>
-        </h2>
-        <p class="text-gray-700 leading-relaxed text-justify" data-aos="fade-up" data-aos-delay="100">
-          This School runs with Twin Ideals as envisaged by Swami Vivekananda: providing <span
-            class="font-semibold text-[#FF9933]">“The Man Making”</span> and <span
-            class="font-semibold text-[#FF9933]">“The Nation Building”</span> Education with Great Indian Values.
-        </p>
-
-        <p class="text-gray-700 leading-relaxed text-justify" data-aos="fade-up" data-aos-delay="200">
-          Guided by our esteemed Academic Advisors:
-        </p>
-
-        <!-- Advisors Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
-          <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#FF9933]" data-aos="zoom-in"
-            data-aos-delay="300">
-            <h3 class="font-bold text-lg text-gray-800">Sri. R. Venkataswamy, M.A., M.Ed.</h3>
-            <p class="text-gray-600 mt-1">50 years of School Education Service - Experience. <br> TN Government's <br><span
-                class="font-bold text-black">Dr. RathaKrishnan Best Teacher Awardee - 2005.</span></p>
-          </div>
-          <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#3B82F6]" data-aos="zoom-in"
-            data-aos-delay="400">
-            <h3 class="font-bold text-lg text-gray-800">Smt G. Mariammal, <br> M.A., M.Sc., M.Ed., M.Phil.</h3>
-            <p class="text-gray-600 mt-1">45+ years of School Education Service - Experience.<br> TN Government's <br><span
-                class="font-bold text-black">Dr. RathaKrishnan Best Teacher Awardee - 2015.</span></p>
-          </div>
-        </div>
-
-        <!-- Achievements -->
-        <div class="mt-8 space-y-4">
-          <p class="text-gray-700 font-semibold" data-aos="fade-up" data-aos-delay="500">
-            <i class="fa-solid fa-trophy text-[#FF9933] mr-2"></i>
-            Quality Brand status in 2017 & ISO 9001:2015 Certified.
-          </p>
-          <p class="text-gray-700 font-semibold" data-aos="fade-up" data-aos-delay="600">
-            <i class="fa-solid fa-chart-line text-[#3B82F6] mr-2"></i>
-            Consistently producing 100% results with High Percentages of Marks.
-          </p>
-        </div>
-
-        <!-- <p class="text-gray-800 mt-6 font-semibold" data-aos="fade-right" data-aos-delay="700">
-          R.Venkataswamy,M.A.,M.Ed<br>
-          Correspondent
-        </p> -->
-      </div>
-
-      <!-- Right Side: Coordinator Info Card -->
-      <div class="md:w-1/2 relative flex justify-center md:justify-end" data-aos="fade-left" data-aos-delay="300">
-        <div class="bg-gradient-to-br from-[#FF9933]/20 to-[#FF9933]/10 rounded-2xl shadow-2xl p-6 w-full max-w-sm">
-
-          <!-- Coordinator Image -->
-          <div class="w-64 h-64 mx-auto rounded-full overflow-hidden border-4 border-[#FF9933] shadow-lg">
-            <img src="./assets/owner.jpg" alt="R. Venkataswamy" class="w-full h-full object-cover">
-          </div>
-
-          <!-- Coordinator Info -->
-          <h3 class="text-xl font-bold text-gray-800 text-center mt-4">R.Venkataswamy,M.A.,M.Ed</h3>
-          <p class="text-gray-600 text-center">Correspondent</p>
-          <p class="text-gray-700 text-center mt-3">
-            Vivekananda Vidya Jyothi Mission, <br>
-            PARAMAHAMSA VIDYALAYAM, <br>
-            IT Park, Tiruchirappalli - 620026, Tamil Nadu
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Decorative floating shapes -->
-    <div class="absolute top-0 left-0 w-32 h-32 bg-[#FF9933]/20 rounded-full blur-3xl" data-aos="fade-down"
-      data-aos-delay="200"></div>
-    <div class="absolute bottom-10 right-10 w-24 h-24 bg-[#3B82F6]/20 rounded-full blur-2xl" data-aos="fade-up"
-      data-aos-delay="400"></div>
-  </section>
-
-  <!-- Golden Rules for Living Section -->
-  <section class="py-16 px-6 md:px-20" data-aos="fade-up">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">
-        Golden Rules for <span class="text-[#FF9933]">Living</span>
-      </h2>
-      <p class="text-gray-600 text-lg mb-8">
-        Simple principles to live with respect, responsibility, and integrity.
-      </p>
-
-      <div class="bg-white rounded-3xl shadow-lg border border-[#FF9933]/30 p-8 md:p-10">
-        <div class="grid md:grid-cols-2 gap-6 text-left">
-          <ul class="space-y-3 text-gray-700 text-lg font-medium leading-relaxed">
-            <li>1. If you open it, close it.</li>
-            <li>2. If you turn it on, turn it off.</li>
-            <li>3. If you unlock it, lock it up.</li>
-            <li>4. If you break it, admit it.</li>
-            <li>5. If you can’t fix it, call in someone who can.</li>
-            <li>6. If you borrow it, return it.</li>
-          </ul>
-          <ul class="space-y-3 text-gray-700 text-lg font-medium leading-relaxed">
-            <li>7. If you value it, take care of it.</li>
-            <li>8. If you make a mess, clean it up.</li>
-            <li>9. If you move it, put it back.</li>
-            <li>10. If it belongs to someone else, get permission to use it.</li>
-            <li>11. If you don’t know how to operate it, leave it alone.</li>
-            <li>12. If it’s none of your business, don’t ask questions.</li>
-          </ul>
-        </div>
-
-        <p class="mt-10 text-[#FF9933] italic font-semibold text-center text-lg">
-          “Good manners and self-discipline build a graceful life.”
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Swami Vivekananda Quotes Section -->
-  <section class="py-16 px-6 md:px-20 mt-20 flex justify-center items-center">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-10 text-center">
-
-      <!-- Left Side Image -->
-      <div class="flex justify-center">
-        <img src="./assets/swami-vivekananda.jpg" alt="Swami Vivekananda"
-          class="rounded-3xl shadow-2xl w-64 sm:w-72 md:w-80 lg:w-[420px] object-cover" />
-      </div>
-
-      <!-- Right Side Quotes -->
-      <div class="flex flex-col justify-center items-center w-full">
-        <div class="swiper vivekanandaSwiper w-full max-w-xl">
-          <div class="swiper-wrapper">
-            <!-- Quotes -->
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Education is the manifestation of the perfection already in man."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Knowledge can only be got in one way, the way of experience; there is no other way to know."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "The secret of life is not enjoyment, but education through experience."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "If the poor boy cannot come to education, education must go to him."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "A sapling must be hedged about for protection, but when it becomes a tree, a hedge would be a hindrance."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "To me the very essence of education is the concentration of mind, not the collecting of facts."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Education is not the amount of information that is put into your brain and runs riot there, undigested,
-              all your life."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "The only value of knowledge is in the strengthening, the disciplining, of the mind."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              “Education may be described as a development of faculty, not an accumulation of words, or as a training of
-              individuals to will rightly and efficiently.”
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              “The ass carrying its load of sandalwood knows only the weight and not the value of sandalwood.”
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Strength is life; weakness is death."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Comfort is no test of truth; truth is often far from being comfortable."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Do one thing at a time, and while doing it put your whole soul into it."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Talk to yourself once in a day; otherwise, you may miss meeting an intelligent person."
-            </div>
-            <div class="swiper-slide text-base sm:text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-              "Fear is death, fear is sin, fear is hell, fear is unrighteousness, fear is wrong life."
-            </div>
-          </div>
-        </div>
-
-        <!-- Author -->
-        <h2 class="mt-6 font-bold text-gray-800 text-lg md:text-xl">
-          - Swami Vivekananda
-        </h2>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-200 pt-12 pb-6 px-6 md:px-24 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-
-      <!-- About with Logo -->
-      <div class="flex flex-col items-start">
-        <!-- Logo -->
-        <div class="flex items-center gap-3 mb-4">
-          <img src="./assets/logo.png" alt="VVJM Logo" class="h-16 w-16 rounded-full shadow-lg">
-          <div>
-            <h3 class="text-xl font-bold text-white">VVJM Paramahamsa Vidyalayam</h3>
-            <p class="text-gray-400 text-sm">Matric Hr Sec School</p>
-          </div>
-        </div>
-        <p class="text-gray-400 leading-relaxed text-justify">
-          Providing value-based quality education from Pre-KG to Higher Secondary with Man Making & Nation Building
-          ideals.
-        </p>
-        <p class="text-white mt-6">
-          An ISO 9001:2015 Certified School since 2017
-        </p>
-        <div class="mt-4 flex space-x-4">
-          <a href="https://www.facebook.com/share/15jGGCvQiE/"
-            class="text-gray-400 hover:text-[#FF9933] transition-colors duration-300"><i
-              class="fab fa-facebook-f"></i></a>
-          <a href="mailto:vvjmmhss@gmail.com" class="text-gray-400 hover:text-[#FF9933] transition-colors duration-300">
-            <i class="fa-solid fa-envelope"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="flex flex-col">
-        <h3 class="text-xl font-bold text-white mb-4">Contact Us</h3>
-        <div class="text-gray-400">
-          <span class="font-semibold">Phone:</span>
-          <ul class="list-none mt-1">
-            <li>+91 76958 88801</li>
-            <li>+91 76985 88802</li>
-            <li>+91 76958 88803</li>
-            <li>+91 76958 88804</li>
-          </ul>
-        </div>
-        <p class="text-gray-400 mt-2">
-          <span class="font-semibold">Email:</span> vvjmmhss@gmail.com
-        </p>
-        <p class="text-gray-400 mt-2">
-          <span class="font-semibold">Correspondent:</span> R. Venkataswamy
-        </p>
-        <p class="text-gray-400 mt-2">
-          <span class="font-semibold">Address:</span> IT Park, Annanagar, Tiruchirappalli - 620026, Tamil Nadu
-        </p>
-      </div>
-
-
-      <!-- Embedded Map -->
-      <div class="flex flex-col">
-        <h3 class="text-xl font-bold text-white mb-4">Our Location</h3>
-        <div class="rounded-xl overflow-hidden shadow-lg">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125438.18117219604!2d78.68575556853486!3d10.738864156980378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa8c8c7f226251%3A0xe07806c711b252c2!2sVVJM%20PARAMAHAMSA%20VIDYALAYAM%20MATRIC%20HR%20SEC%20SCHOOL%2CI.T%20PATK%2C%20TIRUCHIRAPPALLI%20-26!5e0!3m2!1sen!2sin!4v1759223507921!5m2!1sen!2sin"
-            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Footer Bottom -->
-    <div
-      class="mt-12 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0 text-gray-500 text-sm border-t border-gray-700 pt-4 text-center md:text-left">
-
-      <!-- Left side -->
-      <span class="block">&copy; 2025 VVJM Paramahamsa Vidyalayam. All rights reserved.</span>
-
-      <!-- Right side -->
-      <span class="block">
-        Developed by
-        <a href="https://musitechhub.com" target="_blank"
-          class="text-[#FF9933] hover:underline transition-colors duration-300">
-          Musitechhub
-        </a>
-      </span>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./script.js"></script>
-  <!-- AOS JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  </script>
-
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
 </body>
 
 </html>

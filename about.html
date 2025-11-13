@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./assets/logo.png">
+    <link rel="icon" href="./assets/images/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VVJM School</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
     <div id="loader-overlay">
         <div class="loader-container">
             <div class="circle-loader">
-                <img src="./assets/logo.png" alt="VVJM Logo" class="loader-logo">
+                <img src="./assets/images/logo.png" alt="VVJM Logo" class="loader-logo">
                 <svg class="progress-ring" viewBox="0 0 160 160">
                     <circle class="progress-ring__circle" stroke="#FF9933" stroke-width="6" fill="transparent" r="70"
                         cx="80" cy="80" />
@@ -55,7 +55,7 @@
 
         <!-- Logo -->
         <div class="flex items-center gap-2">
-            <a href="./index.html"><img src="./assets/logo.png" alt="School Logo" class="h-16"></a>
+            <a href="./index.html"><img src="./assets/images/logo.png" alt="School Logo" class="h-16"></a>
             <div>
                 <h1 class="text-1xl md:text-3xl font-bold">VVJM</h1>
                 <p class="text-sm md:text-xl text-gray-500">PARAMAHAMSA VIDYALAYAM</p>
@@ -195,7 +195,7 @@
 
     <!-- about banner -->
     <section class="relative w-full h-52 md:h-64 lg:h-72 flex items-center justify-center bg-center bg-cover mt-32"
-        style="background-image: url('./assets/hero-1.jpg');">
+        style="background-image: url('./assets/images/hero-1.jpg');">
 
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/50"></div>
@@ -218,253 +218,535 @@
 
     </section>
 
-    <main class="max-w-7xl mx-auto px-6 md:px-12 space-y-32 mt-20 mb-20">
+    <!-- About us -->
+    <section class="py-20 px-6 md:px-12 lg:px-24" aria-labelledby="who-we-are">
 
-        <!-- About School Zig-Zag -->
-        <section class="grid md:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right"
-                class="relative rounded-3xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-500">
-                <img src="./assets/Gallery/4.jpg" alt="School Building" class="w-full h-96 object-cover">
-            </div>
-            <div data-aos="fade-left" class="space-y-6">
-                <h2 class="text-4xl font-extrabold text-gray-800">Who <span class="text-[#FF9933]">We Are</span></h2>
-                <p class="text-gray-700 text-justify leading-relaxed">
-                    Established on 04/07/1993, VVJM Paramahamsa Vidyalayam offers Holistic Education from Pre-KG, LKG,
-                    UKG, I STD to XII STD. We
-                    foster Academic Excellence, Creativity, and Moral Values for building Confident and Responsible
-                    Future citizens.
-                </p>
-                <p class="text-[#FF9933] font-semibold text-lg">Motto: "The Man Making and The Nation Building"</p>
-            </div>
-        </section>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-        <!-- Vision & Mission Cards -->
-        <section id="Vision" class="pt-14 md:pt-20">
-            <div class="grid md:grid-cols-2 gap-12">
-                <div data-aos="fade-right"
-                    class="bg-gradient-to-br from-[#FF9933]/30 to-[#FF9933]/10 p-10 rounded-3xl shadow-2xl hover-3d transition-transform relative overflow-hidden">
-                    <h3 class="text-2xl font-bold mb-4 text-[#FF9933]">Our Vision</h3>
-                    <p class="text-gray-700 text-justify">To develop responsible, knowledgeable, and morally upright
-                       Future citizens who positively contribute to the welfare of our Great Nation and the People there in.</p>
+            <!-- VISUAL / LEFT -->
+            <div data-aos="fade-right" class="relative order-1 md:order-1">
+                <!-- Main image with soft rounded frame and decorative corner -->
+                <div
+                    class="relative rounded-3xl overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-500">
+                    <img src="./assets/images/Gallery/1.jpg" alt="School Building" class="w-full h-96 object-cover">
+                    <!-- subtle gradient overlay -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 mix-blend-multiply pointer-events-none">
+                    </div>
+
+                    <!-- floating badge top-left -->
+                    <div
+                        class="absolute left-6 top-6 bg-[#FF9933] text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+                        Established 1993
+                    </div>
+
+                    <!-- quote card bottom-left (over image) -->
+                    <div
+                        class="absolute left-6 bottom-6 bg-white/90 rounded-xl p-4 backdrop-blur-sm border border-slate-100 w-11/12 sm:w-9/12">
+                        <p class="text-sm text-slate-800 font-semibold">VVJM Paramahamsa Vidyalayam</p>
+                        <p class="text-xs text-slate-600 mt-1">Value-based education — discipline, character &amp;
+                            academic excellence.</p>
+                    </div>
                 </div>
-                <div data-aos="fade-left"
-                    class="bg-gradient-to-br from-[#3B82F6]/30 to-[#3B82F6]/10 p-10 rounded-3xl shadow-2xl hover-3d transition-transform relative overflow-hidden">
-                    <h3 class="text-2xl font-bold mb-4 text-[#3B82F6]">Our Mission</h3>
-                    <p class="text-gray-700 text-justify">To provide Holistic Education balancing the academics with ageold
-                        Values, and
-                        Life Skills, Nurturing Leadership and Creativity in every Student.</p>
+
+                <!-- small stacked thumbnails to the right/below on large screens -->
+                <div class="mt-6 flex gap-4">
+                    <div class="w-1/2 rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-1 transition">
+                        <img src="./assets/images/Gallery/69.jpg" alt="Campus view" class="w-full h-28 object-cover">
+                    </div>
+                    <div class="w-1/2 rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-1 transition">
+                        <img src="./assets/images/Gallery/6.jpg" alt="Students" class="w-full h-28 object-cover">
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <!-- 3Ds Section -->
-        <section id="3Ds" class="pt-14 md:pt-20">
-            <div>
-                <h2 class="text-4xl font-extrabold text-gray-800 text-center mb-12" data-aos="fade-up">
-                    <span class="block mb-4">Understanding the <span class="text-[#FF9933]">3Ds</span></span>
-                    <span class="text-sm bg-[#FF9933] p-2 rounded-2xl text-white">DUTY • DEVOTION • DISCIPLINE</span>
+            <!-- TEXT / RIGHT -->
+            <div data-aos="fade-left" class="space-y-6 order-2 md:order-2">
+                <h2 id="who-we-are" class="text-4xl font-extrabold text-gray-800 leading-tight">
+                    Who <span class="text-[#FF9933]">We Are</span>
                 </h2>
-                <div class="mt-20 grid md:grid-cols-3 gap-8" data-aos="fade-up">
 
-                    <div
-                        class="bg-gradient-to-br from-[#FF9933]/30 to-[#FF9933]/10 p-8 rounded-3xl shadow-2xl hover:scale-105 transition-transform text-center">
-                        <h3 class="text-2xl font-bold text-[#FF9933] mb-4">DUTY (DHARMA)</h3>
-                        <p class="text-gray-700 text-justify">
-                            Represents the responsibilities and obligations one has towards this society, family, and
-                            work,
-                            which should be performed with selfless zeal and faithfulness. 
-                        </p>
+                <div class="space-y-4">
+                    <!-- main paragraph (content kept exactly as you provided) -->
+                    <p class="text-gray-700 text-justify leading-relaxed">
+                        Established in 04/07/1993, VVJM Paramahamsa Vidyalayam offers holistic education from Pre-KG,
+                        LKG,
+                        UKG, I to XII. We
+                        foster academic excellence, creativity, and moral Values for building confident, responsible
+                        citizens.
+                    </p>
+
+                    <p class="text-[#FF9933] font-semibold text-lg">Motto: "Man Making and Nation Building"</p>
+                </div>
+
+                <!-- Feature strip: 3 small highlights -->
+                <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="flex items-start gap-3 p-3 rounded-lg bg-white border border-slate-100 shadow-sm">
+                        <div class="w-10 h-10 rounded-lg grid place-items-center bg-[#FFF6ED] border border-[#FFE3C4]">
+                            <i class="fa-solid fa-graduation-cap text-[#F59E0B]"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-500">Range</div>
+                            <div class="font-semibold text-sm text-gray-800">Pre KG — XII</div>
+                        </div>
                     </div>
 
-                    <div
-                        class="bg-gradient-to-br from-[#3B82F6]/30 to-[#3B82F6]/10 p-8 rounded-3xl shadow-2xl hover:scale-105 transition-transform text-center">
-                        <h3 class="text-2xl font-bold text-[#3B82F6] mb-4">DEVOTION (BHAKTI)</h3>
-                        <p class="text-gray-700 text-justify">
-                            Signifies intense Love and Loyalty, particularly a deep, steady connection to God or a
-                            Spiritual Ideal. 
-                        </p>
+                    <div class="flex items-start gap-3 p-3 rounded-lg bg-white border border-slate-100 shadow-sm">
+                        <div class="w-10 h-10 rounded-lg grid place-items-center bg-[#E0F2FE] border border-[#CEEFFF]">
+                            <i class="fa-solid fa-heart text-[#0EA5E9]"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-500">Focus</div>
+                            <div class="font-semibold text-sm text-gray-800">Holistic development</div>
+                        </div>
                     </div>
 
-                    <div
-                        class="bg-gradient-to-br from-[#F59E0B]/30 to-[#F59E0B]/10 p-8 rounded-3xl shadow-2xl hover:scale-105 transition-transform text-center">
-                        <h3 class="text-2xl font-bold text-[#F59E0B] mb-4">DISCIPLINE (VAIRAGYA)</h3>
-                        <p class="text-gray-700 text-justify">
-                            Refers to the internal Self-control, adherence to Rules, and Orderly Conduct necessary to
-                            regulate all aspects of One's Life and keep the other two "D's" in balance.
-                        </p>
+                    <div class="flex items-start gap-3 p-3 rounded-lg bg-white border border-slate-100 shadow-sm">
+                        <div class="w-10 h-10 rounded-lg grid place-items-center bg-[#F0FDF4] border border-[#DCFCE7]">
+                            <i class="fa-solid fa-masks-theater text-[#10B981]"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-500">Activities</div>
+                            <div class="font-semibold text-sm text-gray-800">Co-curricular focus</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA row -->
+                <div class="mt-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                    <a href="./admission.html"
+                        class="inline-flex items-center gap-3 px-5 py-3 bg-[#0F172A] text-white rounded-full font-semibold shadow hover:scale-[1.02] transition">
+                        Enquire / Admissions
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" aria-hidden>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+
+                    <a href="tel:+917695888801"
+                        class="inline-flex items-center gap-2 px-4 py-3 border border-slate-200 rounded-full text-sm font-semibold hover:bg-slate-50 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#FF9933]" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" aria-hidden>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M2 8.5A2.5 2.5 0 014.5 6h15A2.5 2.5 0 0122 8.5v7A2.5 2.5 0 0119.5 18h-15A2.5 2.5 0 012 15.5v-7z" />
+                        </svg>
+                        +91-76958 88801
+                    </a>
+                </div>
+
+                <!-- subtle credit / tagline -->
+                <p class="text-xs text-slate-400 mt-4">VVJM Paramahamsa Vidyalayam — Value-based education since 1993
+                </p>
+            </div>
+
+        </div>
+
+        <!-- decorative floating shapes -->
+        <div
+            class="pointer-events-none absolute -left-10 top-10 w-36 h-36 rounded-full bg-[#FF9933]/8 blur-3xl float-soft">
+        </div>
+        <div class="pointer-events-none absolute right-8 -bottom-6 w-28 h-28 rounded-full bg-[#3B82F6]/8 blur-2xl float-soft"
+            style="animation-delay: 1s"></div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section id="Vision" class="pt-14 md:pt-20 pb-20">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-0">
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800" data-aos="fade-up">Vision &amp; <span
+                        class="text-[#FF9933]">Mission</span>
+                </h2>
+                <p class="mt-3 text-sm text-slate-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="80">
+                    Our guiding principles — formed to shape character, learning and leadership.
+                </p>
+            </div>
+
+            <!-- Two cards row -->
+            <div class="relative grid md:grid-cols-2 gap-8 items-stretch">
+
+                <!-- diagonal decorative underlay -->
+                <div class="diagonal bg-gradient-to-r from-[#FF9933] to-transparent md:block hidden"></div>
+
+                <!-- Vision card -->
+                <article data-aos="fade-right" data-aos-delay="120"
+                    class="relative glass-soft rounded-3xl p-8 overflow-hidden card-hover">
+                    <!-- colored decorative top-right glow -->
+                    <div class="absolute -right-20 -top-8 w-56 h-56 rounded-full blur-3xl"
+                        style="background: radial-gradient(circle, rgba(255,153,51,0.18), transparent 40%);"></div>
+
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                        <!-- icon -->
+                        <div class="flex-none w-12 h-12 sm:w-14 sm:h-14 rounded-lg grid place-items-center bg-white shadow-sm ring-1 ring-slate-100 text-[#FF9933] text-xl sm:text-2xl mx-auto sm:mx-0"
+                            aria-hidden="true">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+
+                        <!-- content -->
+                        <div class="flex-1 text-center sm:text-left">
+                            <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-4 text-[#FF9933]">Our Vision</h3>
+
+                            <p class="text-gray-700 text-justify leading-relaxed text-sm sm:text-base">
+                                To develop responsible, knowledgeable, and morally upright
+                                Future citizens who positively contribute to the welfare of our Great Nation and the
+                                People there in.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </article>
+
+                <!-- Mission card -->
+                <article data-aos="fade-left" data-aos-delay="120"
+                    class="relative glass-soft rounded-3xl p-8 overflow-hidden card-hover">
+                    <!-- blue decorative top-left glow -->
+                    <div class="absolute -left-20 -top-8 w-56 h-56 rounded-full blur-3xl"
+                        style="background: radial-gradient(circle, rgba(59,130,246,0.14), transparent 40%);"></div>
+
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                        <!-- Icon -->
+                        <div class="flex-none w-12 h-12 sm:w-14 sm:h-14 rounded-lg grid place-items-center bg-white shadow-sm ring-1 ring-slate-100 text-[#3B82F6] text-xl sm:text-2xl mx-auto sm:mx-0"
+                            aria-hidden="true">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+
+                        <!-- Text content -->
+                        <div class="flex-1 text-center sm:text-left">
+                            <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-4 text-[#3B82F6]">Our Mission</h3>
+                            <p class="text-gray-700 text-justify leading-relaxed text-sm sm:text-base">
+                                To provide Holistic Education balancing the academics with ageold
+                                Values, and
+                                Life Skills, Nurturing Leadership and Creativity in every Student.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </article>
+            </div>
+
+            <!-- decorative floating shapes -->
+            <div
+                class="absolute left-6 bottom-6 w-36 h-36 rounded-full bg-[#FF9933]/6 blur-3xl float-slow pointer-events-none">
+            </div>
+            <div
+                class="absolute right-6 bottom-14 w-28 h-28 rounded-full bg-[#3B82F6]/6 blur-2xl float-slow pointer-events-none">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 D's -->
+    <section id="3Ds" class="py-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-extrabold">Understanding the <span
+                        class="text-[#FF9933]">3Ds</span></h2>
+                <div
+                    class="inline-flex items-center gap-3 bg-[#FF9933] text-white text-xs font-semibold px-3 py-2 rounded-full mt-4">
+                    DUTY • DEVOTION • DISCIPLINE</div>
+            </div>
+
+            <div class="relative">
+                <!-- vertical line -->
+                <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-slate-200"></div>
+
+                <div class="space-y-12">
+                    <!-- Duty -->
+                    <div class="relative pl-16" data-aos="fade-up">
+                        <div
+                            class="absolute left-0 top-1 w-12 h-12 rounded-full bg-white grid place-items-center text-[#FF9933] shadow-md">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#FF9933] mb-2">DUTY (DHARMA)</h3>
+                        <p class="text-gray-700 text-justify">Represents the responsibilities and obligations one has
+                            towards this society, family, and work, which should be performed with selfless zeal and
+                            faithfulness. </p>
+                    </div>
+
+                    <!-- Devotion -->
+                    <div class="relative pl-16" data-aos="fade-up" data-aos-delay="80">
+                        <div
+                            class="absolute left-0 top-1 w-12 h-12 rounded-full bg-white grid place-items-center text-[#3B82F6] shadow-md">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#3B82F6] mb-2">DEVOTION (BHAKTI)</h3>
+                        <p class="text-gray-700 text-justify">Signifies intense Love and Loyalty, particularly a deep,
+                            steady connection to God or a Spiritual Ideal. </p>
+                    </div>
+
+                    <!-- Discipline -->
+                    <div class="relative pl-16" data-aos="fade-up" data-aos-delay="160">
+                        <div
+                            class="absolute left-0 top-1 w-12 h-12 rounded-full bg-white grid place-items-center text-[#F59E0B] shadow-md">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#F59E0B] mb-2">DISCIPLINE (VAIRAGYA)</h3>
+                        <p class="text-gray-700 text-justify">Refers to the internal Self-control, adherence to Rules,
+                            and Orderly Conduct necessary to regulate all aspects of One's Life and keep the other two
+                            "D's" in balance.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Founder Section -->
-        <section id="Founder" class="pt-14 md:pt-20">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Founder Image -->
-                <div data-aos="fade-right" class="flex justify-center">
-                    <img src="./assets/founder1.jpg" alt="Founder"
-                        class="w-full h-full mx-auto shadow-2xl rounded-3xl border-8 border-[#FF9933] object-cover hover:scale-105 transition-transform duration-500">
+    <!-- Founder Section  -->
+    <section id="Founder" class="pt-14 md:pt-20 pb-16">
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+                <!-- LEFT: Portrait with decorative ring + badge -->
+                <div class="flex justify-center md:justify-start" data-aos="fade-right">
+                    <div class="portrait-wrap relative w-full max-w-md">
+                        <!-- soft gradient ring -->
+                        <div class="absolute inset-0 rounded-2xl -z-10"
+                            style="background: radial-gradient(circle at 20% 20%, rgba(255,153,51,0.12), transparent 20%), radial-gradient(circle at 80% 80%, rgba(59,130,246,0.06), transparent 20%);">
+                        </div>
+
+                        <!-- main portrait -->
+                        <div
+                            class="relative rounded-2xl overflow-hidden img-portrait hover:scale-[1.02] transition-transform duration-500">
+                            <img src="./assets/images/founder1.jpg" alt="Founder"
+                                class="w-full h-[360px] md:h-[520px] object-cover">
+                        </div>
+
+                        <!-- floating badge (top-left) -->
+                        <div
+                            class="absolute left-4 top-4 inline-flex items-center gap-2 bg-white/90 px-3 py-1 rounded-full shadow-sm border border-slate-100">
+                            <span class="w-2 h-2 rounded-full bg-[#FF9933]"></span>
+                            <span class="text-xs font-semibold text-slate-700">Founder</span>
+                        </div>
+
+                        <!-- circular badge (bottom-right) -->
+                        <div
+                            class="absolute right-4 bottom-4 hidden sm:flex items-center gap-3 bg-white/95 rounded-full px-3 py-2 shadow hover-pop">
+                            <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#FF9933]">
+                                <img src="./assets/images/founder1.jpg" alt="G. Kandaswami"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-sm text-slate-800">
+                                <div class="font-semibold">Group Captain G. Kandaswami</div>
+                                <div class="text-xs text-slate-500">IAF (Rtd) — Managing Trustee</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Founder Content -->
+                <!-- RIGHT: Heading + Two Quote Cards -->
                 <div data-aos="fade-left" class="space-y-6">
-                    <h2 class="text-4xl font-extrabold text-gray-800">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800">
                         Our <span class="text-[#FF9933]">Founders</span>
                     </h2>
 
-                    <div class="bg-white/80 rounded-2xl p-6 shadow-md border-l-4 border-[#FF9933]">
+                    <!-- Quote Card 1 -->
+                    <div class="card-soft rounded-2xl p-6 md:p-8 border-l-4 border-[#FF9933] shadow-sm hover-pop">
                         <p class="text-gray-700 italic text-lg leading-relaxed text-justify">
                             "With the unflinching love for your Motherland and passion for your profession, you can do
                             wonders on this Earth."
                         </p>
-                        <p class="mt-4 font-semibold text-[#FF9933] text-center">
-                            – Group Captain G. Kandaswami (IAF Rtd)<br />
-                            <span class="text-gray-700 text-sm font-medium">
-                                First Managing Trustee, VVJM
-                            </span>
-                        </p>
+
+                        <div class="mt-4 text-center">
+                            <p class="font-semibold text-[#FF9933]">– Group Captain G. Kandaswami (IAF Rtd)</p>
+                            <p class="text-gray-700 text-sm font-medium mt-1">First Managing Trustee, VVJM</p>
+                        </div>
                     </div>
 
-                    <div class="bg-white/80 rounded-2xl p-6 shadow-md border-l-4 border-[#FF9933]">
+                    <!-- Quote Card 2 -->
+                    <div class="card-soft rounded-2xl p-6 md:p-8 border-l-4 border-[#FF9933] shadow-sm hover-pop">
                         <p class="text-gray-700 italic text-lg leading-relaxed text-justify">
                             "Nothing is impossible to you when you have steadfast uprightness and honesty!"
                         </p>
-                        <p class="mt-4 font-semibold text-[#FF9933] text-center">
-                            – Prof. Rajakrishnammal Kandaswami<br />
-                            <span class="text-gray-700 text-sm font-medium">
-                                Founder Trustee, VVJM
-                            </span>
-                        </p>
+
+                        <div class="mt-4 text-center">
+                            <p class="font-semibold text-[#FF9933]">– Prof. Rajakrishnammal Kandaswami</p>
+                            <p class="text-gray-700 text-sm font-medium mt-1">Founder Trustee, VVJM</p>
+                        </div>
                     </div>
                 </div>
 
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Principal Message Zig-Zag -->
-        <section id="Principal" class="py-16 md:py-24">
-            <div class="max-w-6xl mx-auto px-6 md:px-12">
-                <div class="grid md:grid-cols-2 gap-12 items-center justify-center">
+    <!-- Principal message -->
+    <section id="Principal" class="py-16 md:py-24">
 
-                    <!-- Principal Image -->
-                    <div data-aos="fade-right" class="flex justify-center md:justify-end">
-                        <img src="./assets/prinicipal.jpg" alt="Principal"
-                            class="rounded-full w-64 h-64 object-fit shadow-2xl border-8 border-[#FF9933] hover:scale-105 transition-transform duration-500" />
+
+        <div class="max-w-6xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- LEFT: Portrait (on desktop shows right by default) -->
+                <div class="order-2 lg:order-1 flex justify-center lg:justify-end" data-aos="fade-right">
+                    <div class="relative portrait-ring float-slow">
+                        <img src="./assets/images/prinicipal.jpg" alt="Principal"
+                            class="rounded-3xl w-full h-full object-cover transform transition-transform duration-500 hover:scale-105" />
                     </div>
 
-                    <!-- Principal Message -->
-                    <div data-aos="fade-left" class="flex flex-col justify-center text-center md:text-left space-y-6">
-                        <h2 class="text-4xl font-extrabold text-gray-800">
+                    <!-- small floating badge -->
+                    <div class="absolute lg:relative -translate-y-6 lg:translate-y-0 ml-0 lg:ml-6 mt-4 lg:mt-0">
+                        <div
+                            class="hidden lg:flex items-center gap-3 bg-white/90 px-3 py-2 rounded-full shadow-sm border border-slate-100">
+                            <div class="w-3 h-3 rounded-full bg-[#FF9933]"></div>
+                            <div class="text-sm font-semibold text-slate-700">Principal</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Message -->
+                <div class="order-1 lg:order-2" data-aos="fade-left">
+                    <div class="space-y-6 max-w-xl mx-auto lg:mx-0">
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800">
                             Principal’s <span class="text-[#FF9933]">Message</span>
                         </h2>
-                        <h4 class="text-[#FF9933]">Welcome !</h4>
-                        <p class="text-gray-700 leading-relaxed text-justify md:text-left">
-                            The Education we provide here shapes the character and values of the Future Citizens. Our Teachers nurture Creativity, Empathy,
-                            and Leadership
-                            to build a Confident and Patriotic Society.
-                        </p>
-                        <p class="font-semibold text-[#FF9933]">
-                            – P. SAMPATHKUMAR KUMAR, M.Sc., B.Ed
-                        </p>
-                    </div>
 
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="inline-block w-10 h-1 rounded bg-gradient-to-r from-[#FF9933] to-[#FF6A00]"></span>
+                            <h4 class="text-[#FF9933] text-lg font-semibold">Welcome !</h4>
+                        </div>
+
+                        <div class="soft-glass rounded-2xl p-6 md:p-8 shadow-sm">
+                            <p class="text-gray-700 leading-relaxed text-justify md:text-left">
+                                The Education we provide here shapes the character and values of the Future Citizens.
+                                Our Teachers nurture Creativity, Empathy,
+                                and Leadership
+                                to build a Confident and Patriotic Society.
+                            </p>
+
+                            <p class="mt-6 font-semibold text-[#FF9933] text-right md:text-right">
+                                – P. SAMPATHKUMAR KUMAR, M.Sc., B.Ed
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Management Team -->
-        <section id="Management" class="py-16 md:py-24">
-            <div class="max-w-7xl mx-auto px-6 md:px-12">
-                <!-- Heading -->
-                <h2 class="text-4xl font-extrabold text-gray-800 text-center mb-16" data-aos="fade-up">
-                    Our Management <span class="text-[#FF9933]">Team</span>
-                </h2>
+    <!-- Management Team Section -->
+    <section id="Management" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <!-- Heading -->
+            <h2 class="text-4xl font-extrabold text-gray-800 text-center mb-16" data-aos="fade-up">
+                Our Management <span class="text-[#FF9933]">Team</span>
+            </h2>
 
-                <!-- Cards Grid -->
-                <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-12">
+            <!-- Cards Grid -->
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
 
-                    <!-- Card 1 -->
-                    <div data-aos="fade-up" data-aos-delay="100"
-                        class="bg-white rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-500 p-8 flex flex-col items-center text-center h-full">
-                        <img src="./assets/owner.jpg" alt="Member"
-                            class="w-36 h-36 rounded-full border-4 border-[#FF9933] mb-6 object-cover shadow-lg">
-                        <h3 class="font-bold text-lg text-gray-800 leading-snug">
-                            R.VENKATASWAMY
-                            <span class="block text-gray-700 text-sm">M.A., M.Ed</span>
-                        </h3>
-                        <p class="text-[#FF9933] font-semibold mt-2">Correspondent</p>
-                        <div class="flex-1"></div>
-                        <div class="text-gray-600 mt-4 space-y-1">
-                            <p>50 years of School Education Service - Experience.</p>
-                            <p>Tamil Nadu Government's <br> Dr. Radhakrishnan Best Teacher Awardee – 2005.</p>
-                        </div>
+                <!-- Card 1 -->
+                <div data-aos="fade-up" data-aos-delay="100"
+                    class="relative bg-white rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center transform transition-transform duration-500 hover:scale-[1.05] group overflow-hidden">
+
+                    <!-- Gradient Accent Circle -->
+                    <div
+                        class="absolute -top-10 -right-10 w-36 h-36 rounded-full bg-gradient-to-tr from-[#FF9933]/50 to-transparent blur-3xl pointer-events-none">
                     </div>
 
-                    <!-- Card 2 -->
-                    <div data-aos="fade-up" data-aos-delay="200"
-                        class="bg-white rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-500 p-8 flex flex-col items-center text-center h-full">
-                        <img src="./assets/advicer.jpg" alt="Member"
-                            class="w-36 h-36 rounded-full border-4 border-[#3B82F6] mb-6 object-cover shadow-lg">
-                        <h3 class="font-bold text-lg text-gray-800 leading-snug">
-                            G.MARIAMMAL
-                            <span class="block text-gray-700 text-sm">M.A., M.Sc., M.Ed., M.Phil</span>
-                        </h3>
-                        <p class="text-[#3B82F6] font-semibold mt-2">Academic Advisor</p>
-                        <div class="flex-1"></div>
-                        <div class="text-gray-600 mt-4 space-y-1">
-                            <p>45 years of School Education Service - Experience.</p>
-                            <p>Tamil Nadu Government's <br> Dr. Radhakrishnan Best Teacher Awardee – 2015.</p>
-                        </div>
-                    </div>
+                    <img src="./assets/images/owner.jpg" alt="R.Venkataswamy"
+                        class="w-36 h-36 rounded-full border-4 border-[#FF9933] mb-6 object-cover shadow-lg transition-transform duration-500 group-hover:scale-110" />
 
-                    <!-- Card 3 -->
-                    <div data-aos="fade-up" data-aos-delay="300"
-                        class="bg-white rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-500 p-8 flex flex-col items-center text-center h-full">
-                        <img src="./assets/prinicipal.jpg" alt="Member"
-                            class="w-36 h-36 rounded-full border-4 border-[#F59E0B] mb-6 object-fit shadow-lg">
-                        <h3 class="font-bold text-lg text-gray-800 leading-snug">
-                            P.SAMPATHKUMAR KUMAR
-                            <span class="block text-gray-700 text-sm">M.Sc., B.Ed</span>
-                        </h3>
-                        <p class="text-[#F59E0B] font-semibold mt-2">Principal</p>
-                        <div class="text-gray-600 mt-4 space-y-1">
-                            <p>15 years of School Education Service - Experience.</p>
-                            <!-- <p>Tamil Nadu Government's <br> Dr. Radhakrishnan Best Teacher Awardee – 2015.</p> -->
-                        </div>
-                    </div>
+                    <h3 class="font-bold text-lg text-gray-800 leading-snug">
+                        R.VENKATASWAMY
+                        <span class="block text-gray-700 text-sm mt-1">M.A., M.Ed</span>
+                    </h3>
+                    <p class="text-[#FF9933] font-semibold mt-2 tracking-wide">Correspondent</p>
 
+                    <div class="flex-1"></div>
+
+                    <div class="text-gray-600 mt-4 space-y-2 text-sm leading-relaxed">
+                        <p>50 years of School Education Service - Experience.</p>
+                        <p>Tamil Nadu Government's Dr. Radhakrishnan Best Teacher Awardee – 2005.</p>
+                    </div>
                 </div>
+
+                <!-- Card 2 -->
+                <div data-aos="fade-up" data-aos-delay="200"
+                    class="relative bg-white rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center transform transition-transform duration-500 hover:scale-[1.05] group overflow-hidden">
+
+                    <div
+                        class="absolute -top-10 -right-10 w-36 h-36 rounded-full bg-gradient-to-tr from-[#3B82F6]/50 to-transparent blur-3xl pointer-events-none">
+                    </div>
+
+                    <img src="./assets/images/advicer.jpg" alt="G.Mariammal"
+                        class="w-36 h-36 rounded-full border-4 border-[#3B82F6] mb-6 object-cover shadow-lg transition-transform duration-500 group-hover:scale-110" />
+
+                    <h3 class="font-bold text-lg text-gray-800 leading-snug">
+                        G.MARIAMMAL
+                        <span class="block text-gray-700 text-sm mt-1">M.A., M.Sc., M.Ed., M.Phil</span>
+                    </h3>
+                    <p class="text-[#3B82F6] font-semibold mt-2 tracking-wide">Academic Advisor</p>
+
+                    <div class="flex-1"></div>
+
+                    <div class="text-gray-600 mt-4 space-y-2 text-sm leading-relaxed">
+                        <p>45 years of School Education Service - Experience.</p>
+                        <p>Tamil Nadu Government's Dr. Radhakrishnan Best Teacher Awardee – 2015.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div data-aos="fade-up" data-aos-delay="300"
+                    class="relative bg-white rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center transform transition-transform duration-500 hover:scale-[1.05] group overflow-hidden">
+
+                    <div
+                        class="absolute -top-10 -right-10 w-36 h-36 rounded-full bg-gradient-to-tr from-[#F59E0B]/50 to-transparent blur-3xl pointer-events-none">
+                    </div>
+
+                    <img src="./assets/images/prinicipal.jpg" alt="P. Sampathkumar Kumar"
+                        class="w-36 h-36 rounded-full border-4 border-[#F59E0B] mb-6 object-cover shadow-lg transition-transform duration-500 group-hover:scale-110" />
+
+                    <h3 class="font-bold text-lg text-gray-800 leading-snug">
+                        P.SAMPATHKUMAR KUMAR
+                        <span class="block text-gray-700 text-sm mt-1">M.Sc., B.Ed</span>
+                    </h3>
+                    <p class="text-[#F59E0B] font-semibold mt-2 tracking-wide">Principal</p>
+
+                    <div class="flex-1"></div>
+
+                    <div class="text-gray-600 mt-4 space-y-2 text-sm leading-relaxed">
+                        <p>15 years of School Education Service - Experience.</p>
+                    </div>
+                </div>
+
             </div>
-        </section>
+        </div>
+    </section>
 
-
-    </main>
-
-    <!-- Inspirational Visit Section -->
-    <section class="py-16 px-6 md:px-20" data-aos="fade-up">
-        <div class="max-w-7xl mx-auto text-center mb-12">
-            <h2 class="text-4xl font-extrabold text-gray-800 mb-4">
+    <!-- Dignitaries Visit Section -->
+    <section class="py-20 px-6 md:px-20" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-5xl font-extrabold text-gray-900 mb-4 tracking-tight" data-aos="fade-down"
+                data-aos-delay="100">
                 Inspirational <span class="text-[#FF9933]">Visit by Dignitaries</span>
             </h2>
-            <p class="text-gray-700 leading-relaxed max-w-4xl mx-auto">
+            <p class="text-gray-700 max-w-4xl mx-auto text-lg sm:text-xl leading-relaxed" data-aos="fade-down"
+                data-aos-delay="200">
                 On <span class="font-semibold text-[#FF9933]">13th October 2025 (Monday, 9:45 a.m)</span>, our school
                 was honored by the visit of distinguished guests who shared their wisdom and motivation with our
                 students through an inspiring interactive session.
             </p>
         </div>
 
-        <!-- Image Gallery with Description -->
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-            <div class="space-y-4" data-aos="fade-right">
-                <p class="text-gray-700 text-lg leading-relaxed text-justify">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+            <!-- Left content -->
+            <div class="space-y-6" data-aos="fade-right" data-aos-delay="300">
+                <p class="text-gray-800 text-lg leading-relaxed font-semibold tracking-wide">
                     We had the privilege of welcoming:
                 </p>
-                <ul class="list-disc text-left text-gray-700 text-base ml-6 space-y-2">
+                <ul class="list-disc list-inside space-y-4 text-gray-700 text-base leading-relaxed">
                     <li>
                         <span class="font-semibold text-[#FF9933]">Dr. Krish Soundrarajan</span>,
-                        F.R.C.S., M.D., M.B.A <br>Chief Cardiovascular Surgeon, Director of SINAI Hospitals, New York (U.S.A),
-                        Chairman of South Asia Cardiovascular Surgeons Federation, and Director overseeing
-                        cardiovascular surgeries in New York.
+                        F.R.C.S., M.D., M.B.A <br>
+                        Chief Cardiovascular Surgeon, Director of SINAI Hospitals, New York (U.S.A), Chairman of South
+                        Asia Cardiovascular Surgeons Federation, and Director overseeing cardiovascular surgeries in New
+                        York.
                     </li>
                     <li>
                         <span class="font-semibold text-[#FF9933]">Smt. Susheela Ramaraj</span>, Leading Advocate,
@@ -474,34 +756,32 @@
                         <span class="font-semibold text-[#FF9933]">Smt. Chithra Yaswant</span>, M.S (Dietician), U.S.A.
                     </li>
                 </ul>
-
-                <p class="text-gray-700 text-lg leading-relaxed text-justify mt-4">
+                <p class="text-gray-700 text-lg leading-relaxed mt-6">
                     The dignitaries inspired our students through their motivational speeches and shared their global
                     experiences. The children enthusiastically participated in an interactive session, asking questions
                     and gaining valuable insights.
                 </p>
             </div>
 
-            <!-- Collage of 4 Event Photos -->
-            <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
-                <img src="./assets/Visitor/visit4.jpg" alt="VVJM School Interaction 4"
-                    class="rounded-2xl shadow-lg object-cover w-full h-56 hover:scale-105 transition-transform duration-300">
-                <img src="./assets/Visitor/visit1.jpg" alt="VVJM School Interaction 1"
-                    class="rounded-2xl shadow-lg object-cover w-full h-56 hover:scale-105 transition-transform duration-300">
-                <img src="./assets/Visitor/visit2.jpg" alt="VVJM School Interaction 2"
-                    class="rounded-2xl shadow-lg object-cover w-full h-56 hover:scale-105 transition-transform duration-300">
-                <img src="./assets/Visitor/visit3.jpg" alt="VVJM School Interaction 3"
-                    class="rounded-2xl shadow-lg object-cover w-full h-56 hover:scale-105 transition-transform duration-300">
+            <!-- Right image collage -->
+            <div class="grid grid-cols-2 gap-5" data-aos="fade-left" data-aos-delay="400">
+                <img src="./assets/images/Visitor/visit4.jpg" alt="VVJM School Interaction 4"
+                    class="rounded-3xl shadow-2xl object-cover w-full h-56 sm:h-64 hover:scale-105 transition-transform duration-400 ease-in-out cursor-pointer" />
+                <img src="./assets/images/Visitor/visit1.jpg" alt="VVJM School Interaction 1"
+                    class="rounded-3xl shadow-2xl object-cover w-full h-56 sm:h-64 hover:scale-105 transition-transform duration-400 ease-in-out cursor-pointer" />
+                <img src="./assets/images/Visitor/visit2.jpg" alt="VVJM School Interaction 2"
+                    class="rounded-3xl shadow-2xl object-cover w-full h-56 sm:h-64 hover:scale-105 transition-transform duration-400 ease-in-out cursor-pointer" />
+                <img src="./assets/images/Visitor/visit3.jpg" alt="VVJM School Interaction 3"
+                    class="rounded-3xl shadow-2xl object-cover w-full h-56 sm:h-64 hover:scale-105 transition-transform duration-400 ease-in-out cursor-pointer" />
             </div>
         </div>
 
         <!-- Summary -->
-        <div class="max-w-4xl mx-auto mt-12 text-center" data-aos="fade-up">
-            <p class="text-gray-700 leading-relaxed text-lg">
-                This memorable visit was a true inspiration for the students of <span
-                    class="font-semibold text-[#FF9933]">VVJM School</span>.
-                The dignitaries’ kind words and encouragement motivated every child to dream big and work hard towards
-                their goals.
+        <div class="max-w-4xl mx-auto mt-16 text-center" data-aos="fade-up" data-aos-delay="500">
+            <p class="text-gray-800 text-lg sm:text-xl leading-relaxed font-semibold tracking-wide">
+                This memorable visit was a true inspiration for the students of
+                <span class="font-semibold text-[#FF9933]">VVJM School</span>. The dignitaries’ kind words and
+                encouragement motivated every child to dream big and work hard towards their goals.
             </p>
         </div>
     </section>
@@ -512,7 +792,7 @@
 
             <!-- Left Side Image -->
             <div class="flex justify-center">
-                <img src="./assets/swami-vivekananda.jpg" alt="Swami Vivekananda"
+                <img src="./assets/images/swami-vivekananda.jpg" alt="Swami Vivekananda"
                     class="rounded-3xl shadow-2xl w-64 sm:w-72 md:w-80 lg:w-[420px] object-cover" />
             </div>
 
@@ -609,7 +889,7 @@
             <div class="flex flex-col items-start">
                 <!-- Logo -->
                 <div class="flex items-center gap-3 mb-4">
-                    <img src="./assets/logo.png" alt="VVJM Logo" class="h-16 w-16 rounded-full shadow-lg">
+                    <img src="./assets/images/logo.png" alt="VVJM Logo" class="h-16 w-16 rounded-full shadow-lg">
                     <div>
                         <h3 class="text-xl font-bold text-white">VVJM Paramahamsa Vidyalayam</h3>
                         <p class="text-gray-400 text-sm">Matric Hr Sec School</p>
@@ -692,7 +972,7 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./assets/js/script.js"></script>
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>

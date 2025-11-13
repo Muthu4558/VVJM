@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./assets/logo.png">
+    <link rel="icon" href="./assets/images/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VVJM School</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
     <div id="loader-overlay">
         <div class="loader-container">
             <div class="circle-loader">
-                <img src="./assets/logo.png" alt="VVJM Logo" class="loader-logo">
+                <img src="./assets/images/logo.png" alt="VVJM Logo" class="loader-logo">
                 <svg class="progress-ring" viewBox="0 0 160 160">
                     <circle class="progress-ring__circle" stroke="#FF9933" stroke-width="6" fill="transparent" r="70"
                         cx="80" cy="80" />
@@ -55,7 +55,7 @@
 
         <!-- Logo -->
         <div class="flex items-center gap-2">
-            <a href="./index.html"><img src="./assets/logo.png" alt="School Logo" class="h-16"></a>
+            <a href="./index.html"><img src="./assets/images/logo.png" alt="School Logo" class="h-16"></a>
             <div>
                 <h1 class="text-1xl md:text-3xl font-bold">VVJM</h1>
                 <p class="text-sm md:text-xl text-gray-500">PARAMAHAMSA VIDYALAYAM</p>
@@ -195,7 +195,7 @@
 
     <!-- Academic banner -->
     <section class="relative w-full h-52 md:h-64 lg:h-72 flex items-center justify-center bg-center bg-cover mt-32"
-        style="background-image: url('./assets/hero-1.jpg');">
+        style="background-image: url('./assets/images/hero-1.jpg');">
 
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/50"></div>
@@ -219,93 +219,111 @@
     </section>
 
     <!-- Academics Content Section -->
-    <section class="py-16 px-6 md:px-24">
-        <div class="max-w-7xl mx-auto text-center mb-12" data-aos="fade-up">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">Our <span
-                    class="text-[#FF9933]">Academics</span></h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">
+    <section class="py-20 px-6 md:px-24" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto text-center mb-16" data-aos="fade-down">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+                Our <span class="text-[#FF9933]">Academics</span>
+            </h2>
+            <p class="text-gray-700 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed font-semibold">
                 At VVJM Paramahamsa Vidyalayam, we provide a structured and holistic academic journey
                 that nurtures curiosity, builds confidence, and prepares students for life with strong values
                 and intellectual excellence.
             </p>
         </div>
 
-        <!-- Pre-Primary Section -->
-        <section id="pre-primary" class="pt-14 md:pt-20">
-            <div class="grid md:grid-cols-2 gap-10 items-center mb-16" data-aos="fade-right">
-                <div>
-                    <img src="./assets/academics/pre-primary img.jpeg" alt="Pre-Primary Section"
-                        class="rounded-3xl shadow-xl object-cover w-full h-72">
+        <!-- Academic Sections Wrapper -->
+        <div class="space-y-24 max-w-7xl mx-auto">
+
+            <!-- Pre-Primary Section -->
+            <section id="pre-primary" class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="relative group overflow-hidden rounded-3xl shadow-xl cursor-pointer" data-aos="fade-right">
+                    <img src="./assets/images/academics/pre-primary img.jpeg" alt="Pre-Primary Section"
+                        class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Pre-Primary <span class="text-[#FF9933]">(Nursery
-                            – UKG)</span></h3>
-                    <p class="text-gray-600 leading-relaxed font-bold text-justify">
+                <div data-aos="fade-left">
+                    <h3 class="text-3xl font-extrabold text-gray-900 mb-3 relative inline-block">
+                        Pre-Primary <span class="text-[#FF9933]">(Nursery – UKG)</span>
+                        <span class="block h-1 w-24 bg-[#FF9933] rounded-full mt-2"></span>
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed font-semibold text-justify text-lg">
                         Our Pre-Primary program introduces children to the Joy of Learning through Fun-filled
                         Activities, Storytelling, Art, and Play. The focus is on building Language Skills, Early
-                        Numeracy,
-                        Social-Interaction, and Emotional Growth in a warm and Caring Environment.
+                        Numeracy, Social-Interaction, and Emotional Growth in a warm and Caring Environment.
                     </p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Primary Section -->
-        <section id="primary" class="pt-14 md:pt-20">
-            <div class="grid md:grid-cols-2 gap-10 items-center mb-16 md:flex-row-reverse" data-aos="fade-left">
-                <div class="md:order-2">
-                    <img src="./assets/academics/primary img.jpeg" alt="Primary Section"
-                        class="rounded-3xl shadow-xl object-cover w-full h-72">
+            <!-- Primary Section -->
+            <section id="primary" class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="md:order-2 relative group overflow-hidden rounded-3xl shadow-xl cursor-pointer"
+                    data-aos="fade-left">
+                    <img src="./assets/images/academics/primary img.jpeg" alt="Primary Section"
+                        class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
                 </div>
-                <div class="md:order-1">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Primary <span class="text-[#FF9933]">(Grades I –
-                            V)</span></h3>
-                    <p class="text-gray-600 leading-relaxed font-bold text-justify">
+                <div class="md:order-1" data-aos="fade-right">
+                    <h3 class="text-3xl font-extrabold text-gray-900 mb-3 relative inline-block">
+                        Primary <span class="text-[#FF9933]">(Grades I – V)</span>
+                        <span class="block h-1 w-24 bg-[#FF9933] rounded-full mt-2"></span>
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed font-semibold text-justify text-lg">
                         The Primary stage builds on foundational learning with an emphasis on language, mathematics,
                         science, and moral education. Our child-centered approach encourages curiosity and
                         self-expression while developing discipline and teamwork through engaging activities.
                     </p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Middle Section -->
-        <section id="middle" class="pt-14 md:pt-20">
-            <div class="grid md:grid-cols-2 gap-10 items-center mb-16" data-aos="fade-right">
-                <div>
-                    <img src="./assets/academics/middle.jpg" alt="Middle Section"
-                        class="rounded-3xl shadow-xl object-cover w-full h-72">
+            <!-- Middle Section -->
+            <section id="middle" class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="relative group overflow-hidden rounded-3xl shadow-xl cursor-pointer" data-aos="fade-right">
+                    <img src="./assets/images/academics/middle.jpg" alt="Middle Section"
+                        class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Middle <span class="text-[#FF9933]">(Grades VI –
-                            VIII)</span></h3>
-                    <p class="text-gray-600 leading-relaxed font-bold text-justify">
+                <div data-aos="fade-left">
+                    <h3 class="text-3xl font-extrabold text-gray-900 mb-3 relative inline-block">
+                        Middle <span class="text-[#FF9933]">(Grades VI – VIII)</span>
+                        <span class="block h-1 w-24 bg-[#FF9933] rounded-full mt-2"></span>
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed font-semibold text-justify text-lg">
                         The Middle School curriculum strengthens academic understanding and introduces higher-order
                         concepts. Students develop analytical and problem-solving skills through project-based learning,
                         experiments, and digital resources. Co-curricular activities enhance creativity and confidence.
                     </p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Senior Secondary Section -->
-        <section id="senior-secondary" class="pt-14 md:pt-20">
-            <div class="grid md:grid-cols-2 gap-10 items-center" data-aos="fade-left">
-                <div class="md:order-2">
-                    <img src="./assets/academics/senior.jpg" alt="Senior Secondary Section"
-                        class="rounded-3xl shadow-xl object-cover w-full h-72">
+            <!-- Senior Secondary Section -->
+            <section id="senior-secondary" class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="md:order-2 relative group overflow-hidden rounded-3xl shadow-xl cursor-pointer"
+                    data-aos="fade-left">
+                    <img src="./assets/images/academics/senior.jpg" alt="Senior Secondary Section"
+                        class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
                 </div>
-                <div class="md:order-1">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Senior Secondary <span
-                            class="text-[#FF9933]">(Grades IX – XII)</span></h3>
-                    <p class="text-gray-600 leading-relaxed font-bold text-justify">
+                <div class="md:order-1" data-aos="fade-right">
+                    <h3 class="text-3xl font-extrabold text-gray-900 mb-3 relative inline-block">
+                        Senior Secondary <span class="text-[#FF9933]">(Grades IX – XII)</span>
+                        <span class="block h-1 w-24 bg-[#FF9933] rounded-full mt-2"></span>
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed font-semibold text-justify text-lg">
                         At the Senior Secondary level, we prepare students for board examinations and future careers
                         through specialized streams, mentoring, and career guidance. The program emphasizes conceptual
                         clarity, leadership, and life skills to help students thrive in higher education and beyond.
                     </p>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </section>
 
     <!-- Senior Secondary Courses Section -->
@@ -392,7 +410,7 @@
 
             <!-- Left Side Image -->
             <div class="flex justify-center">
-                <img src="./assets/swami-vivekananda.jpg" alt="Swami Vivekananda"
+                <img src="./assets/images/swami-vivekananda.jpg" alt="Swami Vivekananda"
                     class="rounded-3xl shadow-2xl w-64 sm:w-72 md:w-80 lg:w-[420px] object-cover" />
             </div>
 
@@ -489,7 +507,7 @@
             <div class="flex flex-col items-start">
                 <!-- Logo -->
                 <div class="flex items-center gap-3 mb-4">
-                    <img src="./assets/logo.png" alt="VVJM Logo" class="h-16 w-16 rounded-full shadow-lg">
+                    <img src="./assets/images/logo.png" alt="VVJM Logo" class="h-16 w-16 rounded-full shadow-lg">
                     <div>
                         <h3 class="text-xl font-bold text-white">VVJM Paramahamsa Vidyalayam</h3>
                         <p class="text-gray-400 text-sm">Matric Hr Sec School</p>
@@ -572,7 +590,7 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./assets/js/script.js"></script>
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>

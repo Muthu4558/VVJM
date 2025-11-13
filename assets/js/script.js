@@ -25,18 +25,6 @@ window.addEventListener("scroll", () => {
 
 
 // Swiper
-// const swiper = new Swiper(".mySwiper", {
-//     loop: true,
-//     pagination: { el: ".swiper-pagination", clickable: true },
-//     navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-//     autoplay: { delay: 4000, disableOnInteraction: false },
-//     effect: "fade",
-//     fadeEffect: { crossFade: true },
-// });
-
-feather.replace();
-
-
 document.addEventListener("DOMContentLoaded", () => {
   // Hero/Main Swiper
   new Swiper(".mySwiper", {
@@ -61,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     allowTouchMove: false,
   });
 });
-
 
 // Mobile Menu Toggle
 const menuBtn = document.getElementById("menu-btn");
@@ -117,60 +104,6 @@ const interval = setInterval(() => {
     }
 }, 20);
 
-
-
-// // Gallery
-// const images = [
-//     "./assets/Gallery/1.jpg",
-//     "./assets/Gallery/3.jpg",
-//     "./assets/Gallery/4.jpg",
-//     "./assets/Gallery/6.jpg",
-//     "./assets/Gallery/7.jpg",
-//     "./assets/Gallery/8.jpg",
-//     "./assets/Gallery/9.jpg",
-//     "./assets/Gallery/10.jpg",
-//     "./assets/Gallery/11.jpg",
-//     "./assets/Gallery/12.jpg",
-//     "./assets/Gallery/13.jpg",
-//     "./assets/Gallery/14.jpg",
-//     "./assets/Gallery/15.jpg",
-//     "./assets/Gallery/16.jpg",
-//     "./assets/Gallery/17.jpg",
-//     "./assets/Gallery/18.jpg",
-//     "./assets/Gallery/19.jpg",
-//     "./assets/Gallery/20.jpg"
-// ];
-
-// let currentIndex = 0;
-
-// function openModal(index) {
-//     currentIndex = index;
-//     document.getElementById("lightbox").classList.remove("hidden");
-//     document.getElementById("lightbox-img").src = images[currentIndex];
-// }
-
-// function closeModal() {
-//     document.getElementById("lightbox").classList.add("hidden");
-// }
-
-// function changeSlide(direction) {
-//     currentIndex = (currentIndex + direction + images.length) % images.length;
-//     document.getElementById("lightbox-img").src = images[currentIndex];
-// }
-
-
-// quotes
-// const vivekanandaSwiper = new Swiper(".vivekanandaSwiper", {
-//     loop: true,
-//     effect: "fade",             // Smooth fade effect
-//     fadeEffect: { crossFade: true },
-//     autoplay: {
-//         delay: 3500,              // 3.5 seconds per quote
-//         disableOnInteraction: false,
-//     },
-//     speed: 1200,                // Smooth transition speed
-//     allowTouchMove: false       // Prevent manual swipe
-// });
 
 // Modal popup for VVJM Attention
 (function () {
@@ -297,4 +230,69 @@ const interval = setInterval(() => {
 
     // Optional: expose open/close if needed
     window.VVJMModal = { open: openModal, close: closeModal };
+})();
+
+// News stop section
+(function () {
+    const scrollContainer = document.getElementById('news-scroll');
+    const track = document.getElementById('news-track');
+
+    if (!scrollContainer || !track) return;
+
+    // Duplicate track for a seamless loop
+    const clone = track.cloneNode(true);
+    clone.id = 'news-track-clone';
+    track.parentNode.appendChild(clone);
+
+    // Set up variables
+    let speed = 0.45; // px per frame (adjust speed)
+    let paused = false;
+    let rafId = null;
+
+    // Pause on hover or focus, resume on leave/blur
+    const pause = () => (paused = true);
+    const resume = () => (paused = false);
+
+    scrollContainer.addEventListener('mouseenter', pause);
+    scrollContainer.addEventListener('mouseleave', resume);
+    scrollContainer.addEventListener('focusin', pause);
+    scrollContainer.addEventListener('focusout', resume);
+
+    // Ensure the two tracks are displayed stacked vertically
+    // Wrap both track elements in a single tall container for scrolling
+    const startAutoScroll = () => {
+        // Set heights after DOM layout
+        // We will animate scrollTop of scrollContainer
+        const singleTrackHeight = track.getBoundingClientRect().height;
+        // If no height or too small, do nothing
+        if (singleTrackHeight <= 0) return;
+
+        // set initial scrollTop to 0
+        scrollContainer.scrollTop = 0;
+
+        // animation function
+        const step = () => {
+            if (!paused) {
+                scrollContainer.scrollTop += speed;
+                // When we've scrolled past the first track, reset to start
+                if (scrollContainer.scrollTop >= singleTrackHeight) {
+                    scrollContainer.scrollTop = 0;
+                }
+            }
+            rafId = requestAnimationFrame(step);
+        };
+
+        // start
+        if (!rafId) rafId = requestAnimationFrame(step);
+    };
+
+    // Start after small delay to ensure fonts/images rendered
+    window.addEventListener('load', startAutoScroll);
+    // also attempt on DOMContentLoaded if load may have fired earlier
+    if (document.readyState === 'complete') startAutoScroll();
+
+    // cleanup on unload
+    window.addEventListener('beforeunload', () => {
+        if (rafId) cancelAnimationFrame(rafId);
+    });
 })();
